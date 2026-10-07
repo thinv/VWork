@@ -4303,6 +4303,158 @@ paths:
         '403': { $ref: '#/components/responses/Forbidden' }
         '409': { $ref: '#/components/responses/Conflict' }
         '422': { $ref: '#/components/responses/Validation' }
+  /documents/bulk-action:
+    post:
+      tags: [Documents]
+      operationId: api_doc_017
+      summary: "API-DOC-017 - POST /documents/bulk-action"
+      x-api-id: API-DOC-017
+      x-fr: [FR-015]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /document-relations/{id}:
+    delete:
+      tags: [Documents]
+      operationId: api_doc_018
+      summary: "API-DOC-018 - DELETE /document-relations/{id}"
+      x-api-id: API-DOC-018
+      x-fr: [FR-020]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /document-versions/{id}/summarize:
+    post:
+      tags: [Intelligence]
+      operationId: api_int_010
+      summary: "API-INT-010 - POST /document-versions/{id}/summarize"
+      x-api-id: API-INT-010
+      x-fr: [FR-021]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /document-versions/{id}/summary:
+    get:
+      tags: [Intelligence]
+      operationId: api_int_011
+      summary: "API-INT-011 - GET /document-versions/{id}/summary"
+      x-api-id: API-INT-011
+      x-fr: [FR-021]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /incoming-records/bulk-action:
+    post:
+      tags: [Incoming]
+      operationId: api_inc_011
+      summary: "API-INC-011 - POST /incoming-records/bulk-action"
+      x-api-id: API-INC-011
+      x-fr: [FR-042]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /incoming-records/{id}/archive:
+    post:
+      tags: [Incoming]
+      operationId: api_inc_012
+      summary: "API-INC-012 - POST /incoming-records/{id}/archive"
+      x-api-id: API-INC-012
+      x-fr: [FR-042]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /incoming-records/{id}:
+    patch:
+      tags: [Incoming]
+      operationId: api_inc_013
+      summary: "API-INC-013 - PATCH /incoming-records/{id}"
+      x-api-id: API-INC-013
+      x-fr: [FR-042]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
 components:
   securitySchemes:
     bearerAuth:

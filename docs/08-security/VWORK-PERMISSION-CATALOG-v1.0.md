@@ -1,6 +1,6 @@
 # VWork – Permission Catalog v1.0
 
-**Phạm vi hiện tại:** SC-01 Identity / Shell / Executive + SC-02 Document / Incoming + SC-03 Draft / Workflow + SC-04 Work Case / Task. Catalog tiếp tục mở rộng theo từng Screen Batch.
+**Phạm vi hiện tại:** SC-01 Identity / Shell / Executive + SC-02 Document / Incoming + SC-03 Draft / Workflow + SC-04 Work Case / Task + SC-05 Meeting. Catalog tiếp tục mở rộng theo từng Screen Batch.
 
 ## 1. Quy ước
 Permission code: `<DOMAIN>.<RESOURCE>.<ACTION>`.

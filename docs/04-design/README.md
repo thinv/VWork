@@ -41,8 +41,22 @@
 - [x] SC-08 Governance — 18/18 ENGINEERING READY
 - [x] SC-09 Shared / Master Data — 20/20 ENGINEERING READY
 
+- [x] VWORK-151-SCREEN-EXPOSURE-MATRIX-v2.0.md
+
+- [x] VWORK-USER-FACING-IA-v2.0.md
+
+- [x] VWORK-SERVICE-LAUNCHER-HOME-SPEC-v1.0.md
+
+- [x] VWORK-WEB-NAVIGATION-v2.0.md
+
+- [x] VWORK-MOBILE-NAVIGATION-v2.0.md
+
+- [x] VWORK-GOLDEN-SCREEN-CATALOG-v1.0.md
+
+- [x] VWORK-VISUAL-DESIGN-REFERENCE-PACK-v1.0.md
+
 ## Tiếp theo
-- [ ] High-fidelity mockups P0
+- [ ] Generate approved Golden Screen images (18-screen catalog; first image pack 15 screens)
 - [ ] Component implementation / Storybook-equivalent
 
 Baseline theo Screen ID hiện có 117 Web màn/route-level views (97 Core + 20 Shared/Master Data) và 34 Mobile screens. Mỗi màn hình phải trace Screen ID → UC → FR → API → Entity → Test và có loading/empty/error/permission state.

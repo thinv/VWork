@@ -204,3 +204,29 @@ Mobile Core v1 chỉ read/select lookup; không bắt buộc full admin CRUD.
 - Version/effective-date cho dữ liệu cần lịch sử.
 - Import có preview diff.
 - Audit mọi change.
+
+
+# 13. API Mapping
+
+| Screen ID | API canonical |
+|---|---|
+| WEB-MD-001 | MD-049/050/030 |
+| WEB-MD-002 | MD-001..005/031/032 |
+| WEB-MD-003 | MD-003..005/031 |
+| WEB-MD-004 | MD-002/004/005 |
+| WEB-MD-005 | MD-006..012 |
+| WEB-MD-006 | MD-007..011 |
+| WEB-MD-007 | MD-013..017/033..039 |
+| WEB-MD-008 | MD-014/034/037/038 |
+| WEB-MD-009 | MD-018..020/040/041 |
+| WEB-MD-010 | MD-021..024/042/043 |
+| WEB-MD-011 | MD-003/006..012 (DOCUMENT_TYPE) |
+| WEB-MD-012 | MD-003/006..012 (DOCUMENT_FIELD) |
+| WEB-MD-013 | MD-003/006..012 (RECIPIENT_GROUP) |
+| WEB-MD-014 | MD-003/006..012 (WORK_CASE_TYPE) |
+| WEB-MD-015 | MD-003/006..012 (MEETING_TYPE) |
+| WEB-MD-016 | MD-003/006..012 (REPORT_TYPE) |
+| WEB-MD-017 | MD-025..029/044 |
+| WEB-MD-018 | MD-015..017/045..047 |
+| WEB-MD-019 | MD-016/017/045/046 |
+| WEB-MD-020 | MD-030/048 |

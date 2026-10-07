@@ -138,19 +138,19 @@ Global:
 
 | ID | Màn hình | Route | Actor | API |
 |---|---|---|---|---|
-| WEB-RPT-001 | Danh sách kỳ báo cáo | /reports | ACT-08/01 | RPT-002 |
-| WEB-RPT-002 | Tạo kỳ báo cáo | /reports/new | ACT-08 | RPT-001 |
-| WEB-RPT-003 | Dashboard kỳ báo cáo | /reports/:id | ACT-08/01 | RPT-003 |
-| WEB-RPT-004 | Đơn vị phải nộp | /reports/:id/obligations | ACT-08 | RPT-004/005 |
-| WEB-RPT-005 | Nguồn báo cáo | /reports/:id/submissions | ACT-08 | RPT-006 |
-| WEB-RPT-006 | AI đề xuất chỉ tiêu | /reports/:id/schema/suggest | ACT-08 | RPT-007 |
-| WEB-RPT-007 | Metric Schema Editor | /reports/:id/schema | ACT-08 | RPT-008..010 |
-| WEB-RPT-008 | Kết quả trích xuất | /reports/:id/extraction | ACT-08 | RPT-011 |
-| WEB-RPT-009 | Data Quality | /reports/:id/quality | ACT-08 | RPT-012/013 |
-| WEB-RPT-010 | Đối soát | /reports/:id/reconcile | ACT-08 | RPT-014 |
+| WEB-RPT-001 | Danh sách kỳ báo cáo | /reports | ACT-08/01 | RPT-001..003/019..023 |
+| WEB-RPT-002 | Tạo kỳ báo cáo | /reports/new | ACT-08 | RPT-001/019 |
+| WEB-RPT-003 | Dashboard kỳ báo cáo | /reports/:id | ACT-08/01 | RPT-003/005/013/016/028/042/047 |
+| WEB-RPT-004 | Đơn vị phải nộp | /reports/:id/obligations | ACT-08 | RPT-004/005/024..027 |
+| WEB-RPT-005 | Nguồn báo cáo | /reports/:id/submissions | ACT-08 | RPT-006/028..031 |
+| WEB-RPT-006 | AI đề xuất chỉ tiêu | /reports/:id/schema/suggest | ACT-08 | RPT-007/009/032..035 |
+| WEB-RPT-007 | Metric Schema Editor | /reports/:id/schema | ACT-08 | RPT-008..010/032..035 |
+| WEB-RPT-008 | Kết quả trích xuất | /reports/:id/extraction | ACT-08 | RPT-011/036..038 |
+| WEB-RPT-009 | Data Quality | /reports/:id/quality | ACT-08 | RPT-012/013/039..041 |
+| WEB-RPT-010 | Đối soát | /reports/:id/reconcile | ACT-08 | RPT-014/042/043 |
 | WEB-RPT-011 | Tổng hợp số liệu | /reports/:id/aggregate | ACT-08 | RPT-015/016 |
-| WEB-RPT-012 | Soạn báo cáo tổng | /reports/:id/draft | ACT-08 | RPT-017 |
-| WEB-RPT-013 | Xuất báo cáo | /reports/:id/export | ACT-08 | RPT-018 |
+| WEB-RPT-012 | Soạn báo cáo tổng | /reports/:id/draft | ACT-08 | RPT-017/044..046 |
+| WEB-RPT-013 | Xuất báo cáo | /reports/:id/export | ACT-08 | RPT-018/047 |
 
 ## K. Kho mẫu & tri thức
 

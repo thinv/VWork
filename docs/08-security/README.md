@@ -11,5 +11,7 @@
 - [x] VWORK-AUDIT-EVENT-CATALOG-v1.0.md
 - [x] VWORK-REPORTING-PERMISSION-APPENDIX-v1.0.md
 - [x] VWORK-REPORTING-AUDIT-APPENDIX-v1.0.md
+- [x] SC-07 permissions merged into VWORK-PERMISSION-CATALOG-v1.0.md
+- [x] SC-07 audit events merged into VWORK-AUDIT-EVENT-CATALOG-v1.0.md
 
 Security là yêu cầu xuyên suốt, không phải pha cuối dự án.

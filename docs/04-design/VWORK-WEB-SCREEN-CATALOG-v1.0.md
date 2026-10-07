@@ -169,19 +169,19 @@ Global:
 
 | ID | Màn hình | Route | Actor | API |
 |---|---|---|---|---|
-| WEB-ADM-001 | Cơ cấu tổ chức | /admin/organization | ACT-10 | IAM-008..010 |
-| WEB-ADM-002 | Người dùng | /admin/users | ACT-10 | IAM-011..013 |
-| WEB-ADM-003 | Vai trò & phạm vi | /admin/roles | ACT-10 | IAM-014..016 |
-| WEB-ADM-004 | Ủy quyền | /admin/delegations | ACT-10 | IAM-017/018 |
-| WEB-ADM-005 | Hồ sơ văn bản | /admin/document-profiles | ACT-10 | IAM-019/020 |
-| WEB-ADM-006 | AI Providers/Models | /admin/ai | ACT-12 | GOV-002..005 |
-| WEB-ADM-007 | Prompt Registry | /admin/prompts | ACT-12 | GOV-006/007 |
-| WEB-ADM-008 | Evaluation | /admin/evaluations | ACT-12/14 | GOV-008 |
-| WEB-ADM-009 | AI Usage | /admin/ai-usage | ACT-10/12 | GOV-009 |
-| WEB-ADM-010 | Integrations | /admin/integrations | ACT-10/11 | GOV-010..012 |
-| WEB-ADM-011 | Audit | /admin/audit | ACT-10/14 | GOV-001 |
-| WEB-ADM-012 | Retention | /admin/retention | ACT-10 | GOV-018/019 |
-| WEB-ADM-013 | Job Operations | /admin/jobs | ACT-11 | GOV-013..015 |
+| WEB-ADM-001 | Cơ cấu tổ chức | /admin/organization | ACT-10 | IAM-008..010/022/023 |
+| WEB-ADM-002 | Người dùng | /admin/users | ACT-10 | IAM-011..013/024..027 |
+| WEB-ADM-003 | Vai trò & phạm vi | /admin/roles | ACT-10 | IAM-014..016/028..035 |
+| WEB-ADM-004 | Ủy quyền | /admin/delegations | ACT-10 | IAM-017/018/036..038 |
+| WEB-ADM-005 | Hồ sơ văn bản | /admin/document-profiles | ACT-10 | IAM-019/020/039..044 |
+| WEB-ADM-006 | AI Providers/Models | /admin/ai | ACT-12 | GOV-002..005/024..029 |
+| WEB-ADM-007 | Prompt Registry | /admin/prompts | ACT-12 | GOV-006/007/030..034 |
+| WEB-ADM-008 | Evaluation | /admin/evaluations | ACT-12/14 | GOV-008/035..037 |
+| WEB-ADM-009 | AI Usage | /admin/ai-usage | ACT-10/12 | GOV-009/038 |
+| WEB-ADM-010 | Integrations | /admin/integrations | ACT-10/11 | GOV-010..012/039..042 |
+| WEB-ADM-011 | Audit | /admin/audit | ACT-10/14 | GOV-001/043 |
+| WEB-ADM-012 | Retention | /admin/retention | ACT-10 | GOV-018/019/044 |
+| WEB-ADM-013 | Job Operations | /admin/jobs | ACT-11 | GOV-013..015/023/045 |
 
 ## M. Dữ liệu dùng chung / Master Data
 

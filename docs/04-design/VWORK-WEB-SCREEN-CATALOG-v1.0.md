@@ -126,13 +126,13 @@ Global:
 
 | ID | Màn hình | Route | Actor | API |
 |---|---|---|---|---|
-| WEB-MTG-001 | Danh sách cuộc họp | /meetings | ACT-01/03/06/07 | MTG-002 |
+| WEB-MTG-001 | Danh sách cuộc họp | /meetings | ACT-01/03/06/07 | MTG-001..004/014/015 |
 | WEB-MTG-002 | Tạo cuộc họp | /meetings/new | ACT-06 | MTG-001 |
-| WEB-MTG-003 | Tổng quan cuộc họp | /meetings/:id | authorized | MTG-003/004 |
-| WEB-MTG-004 | Giấy mời/Agenda | /meetings/:id/context | ACT-06 | MTG-005 |
-| WEB-MTG-005 | Audio & Transcript | /meetings/:id/transcript | ACT-06/07 | MTG-006..009 |
-| WEB-MTG-006 | Quyết định/Nhiệm vụ | /meetings/:id/decisions | ACT-06/07 | MTG-010..012 |
-| WEB-MTG-007 | Biên bản | /meetings/:id/minutes | ACT-06/07 | MTG-013 |
+| WEB-MTG-003 | Tổng quan cuộc họp | /meetings/:id | authorized | MTG-003/004/015..020/026/030 |
+| WEB-MTG-004 | Giấy mời/Agenda | /meetings/:id/context | ACT-06 | MTG-005/016..026 |
+| WEB-MTG-005 | Audio & Transcript | /meetings/:id/transcript | ACT-06/07 | MTG-006..009/027 |
+| WEB-MTG-006 | Quyết định/Nhiệm vụ | /meetings/:id/decisions | ACT-06/07 | MTG-010..012/028/029 |
+| WEB-MTG-007 | Biên bản | /meetings/:id/minutes | ACT-06/07 | MTG-013/030..033 |
 
 ## J. Báo cáo
 

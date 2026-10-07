@@ -111,6 +111,8 @@ API-IAM-048 PATCH /me/profile
 | API-DOC-014 | GET | /files/{assetId}/download-url | FR-019 |
 | API-DOC-015 | GET | /documents/{id}/relations | FR-020 |
 | API-DOC-016 | POST | /documents/{id}/relations | FR-020 |
+API-DOC-017 POST /documents/bulk-action  
+API-DOC-018 DELETE /document-relations/{id}  
 
 ---
 

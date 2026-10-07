@@ -472,6 +472,26 @@ API-MD-027 PATCH /taxonomy/nodes/{id}
 API-MD-028 POST /taxonomy/nodes/{id}/move  
 API-MD-029 POST /taxonomy/nodes/{id}/retire  
 API-MD-030 GET /master-data/history
+API-MD-031 POST /code-lists/{code}/retire
+API-MD-032 POST /code-lists/bulk-action
+API-MD-033 POST /administrative-units/staging
+API-MD-034 PATCH /administrative-units/staging/{id}
+API-MD-035 POST /administrative-units/staging/{id}/validate
+API-MD-036 POST /administrative-units/staging/{id}/publish
+API-MD-037 POST /administrative-units/{code}/retire
+API-MD-038 POST /administrative-units/{code}/map-successor
+API-MD-039 POST /administrative-units/bulk-action
+API-MD-040 POST /external-agencies/{id}/retire
+API-MD-041 POST /external-agencies/bulk-action
+API-MD-042 POST /units-of-measure/{code}/versions
+API-MD-043 POST /units-of-measure/bulk-action
+API-MD-044 POST /taxonomy/nodes/bulk-action
+API-MD-045 POST /master-data-imports/{id}/validate
+API-MD-046 GET /master-data-imports/{id}/diff
+API-MD-047 POST /master-data-imports/{id}/cancel
+API-MD-048 POST /master-data/history/export
+API-MD-049 GET /master-data/overview
+API-MD-050 GET /master-data/datasets/{code}
 
 Trace: Shared/Master Data Governance; cross-cutting CRUD and administration.
 

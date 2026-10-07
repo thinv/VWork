@@ -60,6 +60,7 @@ Nguyên tắc:
 | API-IAM-018 | GET | /delegations | FR-008 |
 | API-IAM-019 | POST | /document-profiles | FR-009 |
 | API-IAM-020 | GET | /document-profiles | FR-009 |
+| API-IAM-021 | POST | /auth/reauth | FR-002 |
 
 ---
 
@@ -253,6 +254,7 @@ API-EXE-002 GET /executive/signals
 API-EXE-003 POST /executive/briefs/generate  
 API-EXE-004 GET /executive/briefs  
 API-EXE-005 GET /executive/briefs/{id}  
+API-EXE-006 GET /executive/inbox/{itemId}  
 API-AST-001 POST /assistant/conversations  
 API-AST-002 GET /assistant/conversations/{id}  
 API-AST-003 POST /assistant/conversations/{id}/messages  
@@ -284,7 +286,9 @@ API-GOV-017 POST /notifications/{id}/read
 API-GOV-018 GET /retention-policies  
 API-GOV-019 PUT /retention-policies/{objectType}  
 API-GOV-020 GET /health/ready  
-API-GOV-021 GET /health/live
+API-GOV-021 GET /health/live  
+API-GOV-022 POST /notifications/bulk-action  
+API-GOV-023 POST /jobs/{id}/cancel
 
 Trace: FR-109..124.
 

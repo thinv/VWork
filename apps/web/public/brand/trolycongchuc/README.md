@@ -1,3 +1,6 @@
 # trolycongchuc.vn Brand Assets
 
-Place official trolycongchuc.vn logo and app icon assets here.
+Official runtime asset:
+- `logo-primary.webp`
+
+Source: approved trolycongchuc.vn blue/green logo supplied for the Government website baseline.

@@ -78,10 +78,10 @@ Global:
 
 | ID | Màn hình | Route | Actor | API |
 |---|---|---|---|---|
-| MOB-MTG-001 | Lịch họp | meetings | ACT-01/06/07 | MTG-002 |
-| MOB-MTG-002 | Chi tiết cuộc họp | meetings/:id | authorized | MTG-003 |
-| MOB-MTG-003 | Transcript | meetings/:id/transcript | ACT-06/07 | MTG-008 |
-| MOB-MTG-004 | Kết luận & nhiệm vụ | meetings/:id/decisions | ACT-01/06/07 | MTG-010..012 |
+| MOB-MTG-001 | Lịch họp | meetings | ACT-01/06/07 | MTG-001..004/014/015 |
+| MOB-MTG-002 | Chi tiết cuộc họp | meetings/:id | authorized | MTG-003/004/016/018/020/026/030 |
+| MOB-MTG-003 | Transcript | meetings/:id/transcript | ACT-06/07 | MTG-008/009/027 |
+| MOB-MTG-004 | Kết luận & nhiệm vụ | meetings/:id/decisions | ACT-01/06/07 | MTG-010..012/028/029 |
 | MOB-MTG-005 | Upload/ghi âm | meetings/:id/audio | ACT-06 | MTG-006 |
 
 ## Notifications/Profile

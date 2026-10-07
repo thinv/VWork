@@ -1,6 +1,6 @@
 # VWork – Permission Catalog v1.0
 
-**Phạm vi hiện tại:** SC-01 Identity / Shell / Executive + SC-02 Document / Incoming + SC-03 Draft / Workflow + SC-04 Work Case / Task + SC-05 Meeting + SC-06 Reporting. Catalog tiếp tục mở rộng theo từng Screen Batch.
+**Phạm vi hiện tại:** SC-01 Identity / Shell / Executive + SC-02 Document / Incoming + SC-03 Draft / Workflow + SC-04 Work Case / Task + SC-05 Meeting + SC-06 Reporting + SC-07 Knowledge / AI. Catalog tiếp tục mở rộng theo từng Screen Batch.
 
 ## 1. Quy ước
 Permission code: `<DOMAIN>.<RESOURCE>.<ACTION>`.
@@ -280,3 +280,45 @@ Audio/transcript có thể có scope hẹp hơn metadata cuộc họp.
 
 ## 19. Reporting Data Scope
 OWNED_CYCLE / REPORTING_UNIT / ORG_UNIT / ORG_TREE / TENANT / EXPLICIT.
+
+
+## 20. Knowledge / RAG / Template
+- KNO.TEMPLATE.READ
+- KNO.TEMPLATE.CREATE
+- KNO.TEMPLATE.UPDATE
+- KNO.TEMPLATE.CREATE_VERSION
+- KNO.TEMPLATE.PUBLISH
+- KNO.TEMPLATE.ARCHIVE
+- KNO.TEMPLATE.BULK
+- KNO.SOURCE.READ
+- KNO.SOURCE.CREATE
+- KNO.SOURCE.UPDATE
+- KNO.SOURCE.CREATE_VERSION
+- KNO.SOURCE.PUBLISH
+- KNO.SOURCE.ARCHIVE
+- KNO.SOURCE.RESTORE
+- KNO.SOURCE.BULK
+- KNO.SOURCE.REINDEX
+- KNO.SOURCE.REVOKE_VERSION
+- KNO.TAXONOMY.ASSIGN
+- KNO.SEARCH.USE
+- KNO.SEARCH.BULK
+- KNO.QUERY.USE
+- KNO.CITATION.READ
+- KNO.RETRIEVAL_TRACE.READ
+- AST.CONVERSATION.CREATE
+- AST.CONVERSATION.READ_OWN
+- AST.CONVERSATION.UPDATE_OWN
+- AST.CONVERSATION.ARCHIVE_OWN
+- AST.MESSAGE.CREATE
+- AST.MESSAGE.READ_OWN
+
+## 21. Knowledge Data Scope
+- OWNED_SOURCE
+- SHARED_WITH_ME
+- ORG_UNIT
+- ORG_TREE
+- TENANT
+- EXPLICIT
+
+RAG retrieval luôn dùng current effective scope; conversation history không mở rộng source scope.

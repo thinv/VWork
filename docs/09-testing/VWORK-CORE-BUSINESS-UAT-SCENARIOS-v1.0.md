@@ -495,6 +495,60 @@ Select All + bulk actions ở Org/User/Role/Delegation/AI/Integration/Retention/
 # UAT-158 Governance Cross-tenant
 Tenant admin A không xem/sửa/export config/audit/user/role của tenant B.
 
+# UAT-159 Code List Governance
+System-owned code list không cho tenant sửa semantic/code; tenant-owned list full CRUD theo quyền.
+
+# UAT-160 Code Item Lifecycle
+Code item Add/Edit/Activate/Deactivate/Retire giữ stable code; referenced item không hard delete.
+
+# UAT-161 Master Data Select All/Bulk
+Select All filtered result + bulk action re-authorize từng item, confirm destructive action và trả partial result.
+
+# UAT-162 Administrative Staging/Publish
+Official administrative data phải qua staging → validate → publish; tenant không sửa trực tiếp effective version.
+
+# UAT-163 Administrative Effective Date
+Historical query theo as-of date trả đúng code/name/parent/version có hiệu lực tại thời điểm đó.
+
+# UAT-164 Administrative Successor
+Retired unit map predecessor/successor hợp lệ; historical records vẫn resolve old version.
+
+# UAT-165 External Agency Lifecycle
+External Agency CRUD/Retire/Bulk giữ source system/external id và không hard delete referenced agency.
+
+# UAT-166 Unit of Measure Versioning
+UoM semantic/conversion rule thay đổi ảnh hưởng reporting phải tạo version; incompatible conversion bị chặn.
+
+# UAT-167 Document Type Master
+Document Type tenant extension không được phá system semantic; referenced document giữ historical snapshot/version.
+
+# UAT-168 Domain/Recipient/Work Case/Meeting/Report Type
+Các tenant-owned master list CRUD/Bulk theo cùng standard và không hard delete item referenced.
+
+# UAT-169 Taxonomy Integrity
+Không circular hierarchy, không duplicate sibling code, không move vào retired parent; historical retired node vẫn resolve.
+
+# UAT-170 Import Validation
+Import file/column mapping/duplicate/parent/effective date được validate trước Diff.
+
+# UAT-171 Import Diff
+Diff phải phân NEW/CHANGED/UNCHANGED/INVALID/CONFLICT/RETIRE_CANDIDATE trước Confirm/Apply.
+
+# UAT-172 Import Apply Idempotency
+Retry cùng batch/checksum sau apply không tạo duplicate; result/history giữ nguyên.
+
+# UAT-173 Import Partial Failure
+Configured atomic boundary hoặc item-level partial result phải rõ; không silent partial success.
+
+# UAT-174 Master Cache Invalidation
+Publish/change master version phát invalidation và client/service không giữ label/semantic cũ quá SLA.
+
+# UAT-175 Master History
+History append-only; filter/export đúng permission và filter snapshot; không sửa/xóa event.
+
+# UAT-176 Snapshot Preservation
+Master rename/retire/version change không rewrite snapshot của business record đã final/issued.
+
 # Exit Criteria
 - 100% UAT P0 PASS.
 - Không workaround cho lỗi thẩm quyền, data loss, versioning, tenant isolation.

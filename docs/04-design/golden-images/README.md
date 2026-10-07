@@ -72,3 +72,34 @@
 ![GS-WEB-12](./GS-WEB-12-quan-tri-tich-hop-che-do.webp)
 
 **Batch 02 commit:** `21233f6c14133e4f8ade947c6ad7b83fddf141c7`
+
+
+## Mobile Golden Image Pack
+
+| Golden Screen | File | Purpose |
+|---|---|---|
+| GS-MOB-01 | GS-MOB-01-home-service-launcher.webp | Home / Service Launcher |
+| GS-MOB-02 | GS-MOB-02-unified-work-inbox.webp | Việc của tôi / Unified Work Inbox |
+| GS-MOB-03 | GS-MOB-03-hoi-vwork.webp | Hỏi VWork |
+| GS-MOB-04 | GS-MOB-04-review-approval.webp | Review / Approval |
+| GS-MOB-05 | GS-MOB-05-tro-ly-cuoc-hop.webp | Trợ lý cuộc họp |
+| GS-MOB-06 | GS-MOB-06-mobile-tool-launcher.webp | Mobile Tool Launcher |
+
+Contact sheet:
+- GS-MOB-00-mobile-golden-pack-contact-sheet.webp
+
+### Mobile implementation rules
+1. Bottom navigation tối đa 5 mục: Trang chủ / Việc / Hỏi VWork / Công cụ / Tôi.
+2. Giữ cùng visual language với Web Golden Pack: navy/deep blue + cyan/teal + light surfaces.
+3. Source badge, citation, AI state, connector state phải dùng cùng semantic với Web.
+4. Mobile ưu tiên completion flow; không ép desktop table/admin layout xuống màn nhỏ.
+5. GS-MOB-01 là mobile shell anchor; GS-MOB-03 khóa pattern assistant/citation; GS-MOB-04 khóa sticky action CTA.
+6. Business/security specs override mockup nếu copy minh họa khác canonical behavior.
+
+### Images
+![GS-MOB-01](./GS-MOB-01-home-service-launcher.webp)
+![GS-MOB-02](./GS-MOB-02-unified-work-inbox.webp)
+![GS-MOB-03](./GS-MOB-03-hoi-vwork.webp)
+![GS-MOB-04](./GS-MOB-04-review-approval.webp)
+![GS-MOB-05](./GS-MOB-05-tro-ly-cuoc-hop.webp)
+![GS-MOB-06](./GS-MOB-06-mobile-tool-launcher.webp)

@@ -23,3 +23,9 @@ jobs:
       - run: pnpm --filter @vwork/web typecheck
       - run: pnpm --filter @vwork/mobile typecheck
       - run: pnpm dlx @redocly/cli@2 lint docs/06-api/openapi/vwork-openapi.yaml
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -e "./services/ai-orchestrator[dev]"
+      - run: ruff check services/ai-orchestrator
+      - run: pytest services/ai-orchestrator

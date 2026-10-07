@@ -1,6 +1,6 @@
 # VWork – Permission Catalog v1.0
 
-**Phạm vi hiện tại:** SC-01 Identity / Shell / Executive + SC-02 Document / Incoming + SC-03 Draft / Workflow + SC-04 Work Case / Task + SC-05 Meeting. Catalog tiếp tục mở rộng theo từng Screen Batch.
+**Phạm vi hiện tại:** SC-01 Identity / Shell / Executive + SC-02 Document / Incoming + SC-03 Draft / Workflow + SC-04 Work Case / Task + SC-05 Meeting + SC-06 Reporting. Catalog tiếp tục mở rộng theo từng Screen Batch.
 
 ## 1. Quy ước
 Permission code: `<DOMAIN>.<RESOURCE>.<ACTION>`.
@@ -231,3 +231,52 @@ Work Case scope không tự động mở rộng quyền đọc mọi related obj
 - EXPLICIT
 
 Audio/transcript có thể có scope hẹp hơn metadata cuộc họp.
+
+
+## 18. Reporting
+- RPT.CYCLE.READ
+- RPT.CYCLE.CREATE
+- RPT.CYCLE.UPDATE
+- RPT.CYCLE.CLOSE
+- RPT.CYCLE.REOPEN
+- RPT.CYCLE.ARCHIVE
+- RPT.CYCLE.BULK
+- RPT.OBLIGATION.READ
+- RPT.OBLIGATION.CREATE
+- RPT.OBLIGATION.UPDATE
+- RPT.OBLIGATION.RETIRE
+- RPT.OBLIGATION.BULK
+- RPT.OBLIGATION.REMIND
+- RPT.SUBMISSION.READ
+- RPT.SUBMISSION.CREATE
+- RPT.SUBMISSION.REPLACE
+- RPT.SUBMISSION.ARCHIVE
+- RPT.SUBMISSION.BULK
+- RPT.SCHEMA.READ
+- RPT.SCHEMA.CREATE_VERSION
+- RPT.SCHEMA.UPDATE_DRAFT
+- RPT.SCHEMA.APPROVE
+- RPT.SCHEMA.BULK
+- RPT.EXTRACTION.RUN
+- RPT.EXTRACTION.READ
+- RPT.EXTRACTION.VERIFY
+- RPT.EXTRACTION.BULK
+- RPT.QUALITY.RUN
+- RPT.QUALITY.READ
+- RPT.QUALITY.RESOLVE
+- RPT.QUALITY.OVERRIDE
+- RPT.QUALITY.BULK
+- RPT.RECONCILIATION.RUN
+- RPT.RECONCILIATION.READ
+- RPT.RECONCILIATION.OVERRIDE
+- RPT.AGGREGATION.RUN
+- RPT.AGGREGATION.READ
+- RPT.DRAFT.GENERATE
+- RPT.DRAFT.READ
+- RPT.DRAFT.UPDATE
+- RPT.DRAFT.SUBMIT
+- RPT.EXPORT.RUN
+- RPT.EXPORT.READ
+
+## 19. Reporting Data Scope
+OWNED_CYCLE / REPORTING_UNIT / ORG_UNIT / ORG_TREE / TENANT / EXPLICIT.

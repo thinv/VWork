@@ -97,7 +97,9 @@ API-INT-005 GET /provenance/{id}
 API-INT-006 GET /ocr-pages/{id}  
 API-INT-007 PATCH /ocr-pages/{id}  
 API-INT-008 POST /document-versions/{id}/classify  
-API-INT-009 GET /document-versions/{id}/classifications
+API-INT-009 GET /document-versions/{id}/classifications  
+API-INT-010 POST /document-versions/{id}/summarize  
+API-INT-011 GET /document-versions/{id}/summary
 
 Trace: FR-021..028.
 
@@ -133,7 +135,10 @@ API-INC-006 PATCH /incoming-requirements/{id}/verify
 API-INC-007 GET /incoming-records/{id}/suggestions  
 API-INC-008 POST /incoming-records/{id}/convert-to-work-case  
 API-INC-009 POST /incoming-requirements/{id}/convert-to-task  
-API-INC-010 POST /incoming-records/{id}/generate-response-package
+API-INC-010 POST /incoming-records/{id}/generate-response-package  
+API-INC-011 POST /incoming-records/bulk-action  
+API-INC-012 POST /incoming-records/{id}/archive  
+API-INC-013 PATCH /incoming-records/{id}
 
 Trace: FR-042..049.
 

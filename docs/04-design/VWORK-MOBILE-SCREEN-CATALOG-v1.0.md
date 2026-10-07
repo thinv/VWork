@@ -70,9 +70,9 @@ Global:
 
 | ID | Màn hình | Route | Actor | API |
 |---|---|---|---|---|
-| MOB-AI-001 | Ask VWork | ai | authorized | AST-001..004 |
-| MOB-AI-002 | Chat theo hồ sơ | ai/context/:id | authorized | AST-003 |
-| MOB-AI-003 | Nguồn trích dẫn | ai/citation/:id | authorized | INT-005/KNO |
+| MOB-AI-001 | Ask VWork | ai | authorized | AST-001..008, KNO-022 |
+| MOB-AI-002 | Chat theo hồ sơ | ai/context/:id | authorized | AST-003/004 + context API + KNO-022 |
+| MOB-AI-003 | Nguồn trích dẫn | ai/citation/:id | authorized | KNO-022 |
 
 ## Meeting
 

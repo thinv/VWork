@@ -346,6 +346,32 @@ Không tạo fork codebase riêng cho từng xã/phường.
 
 ---
 
+## BR-073 – Shared/Master Data
+VWork phải có lớp dữ liệu dùng chung/master data làm source of truth cho danh mục xuyên module.
+
+## BR-074 – Ownership & Semantic Protection
+Master data phải phân biệt System/Tenant/Hybrid/External ownership; tenant không được phá semantic system-owned.
+
+## BR-075 – Version & Effective Date
+Master data ảnh hưởng hồ sơ lịch sử phải hỗ trợ version/effective date và historical resolution.
+
+## BR-076 – Administrative Reference
+Dữ liệu hành chính phải versioned, có parent/predecessor/successor và quy trình staging/validate/publish.
+
+## BR-077 – Unit of Measure
+Đơn vị đo và conversion rule dùng cho reporting phải canonical, compatible và versioned khi thay đổi semantic.
+
+## BR-078 – Taxonomy Governance
+Taxonomy phải quản trị hierarchy, chống cycle/duplicate sibling và giữ historical resolution cho node retired.
+
+## BR-079 – Master Data Import
+Import phải có validate, preview diff, confirm, idempotent apply và partial-failure policy rõ.
+
+## BR-080 – Master Data History & Cache
+Mọi thay đổi master data phải audit; publish/change phải invalidate cache và không rewrite snapshot lịch sử.
+
+---
+
 ## 8. Business Constraints
 
 ### BC-01
@@ -399,7 +425,7 @@ Mọi thay đổi baseline phải qua change control.
 ## 11. Acceptance cấp BRD
 
 BRD được coi là baseline khi:
-- 12 core domain đều có requirement;
+- 12 core domain và lớp Shared/Master Data xuyên suốt đều có requirement;
 - không chứa nghiệp vụ ngoài Product Boundary;
 - mỗi requirement có ID duy nhất;
 - actor/process liên quan xác định được;
@@ -420,4 +446,4 @@ BRD được coi là baseline khi:
 | OBJ-06 | BR-045..050 |
 | OBJ-07 | BR-051..056 |
 | OBJ-08 | BR-010..012, BR-060..063 |
-| OBJ-09 | BR-001, BR-057..072 |
+| OBJ-09 | BR-001, BR-057..080 |

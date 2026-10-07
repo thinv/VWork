@@ -1,7 +1,7 @@
 # VWork – Web Screen Catalog v1.0
 
 **Mục tiêu:** Danh mục màn hình Web Core v1, trace trực tiếp tới Use Case, FR, API và domain.  
-**Nguyên tắc:** Desktop-first, tiếng Việt, permission-aware, mọi màn có loading/empty/error/permission state.
+**Nguyên tắc:** Desktop-first, tiếng Việt, permission-aware, mọi màn có loading/empty/error/permission state. Mọi màn quản lý dữ liệu phải tuân `VWORK-CRUD-BULK-INTERACTION-STANDARD-v1.0`: Thêm, Sửa, Xóa/Lưu trữ, chọn từng dòng, Chọn tất cả và thao tác hàng loạt theo quyền.
 
 ## 1. Navigation cấp 1
 
@@ -437,16 +437,21 @@ Rule:
 
 # 5. Global UX Rules
 
-1. Form dirty-state warning.
-2. Destructive action confirmation.
-3. Async AI action luôn có progress/job state.
-4. Không dùng spinner vô hạn không trạng thái.
-5. Permission denied khác Not Found theo security policy.
-6. AI-generated content có visual marker.
-7. Citation có thể click.
-8. Date/time hiển thị theo tenant/user timezone.
-9. Table hỗ trợ filter/sort/pagination.
-10. P0 flow usable ở 1366x768 trở lên.
+1. Mọi màn danh sách quản lý dữ liệu phải có **Thêm – Sửa – Xóa/Lưu trữ – checkbox từng dòng – Chọn tất cả – bulk action bar**.
+2. Mọi màn chi tiết đối tượng có thể thay đổi phải có **Sửa** và **Xóa/Lưu trữ/Thu hồi** theo quyền.
+3. Dữ liệu immutable/history/audit không được sửa/xóa vật lý; dùng Export/Compare/Archive hoặc action nghiệp vụ phù hợp.
+4. Select All mặc định chọn trang hiện tại; chọn toàn bộ kết quả phải có bước xác nhận riêng.
+5. Destructive bulk action phải confirm và hiển thị số bản ghi bị ảnh hưởng.
+6. Form dirty-state warning.
+7. Destructive action confirmation.
+8. Async AI action luôn có progress/job state.
+9. Không dùng spinner vô hạn không trạng thái.
+10. Permission denied khác Not Found theo security policy.
+11. AI-generated content có visual marker.
+12. Citation có thể click.
+13. Date/time hiển thị theo tenant/user timezone.
+14. Table hỗ trợ filter/sort/pagination.
+15. P0 flow usable ở 1366x768 trở lên.
 
 ---
 

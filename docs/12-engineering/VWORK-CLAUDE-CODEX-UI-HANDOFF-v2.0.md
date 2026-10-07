@@ -160,3 +160,20 @@ Implementation rule:
 3. Use the relevant Golden Screen as composition reference for each flow.
 4. Generated mockup copy is illustrative; canonical Screen/BRULE/Permission/API specs control behavior.
 5. Do not invent a new module theme or alternate app shell without approved design change.
+
+
+# 16. Golden Image Pack – Batch 02
+
+Repository path: `docs/04-design/golden-images/`
+
+Approved assets:
+- `GS-WEB-07-tro-ly-cuoc-hop.webp`
+- `GS-WEB-08-tong-hop-bao-cao.webp`
+- `GS-WEB-09-hoi-vwork.webp`
+- `GS-WEB-10-kho-mau-tri-thuc.webp`
+- `GS-WEB-11-dieu-hanh-daily-brief.webp`
+- `GS-WEB-12-quan-tri-tich-hop-che-do.webp`
+
+Batch commit: `21233f6c14133e4f8ade947c6ad7b83fddf141c7`
+
+Use GS-WEB-01 as global shell/style anchor; use GS-WEB-07..12 as composition references for Meeting, Reporting, Assistant, Knowledge, Leader and Admin surfaces.

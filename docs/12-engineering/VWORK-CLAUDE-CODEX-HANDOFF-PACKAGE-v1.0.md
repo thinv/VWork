@@ -1,5 +1,23 @@
 # VWork – Claude/Codex Handoff Package v1.0
 
+## 0. Product Refactor v2 Gate
+
+**Quan trọng:** Product baseline mới đã được mở tại:
+- VWORK-PRODUCT-POSITIONING-v2.0.md
+- VWORK-PRODUCT-BOUNDARY-v2.0.md
+- VWORK-NATIVE-INTEGRATED-OPTIONAL-MATRIX-v1.0.md
+- VWORK-CORE-TOOLS-SKILL-CATALOG-v1.0.md
+- VWORK-BRD-v2.0.md
+
+Cho tới khi Wave R3/R4 hoàn tất:
+- technical baseline v1.x vẫn authoritative cho state/security/API/data semantics;
+- **không tiếp tục xây user-facing navigation/module theo IA v1 như một eOffice đầy đủ**;
+- không expose toàn bộ 151 screens cho ordinary users;
+- mọi UI mới phải chờ Screen Exposure Matrix + User-facing IA v2/Golden Screens hoặc được Product duyệt riêng;
+- backend foundation có thể tiếp tục nếu không phụ thuộc packaging/ownership đang refactor.
+
+Mục tiêu v2: AI-first, task-centric, integration-first; external System of Record được giữ nguyên khi tồn tại.
+
 ## 1. Handoff Status
 Business/Screen/Traceability baseline đã qua:
 - Final 151-Screen Audit: PASS
@@ -22,7 +40,12 @@ Engineering may start implementation theo feature/domain package, nhưng không 
 
 ## 3. Mandatory Documents Before Coding
 Global:
-1. VWORK-PRODUCT-BOUNDARY-v1.0.md
+1. VWORK-PRODUCT-POSITIONING-v2.0.md
+2. VWORK-PRODUCT-BOUNDARY-v2.0.md
+3. VWORK-NATIVE-INTEGRATED-OPTIONAL-MATRIX-v1.0.md
+4. VWORK-CORE-TOOLS-SKILL-CATALOG-v1.0.md
+5. VWORK-BRD-v2.0.md
+6. VWORK-PRODUCT-BOUNDARY-v1.0.md (technical history/baseline)
 2. VWORK-BUSINESS-PROCESS-SPEC-v1.0.md
 3. VWORK-BRD-v1.0.md
 4. VWORK-ACTOR-CATALOG-v1.0.md

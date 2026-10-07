@@ -88,11 +88,11 @@ Global:
 
 | ID | Màn hình | Route | Actor | API |
 |---|---|---|---|---|
-| MOB-NOT-001 | Thông báo | notifications | All | GOV-016/017 |
-| MOB-PRO-001 | Hồ sơ cá nhân | profile | All | IAM-003 |
-| MOB-PRO-002 | Ủy quyền của tôi | profile/delegation | ACT-01/05 | IAM-017/018 |
-| MOB-PRO-003 | Phiên đăng nhập | profile/sessions | All | IAM-004/005 |
-| MOB-PRO-004 | Thiết lập ứng dụng | settings | All | local/server prefs |
+| MOB-NOT-001 | Thông báo | notifications | All | GOV-016/017/022/046/047 |
+| MOB-PRO-001 | Hồ sơ cá nhân | profile | All | IAM-003/048 |
+| MOB-PRO-002 | Ủy quyền của tôi | profile/delegation | ACT-01/05 | IAM-017/018/036..038 |
+| MOB-PRO-003 | Phiên đăng nhập | profile/sessions | All | IAM-004/005/045 |
+| MOB-PRO-004 | Thiết lập ứng dụng | settings | All | IAM-046/047, GOV-046/047 |
 
 **Tổng theo Screen ID:** 34 màn.
 

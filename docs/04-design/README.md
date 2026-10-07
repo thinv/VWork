@@ -7,6 +7,7 @@
 - [x] VWORK-UI-SPEC-v1.0.md
 - [x] VWORK-DESIGN-SYSTEM-v1.0.md
 - [x] VWORK-CRUD-BULK-INTERACTION-STANDARD-v1.0.md
+- [x] VWORK-SCREEN-CRUD-BULK-MATRIX-v1.0.md
 
 ## Tiếp theo
 - [ ] High-fidelity mockups P0

@@ -9,6 +9,20 @@ on:
 jobs:
   checks:
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_DB: vwork_ci
+          POSTGRES_USER: vwork_ci
+          POSTGRES_PASSWORD: ci_only
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U vwork_ci -d vwork_ci"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
@@ -20,9 +34,15 @@ jobs:
       - run: pnpm install --no-frozen-lockfile
       - run: pnpm --filter @vwork/contracts typecheck
       - run: pnpm --filter @vwork/core-api typecheck
+      - run: pnpm --filter @vwork/core-api build
       - run: pnpm --filter @vwork/web typecheck
+      - run: pnpm --filter @vwork/web build
       - run: pnpm --filter @vwork/mobile typecheck
       - run: pnpm --package=@redocly/cli@2 dlx redocly lint docs/06-api/openapi/vwork-openapi.yaml
+      - name: Migration 0001 smoke test
+        env:
+          PGPASSWORD: ci_only
+        run: psql -h localhost -U vwork_ci -d vwork_ci -v ON_ERROR_STOP=1 -f infra/db/migrations/0001_foundation.sql
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"

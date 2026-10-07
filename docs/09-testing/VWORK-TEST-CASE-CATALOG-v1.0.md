@@ -100,5 +100,19 @@ TC-OPS-002 Duplicate event idempotent.
 TC-OPS-003 Backup restore.
 TC-OPS-004 Provider outage degrade.
 
+## CRUD/Bulk UI
+TC-CRUD-001 List screen có Add/Create theo quyền.
+TC-CRUD-002 Row Edit action theo quyền.
+TC-CRUD-003 Delete/Archive action đúng semantics.
+TC-CRUD-004 Select từng dòng.
+TC-CRUD-005 Select All page hiện tại.
+TC-CRUD-006 Select toàn bộ filtered result có confirm.
+TC-CRUD-007 Filter đổi làm reset/cảnh báo selection.
+TC-CRUD-008 Bulk delete/archive confirm số lượng.
+TC-CRUD-009 Bulk action re-authorize backend.
+TC-CRUD-010 Partial success trả chi tiết.
+TC-CRUD-011 Immutable object không sửa/hard-delete.
+TC-CRUD-012 CRUD/Bulk action có audit khi required.
+
 ## Release Gate
 Mọi TC P0 trong scope release phải PASS; không release khi còn S0/S1.

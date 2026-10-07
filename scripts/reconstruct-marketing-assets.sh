@@ -13,7 +13,7 @@ decode_asset() {
   file "$out"
 }
 
-decode_asset "WEB-MKT-01" "$ROOT/golden/marketing/WEB-MKT-01-vwork-homepage-desktop.webp"
-decode_asset "WEB-GOV-01" "$ROOT/golden/marketing/WEB-GOV-01-trolycongchuc-homepage-desktop.webp"
+decode_asset "WEB-MKT-01-MICRO" "$ROOT/golden/marketing/WEB-MKT-01-vwork-homepage-desktop.webp"
+decode_asset "WEB-GOV-01-MICRO" "$ROOT/golden/marketing/WEB-GOV-01-trolycongchuc-homepage-desktop.webp"
 decode_asset "VWORK-LOGO" "$ROOT/brand/vwork/logo-primary.webp"
 decode_asset "TCC-LOGO" "$ROOT/brand/trolycongchuc/logo-primary.webp"

@@ -190,7 +190,7 @@ Chi tiết đầy đủ xem: `VWORK-SHARED-MASTER-DATA-SCREEN-CATALOG-v1.0.md`.
 Nhóm này gồm WEB-MD-001..020: Code Lists, Administrative Units, External Agencies, Units of Measure, Document Types, Domains, Recipient Groups, Work Case Types, Meeting Types, Report Types, Taxonomy, Import/Diff và History.
 
 
-**Tổng catalog Core trước Shared/Master Data:** 89 màn/route-level views. Bộ `VWORK-SHARED-MASTER-DATA-SCREEN-CATALOG-v1.0.md` bổ sung 20 màn quản trị dữ liệu dùng chung, nâng tổng baseline Web lên **109 màn/route-level views**. Một số side panel/modal dùng chung không tính thành màn riêng.
+**Tổng catalog Core theo Screen ID:** 97 màn/route-level views. Bộ `VWORK-SHARED-MASTER-DATA-SCREEN-CATALOG-v1.0.md` bổ sung 20 màn quản trị dữ liệu dùng chung, nâng tổng baseline Web lên **117 màn/route-level views**. Một số side panel/modal dùng chung không tính thành màn riêng.
 
 ---
 

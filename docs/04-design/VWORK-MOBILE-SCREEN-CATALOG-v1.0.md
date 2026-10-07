@@ -50,10 +50,10 @@ Global:
 
 | ID | Màn hình | Route | Actor | API |
 |---|---|---|---|---|
-| MOB-DOC-001 | Danh sách văn bản | documents | authorized | DOC-004 |
-| MOB-DOC-002 | Xem văn bản | documents/:id | authorized | DOC-005/009 |
-| MOB-DOC-003 | AI tóm tắt văn bản | documents/:id/summary | authorized | AST/INC |
-| MOB-DOC-004 | Dữ liệu chính & deadline | documents/:id/facts | authorized | INT-003/005 |
+| MOB-DOC-001 | Danh sách văn bản | documents | authorized | DOC-001..004/011/017 |
+| MOB-DOC-002 | Xem văn bản | documents/:id | authorized | DOC-005/009/011/014 |
+| MOB-DOC-003 | AI tóm tắt văn bản | documents/:id/summary | authorized | INT-010/011 |
+| MOB-DOC-004 | Dữ liệu chính & deadline | documents/:id/facts | authorized | INT-003..005 |
 
 ## Work
 

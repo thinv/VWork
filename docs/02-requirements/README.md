@@ -5,6 +5,7 @@ Chứa toàn bộ hồ sơ yêu cầu nghiệp vụ và phần mềm.
 ## Đã hoàn thành baseline
 - [x] VWORK-BUSINESS-PROCESS-SPEC-v1.0.md
 - [x] VWORK-BRD-v1.0.md
+- [x] VWORK-BRD-v2.0.md — product/business baseline mới cho xã/phường
 - [x] VWORK-ACTOR-CATALOG-v1.0.md
 - [x] VWORK-USE-CASE-CATALOG-v1.0.md
 - [x] VWORK-BUSINESS-RULE-CATALOG-v1.0.md
@@ -68,7 +69,7 @@ Research/Capability → Business Process → BRD → Actor → Authority → Use
 ID đã cấp giữ ổn định. Requirement/rule/use case loại bỏ phải Deprecated/Removed, không tái sử dụng ID.
 
 ## Trọng tâm tiếp theo
-- Implementation theo Claude/Codex Handoff Package v1.0
-- Giữ traceability 372 API / 151 Screen / 176 UAT
-- Không thay đổi canonical state/permission/API/master data ngoài change control
-- Thu thập implementation/test/UAT/release evidence
+- Wave R3: FR/SRS v2 + System-of-Record Registry + Integration Profile + Tool/Skill entitlement + Unified Work Inbox.
+- Wave R4: reclassify 151 screens theo Exposure/Mode/Audience/SourceOfTruth và xây User-facing IA/Golden Screens.
+- Giữ technical baseline 372 API / 151 Screen / 176 UAT cho đến khi Delta Audit phê duyệt thay đổi.
+- Không thay canonical state/permission/API/master data chỉ vì đổi packaging/UX.

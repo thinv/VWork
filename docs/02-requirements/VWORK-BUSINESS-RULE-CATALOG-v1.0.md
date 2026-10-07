@@ -569,7 +569,58 @@ Retry/cancel/bulk job operations chỉ hợp lệ theo job state và phải idem
 ## BRULE-160 – Session and Preference Scope
 Session revocation áp đúng user/session; app preference chỉ thay đổi presentation/user preference, không được dùng để thay đổi authorization/security policy.
 
-# 18. Business Rule → Requirement Mapping
+
+# 18. Shared / Master Data Governance
+
+## BRULE-161 – Master Data Single Source of Truth
+Mỗi master dataset có một source of truth/owner rõ; domain/client không tự định nghĩa semantic trùng lặp.
+
+## BRULE-162 – Code Is Stable, Label Is Mutable
+Code dùng làm khóa máy và không đổi sau publish/reference; label/description có thể đổi theo version/effective date.
+
+## BRULE-163 – Referenced Master Data Cannot Hard Delete
+Item đã được tham chiếu không hard delete; chuyển INACTIVE/RETIRED và giữ historical resolution.
+
+## BRULE-164 – System Semantic Protection
+Tenant không được sửa semantic/code của system-owned code list; chỉ extension/label override khi policy cho phép.
+
+## BRULE-165 – Effective-Date Resolution
+Query lịch sử phải resolve master data theo version/effective period tại thời điểm nghiệp vụ, không dùng latest label/code một cách mù quáng.
+
+## BRULE-166 – Administrative Unit Versioning
+Administrative unit phải có version/effective dates/predecessor/successor; không hard-code số lượng đơn vị hành chính trong logic.
+
+## BRULE-167 – Administrative Official Data Protection
+Platform/external-authoritative administrative code không được tenant tùy ý sửa; mọi thay đổi qua staging/validation/publish.
+
+## BRULE-168 – Unit of Measure Compatibility
+UoM conversion chỉ thực hiện trong approved conversion group/rule; thay đổi conversion rule ảnh hưởng báo cáo phải versioned.
+
+## BRULE-169 – Taxonomy Integrity
+Taxonomy không được tạo cycle, duplicate sibling code hoặc move vào retired/incompatible parent.
+
+## BRULE-170 – Master Import Preview Required
+Import phải qua Upload → Parse → Validate → Diff Preview → Confirm → Apply; không apply trực tiếp bỏ qua diff.
+
+## BRULE-171 – Import Idempotency
+Import/apply phải idempotent theo dataset/code/version/batch checksum; retry không tạo duplicate.
+
+## BRULE-172 – Master Import Partial Failure Policy
+Apply batch phải atomic theo configured boundary hoặc trả item-level result rõ; không silent partial success.
+
+## BRULE-173 – Master Data Publish Invalidates Cache
+Publish/version/effective-date change phải phát invalidation để các client/service không giữ label/semantic cũ vô hạn.
+
+## BRULE-174 – Snapshot Preservation
+Business record đã final phải giữ snapshot label/version khi cần chứng cứ; master rename không rewrite snapshot lịch sử.
+
+## BRULE-175 – Master Data Bulk Reauthorization
+Select All/Bulk phải re-authorize từng item theo ownership/state/system-vs-tenant semantics và trả partial result.
+
+## BRULE-176 – Master History Append-Only
+History/version/import/audit record không sửa/xóa từ UI; export có permission và filter snapshot.
+
+# 19. Business Rule → Requirement Mapping
 
 | Nhóm rule | BRD chính |
 |---|---|
@@ -589,10 +640,11 @@ Session revocation áp đúng user/session; app preference chỉ thay đổi pre
 | 121–132 | Cross-Domain Orchestration |
 | 133–144 | Knowledge / RAG Governance |
 | 145–160 | Governance / IAM / Platform Administration |
+| 161–176 | Shared / Master Data Governance |
 
 ---
 
-# 19. Rule Enforcement Layers
+# 20. Rule Enforcement Layers
 
 | Layer | Ví dụ |
 |---|---|
@@ -608,7 +660,7 @@ Session revocation áp đúng user/session; app preference chỉ thay đổi pre
 
 ---
 
-# 20. Exit Criteria
+# 21. Exit Criteria
 
 Business Rule Catalog được coi là baseline khi:
 - các rule trọng yếu của 12 domain đều được định danh;

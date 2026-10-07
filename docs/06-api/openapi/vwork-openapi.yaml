@@ -4184,6 +4184,125 @@ paths:
         '403': { $ref: '#/components/responses/Forbidden' }
         '409': { $ref: '#/components/responses/Conflict' }
         '422': { $ref: '#/components/responses/Validation' }
+  /executive/inbox/bulk-action:
+    post:
+      tags: [Executive]
+      operationId: api_exe_007
+      summary: "API-EXE-007 - POST /executive/inbox/bulk-action"
+      x-api-id: API-EXE-007
+      x-fr: [FR-101]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /executive/signals/bulk-action:
+    post:
+      tags: [Executive]
+      operationId: api_exe_008
+      summary: "API-EXE-008 - POST /executive/signals/bulk-action"
+      x-api-id: API-EXE-008
+      x-fr: [FR-107]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /assistant/conversations:
+    get:
+      tags: [Executive]
+      operationId: api_ast_005
+      summary: "API-AST-005 - GET /assistant/conversations"
+      x-api-id: API-AST-005
+      x-fr: [FR-105]
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /assistant/conversations/{id}:
+    patch:
+      tags: [Executive]
+      operationId: api_ast_006
+      summary: "API-AST-006 - PATCH /assistant/conversations/{id}"
+      x-api-id: API-AST-006
+      x-fr: [FR-105]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /assistant/conversations/{id}/archive:
+    post:
+      tags: [Executive]
+      operationId: api_ast_007
+      summary: "API-AST-007 - POST /assistant/conversations/{id}/archive"
+      x-api-id: API-AST-007
+      x-fr: [FR-105]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /assistant/conversations/bulk-action:
+    post:
+      tags: [Executive]
+      operationId: api_ast_008
+      summary: "API-AST-008 - POST /assistant/conversations/bulk-action"
+      x-api-id: API-AST-008
+      x-fr: [FR-105]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
 components:
   securitySchemes:
     bearerAuth:

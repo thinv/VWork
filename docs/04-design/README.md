@@ -10,13 +10,15 @@
 - [x] VWORK-SCREEN-CRUD-BULK-MATRIX-v1.0.md
 - [x] VWORK-SCREEN-COMPLETENESS-AUDIT-v1.0.md
 - [x] VWORK-SCREEN-COMPLETENESS-AUDIT-v1.1.md
+- [x] VWORK-SCREEN-COMPLETENESS-AUDIT-v1.2.md
+- [x] VWORK-SCREEN-SPEC-v1.1-SC02-DOCUMENT-INCOMING.md
 - [x] VWORK-SCREEN-GAP-CLOSURE-PLAN-v1.0.md
 - [x] VWORK-SCREEN-SPEC-v1.1-SC01-IDENTITY-SHELL-EXECUTIVE.md
 - [x] VWORK-SHARED-MASTER-DATA-SCREEN-CATALOG-v1.0.md
 
 ## Screen closure progress
 - [x] SC-01 Identity / Shell / Executive — 19/19 ENGINEERING READY
-- [ ] SC-02 Document / Incoming
+- [x] SC-02 Document / Incoming — 21/21 ENGINEERING READY
 - [ ] SC-03 Draft / Workflow
 - [ ] SC-04 Work Case / Task
 - [ ] SC-05 Meeting

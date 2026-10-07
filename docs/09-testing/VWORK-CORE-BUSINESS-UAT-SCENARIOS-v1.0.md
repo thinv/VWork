@@ -201,6 +201,42 @@ Tạo Work Case/Task từ requirement đã xác nhận, giữ source/provenance 
 # UAT-60 Response Package
 Bộ hồ sơ phản hồi phải pin nguồn, context, template/version; thiếu context thì không tạo official package.
 
+# UAT-61 Draft Context Pinning
+Draft phải pin source document version, template version và context snapshot; source/template đổi sau đó không silently đổi draft cũ.
+
+# UAT-62 Draft Review Stale
+Sau AI review, nếu người dùng sửa nội dung thì review result phải được đánh dấu stale và yêu cầu review lại trước submit theo policy.
+
+# UAT-63 Review Blocker Override
+BLOCKER chặn submit; chỉ actor có DRF.REVIEW.OVERRIDE_BLOCKER mới override, bắt buộc lý do và audit.
+
+# UAT-64 Draft Bulk
+Select All + bulk archive/delete chỉ tác động draft đủ quyền/state; draft submitted/referenced không hard delete.
+
+# UAT-65 Approval Exact Version
+Approve chỉ hợp lệ với đúng submitted version; version đổi sau submit phải chặn bằng stale-version conflict.
+
+# UAT-66 Approval Return/Reject
+Return/Reject giữ lịch sử, lý do bắt buộc theo policy; không overwrite action cũ.
+
+# UAT-67 Approval Delegation
+Delegate chỉ hợp lệ trong effective window/scope; không chain delegation mặc định và không vượt quyền gốc.
+
+# UAT-68 Parallel Approval
+ALL/ANY/QUORUM/ORDERED_GROUP phải thực thi đúng policy đã publish.
+
+# UAT-69 Approval Bulk
+Bulk approval mặc định bị chặn; chỉ chạy khi workflow policy bật, cùng step/subject rule và re-authorize từng item.
+
+# UAT-70 Workflow Definition Versioning
+Definition đã publish không sửa in-place; thay đổi tạo version mới và instance đang chạy tiếp tục pin version cũ.
+
+# UAT-71 Workflow Definition Archive
+Definition còn active instance không được archive nếu policy chặn; audit đầy đủ.
+
+# UAT-72 Mobile Approval Stale
+Mobile approval phải refresh submitted version/state trước action; stale/offline cached action không được gửi thành công.
+
 # Exit Criteria
 - 100% UAT P0 PASS.
 - Không workaround cho lỗi thẩm quyền, data loss, versioning, tenant isolation.

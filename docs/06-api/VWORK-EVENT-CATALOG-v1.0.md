@@ -179,7 +179,17 @@ EVT-KNO-002 template.archived.v1
 EVT-KNO-003 knowledge.published.v1  
 EVT-KNO-004 knowledge.reindex-requested.v1  
 EVT-KNO-005 knowledge.indexed.v1  
-EVT-KNO-006 knowledge.archived.v1
+EVT-KNO-006 knowledge.archived.v1  
+EVT-KNO-007 knowledge.revoked.v1  
+EVT-KNO-008 knowledge.restored.v1  
+EVT-KNO-009 knowledge.permission-changed.v1  
+EVT-KNO-010 knowledge.invalidation-requested.v1  
+EVT-KNO-011 knowledge.cache-invalidated.v1  
+EVT-KNO-012 taxonomy.assignment-updated.v1  
+EVT-KNO-013 retrieval.executed.v1  
+EVT-KNO-014 retrieval.insufficient-evidence.v1  
+EVT-KNO-015 retrieval.conflicting-evidence.v1  
+EVT-KNO-016 prompt-injection.blocked.v1
 
 Consumers: search/vector indexer, cache invalidation, audit.
 

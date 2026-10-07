@@ -12,6 +12,10 @@ Chứa toàn bộ hồ sơ yêu cầu nghiệp vụ và phần mềm.
 - [x] VWORK-FUNCTIONAL-REQUIREMENTS-v1.0.md
 - [x] VWORK-NON-FUNCTIONAL-REQUIREMENTS-v1.0.md
 - [x] VWORK-SRS-v1.0.md
+- [x] VWORK-BUSINESS-RULE-v2-ADDITIONS-v1.0.md — BRULE-177..200
+- [x] VWORK-UNIFIED-WORK-INBOX-BUSINESS-SYSTEM-SPEC-v1.0.md
+- [x] VWORK-SRS-v2.0-DELTA.md
+- [x] VWORK-FUNCTIONAL-REQUIREMENTS-v2.0-DELTA.md — 40 yêu cầu hệ thống mới
 - [x] VWORK-AUTHORITY-RESPONSIBILITY-MATRIX-v1.0.md
 - [x] VWORK-STATE-MACHINE-CATALOG-v1.0.md
 - [x] VWORK-EXCEPTION-EDGE-CASE-CATALOG-v1.0.md
@@ -39,7 +43,7 @@ Chứa toàn bộ hồ sơ yêu cầu nghiệp vụ và phần mềm.
 - 80 Business Requirements
 - 14 Business Actors
 - 104 Use Cases
-- 176 Business Rules
+- 200 Business Rules (176 v1 + 24 Product v2)
 - 134 Functional Requirements
 - 94 Non-Functional Requirements
 
@@ -69,7 +73,7 @@ Research/Capability → Business Process → BRD → Actor → Authority → Use
 ID đã cấp giữ ổn định. Requirement/rule/use case loại bỏ phải Deprecated/Removed, không tái sử dụng ID.
 
 ## Trọng tâm tiếp theo
-- Wave R3: FR/SRS v2 + System-of-Record Registry + Integration Profile + Tool/Skill entitlement + Unified Work Inbox.
+- Wave R3: **COMPLETED** — System Requirement Refactor.
 - Wave R4: reclassify 151 screens theo Exposure/Mode/Audience/SourceOfTruth và xây User-facing IA/Golden Screens.
 - Giữ technical baseline 372 API / 151 Screen / 176 UAT cho đến khi Delta Audit phê duyệt thay đổi.
 - Không thay canonical state/permission/API/master data chỉ vì đổi packaging/UX.

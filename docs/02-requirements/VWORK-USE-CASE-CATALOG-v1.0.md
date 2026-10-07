@@ -31,7 +31,7 @@ Priority:
 
 ---
 
-# 2. Catalog tổng thể – 96 Use Cases
+# 2. Catalog tổng thể – 104 Use Cases
 
 ## Domain 1 – Identity & Organization
 
@@ -190,6 +190,19 @@ Priority:
 | UC-096 | Backup/restore và kiểm tra khôi phục | ACT-11 | BP-12 | P0 | Recovery evidence |
 
 ---
+
+## Cross-cutting – Shared / Master Data
+
+| ID | Use Case | Actor | Process | Priority | Kết quả |
+|---|---|---|---|---|---|
+| UC-097 | Quản lý Code List và Item | ACT-10 | BP-12 | P0 | Canonical code lists |
+| UC-098 | Quản lý dữ liệu hành chính | ACT-10/11 | BP-12 | P0 | Versioned administrative reference |
+| UC-099 | Quản lý cơ quan ngoài và đơn vị đo | ACT-10/08 | BP-12 | P0 | Shared agencies/UoM |
+| UC-100 | Quản lý danh mục nghiệp vụ tenant | ACT-10 | BP-12 | P0 | Document/Domain/Recipient/Work/Meeting/Report types |
+| UC-101 | Quản lý taxonomy | ACT-10/13 | BP-10/12 | P0 | Governed taxonomy tree |
+| UC-102 | Import Master Data | ACT-10 | BP-12 | P0 | Validated diff/apply batch |
+| UC-103 | Xem lịch sử/effective version | ACT-10/14 | BP-12 | P0 | Historical resolution |
+| UC-104 | Publish và invalidate Master Data cache | ACT-10/11 | BP-12 | P0 | Consistent shared data cache |
 
 # 3. Use Case chi tiết trọng yếu
 

@@ -47,6 +47,13 @@ Một số API mở rộng WRK/MTG/RPT/KNO/GOV/MD trỏ FR tồn tại nhưng sa
 Remediation: sửa 129 x-fr mapping về đúng FR semantic.
 Status: CLOSED.
 
+### F151-005 – OpenAPI duplicate path blocks
+Severity: P0.
+Các batch mở rộng đã tạo 26 path key lặp trong YAML; operationId/x-api-id vẫn unique nhưng Redocly lint fail.
+Remediation: merge về 322 unique path, giữ nguyên 372 unique operations và 0 duplicate method.
+Validation: CI run 37613779021 trên SHA 18f62a1f32d3cd401fa4d2f428718bcf9b35d5ea PASS toàn bộ.
+Status: CLOSED.
+
 ## 5. Screen Result
 - ENGINEERING READY: 151
 - PARTIAL: 0
@@ -55,5 +62,8 @@ Status: CLOSED.
 ## 6. Qualification Note
 151/151 ở đây nghĩa là business/design contract đủ để engineering triển khai; không đồng nghĩa code đã hoàn thành. Release vẫn cần CI, implementation, automated tests, security/performance/evaluation/UAT evidence.
 
-## 7. Exit
+## 7. Technical Evidence
+CI run 37613779021: PASS — contracts/core/web/mobile checks, Redocly lint, migration smoke, AI orchestrator Ruff/Pytest.
+
+## 8. Exit
 FINAL SCREEN GATE: PASS.

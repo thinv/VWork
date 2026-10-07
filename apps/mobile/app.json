@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "VWork",
+    "slug": "vwork",
+    "scheme": "vwork",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "plugins": ["expo-router"],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "vn.dcv.vwork"
+    }
+  }
+}

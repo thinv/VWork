@@ -1,6 +1,6 @@
 # VWork – Audit Event Catalog v1.0
 
-**Phạm vi hiện tại:** SC-01 Identity / Shell / Executive + SC-02 Document / Incoming + SC-03 Draft / Workflow + SC-04 Work Case / Task + SC-05 Meeting + SC-06 Reporting + SC-07 Knowledge / AI.
+**Phạm vi hiện tại:** SC-01 Identity / Shell / Executive + SC-02 Document / Incoming + SC-03 Draft / Workflow + SC-04 Work Case / Task + SC-05 Meeting + SC-06 Reporting + SC-07 Knowledge / AI + SC-08 Governance.
 
 ## 1. Quy ước
 Audit ID: `AUD-<DOMAIN>-NNN`.

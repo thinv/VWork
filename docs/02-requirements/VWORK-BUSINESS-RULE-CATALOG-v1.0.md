@@ -439,7 +439,47 @@ Create/Update/Delete/Archive/Bulk action đối với dữ liệu nghiệp vụ 
 
 ---
 
-# 15. Business Rule → Requirement Mapping
+
+# 15. Cross-Domain Orchestration
+
+## BRULE-121 – Source Link Required
+Mọi Work Case/Task/Draft được tạo từ Incoming/Document/Meeting/Report phải lưu source object + source version/provenance khi khả thi.
+
+## BRULE-122 – Cross-Domain Idempotency
+Command tạo đối tượng mới từ nguồn khác domain phải có idempotency key hoặc duplicate guard để tránh tạo trùng ngoài ý muốn.
+
+## BRULE-123 – Routing Confirmation Gate
+AI routing/suggested owner không được trở thành Task owner chính thức trước human confirmation.
+
+## BRULE-124 – Deadline Provenance Propagation
+Deadline được chuyển từ Incoming requirement sang Work Case/Task phải giữ source/provenance và distinction giữa candidate/official.
+
+## BRULE-125 – Approval Return Synchronization
+approval.returned phải đưa đúng submitted Draft version/subject về state RETURNED hoặc state được workflow định nghĩa; không tác động version khác.
+
+## BRULE-126 – Approval Approval Synchronization
+approval.approved phải áp lên đúng pinned subject version; subject state được cập nhật theo workflow contract và audit correlation.
+
+## BRULE-127 – Rejected Subject Preservation
+approval.rejected không xóa Draft/Document/Work Case; subject history và submitted version phải được giữ.
+
+## BRULE-128 – Cross-Domain Correlation
+Các object/event sinh ra trong cùng một business chain phải giữ correlationId/causationId để truy vết end-to-end.
+
+## BRULE-129 – Related Object Authorization
+Liên kết Work Case ↔ Document/Meeting/Task không tự cấp quyền đọc related object; mỗi lần mở phải re-authorize domain gốc.
+
+## BRULE-130 – Task Completion Non-Transitive
+Task COMPLETED không tự động làm Work Case COMPLETED; Work Case closure phải chạy closure gate riêng.
+
+## BRULE-131 – Source Mutation Does Not Rewrite History
+Nguồn thay version/metadata sau khi tạo Draft/Approval/Task không được rewrite snapshot/provenance lịch sử; hệ thống tạo stale/reconciliation signal khi cần.
+
+## BRULE-132 – Cross-Domain Event Delivery
+State synchronization liên-domain phải dùng transactional/outbox event hoặc command orchestration có idempotency; consumer phải deduplicate.
+
+---
+# 16. Business Rule → Requirement Mapping
 
 | Nhóm rule | BRD chính |
 |---|---|
@@ -456,10 +496,11 @@ Create/Update/Delete/Archive/Bulk action đối với dữ liệu nghiệp vụ 
 | 093–096 | BR-051..054 |
 | 097–110 | BR-060..072 |
 | 111–120 | Cross-cutting CRUD/UI/Data Governance |
+| 121–132 | Cross-Domain Orchestration |
 
 ---
 
-# 16. Rule Enforcement Layers
+# 17. Rule Enforcement Layers
 
 | Layer | Ví dụ |
 |---|---|
@@ -475,7 +516,7 @@ Create/Update/Delete/Archive/Bulk action đối với dữ liệu nghiệp vụ 
 
 ---
 
-# 17. Exit Criteria
+# 18. Exit Criteria
 
 Business Rule Catalog được coi là baseline khi:
 - các rule trọng yếu của 12 domain đều được định danh;

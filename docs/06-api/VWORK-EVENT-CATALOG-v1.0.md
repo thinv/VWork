@@ -276,3 +276,33 @@ Mỗi event cần:
 - test fixture.
 
 Breaking payload change → version mới.
+
+
+# 16. Cross-Domain Orchestration Events
+
+EVT-XD-001 source.stale.v1  
+Khi source version/metadata ảnh hưởng downstream context sau khi object downstream đã được tạo.
+
+EVT-XD-002 downstream.reconciliation-required.v1  
+Yêu cầu người dùng xác nhận việc đồng bộ owner/deadline/content từ source thay đổi sang downstream object.
+
+EVT-XD-003 post-approval-action.requested.v1  
+Yêu cầu thực thi Post-Approval Action theo WorkflowDefinitionVersion.
+
+EVT-XD-004 post-approval-action.completed.v1  
+Post-action hoàn tất; payload chỉ chứa target refs/result metadata.
+
+EVT-XD-005 post-approval-action.failed.v1  
+Post-action thất bại; retry/dead-letter theo policy.
+
+## 16.1 Consumer Mapping
+- approval.approved.v1 → Draft state sync + optional EVT-XD-003.
+- approval.returned.v1 → exact submitted Draft state RETURNED.
+- approval.rejected.v1 → exact submitted Draft state REJECTED.
+- task.completed.v1 → Work Case projection/progress update only.
+- source.stale.v1 → tạo reconciliation signal; không silent rewrite downstream.
+- incoming.converted-to-case.v1 → không tạo lại Case nếu idempotency đã xử lý.
+
+## 16.2 Idempotency
+Consumer phải deduplicate theo eventId.
+Post-approval action deduplicate theo workflowInstanceId + actionId + subjectVersion.

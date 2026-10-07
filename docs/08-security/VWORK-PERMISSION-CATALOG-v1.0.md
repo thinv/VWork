@@ -144,3 +144,44 @@ Văn bản có classification/mật/khẩn có thể thu hẹp scope thêm theo 
 - EXPLICIT
 
 Approval luôn giới hạn thêm bởi active approval assignment/delegation và subject version/state.
+
+
+## 13. Work Case
+- WRK.CASE.READ
+- WRK.CASE.CREATE
+- WRK.CASE.UPDATE
+- WRK.CASE.COMPLETE
+- WRK.CASE.REOPEN
+- WRK.CASE.ARCHIVE
+- WRK.CASE.DELETE_DRAFT
+- WRK.CASE.BULK
+- WRK.CASE.EXPORT
+- WRK.CASE.OUTPUT_MANAGE
+
+## 14. Task
+- WRK.TASK.READ
+- WRK.TASK.CREATE
+- WRK.TASK.UPDATE
+- WRK.TASK.ASSIGN
+- WRK.TASK.ACCEPT
+- WRK.TASK.PROGRESS
+- WRK.TASK.EVIDENCE
+- WRK.TASK.COMPLETE
+- WRK.TASK.REVIEW
+- WRK.TASK.REASSIGN
+- WRK.TASK.CANCEL
+- WRK.TASK.REOPEN
+- WRK.TASK.BULK
+- WRK.TASK.REMIND
+- WRK.TASK.EXPORT
+
+## 15. Work Data Scope
+- SELF_CREATED
+- ASSIGNED
+- WATCHING
+- ORG_UNIT
+- ORG_TREE
+- TENANT
+- EXPLICIT
+
+Work Case scope không tự động mở rộng quyền đọc mọi related object; mỗi related object vẫn re-authorize.

@@ -140,3 +140,23 @@ UI must still satisfy Screen Spec:
 
 # 14. Handoff
 Once Golden Screen images are approved, image references become visual source of truth for component composition; this document remains behavioral/implementation guardrail.
+
+# 15. Golden Image Pack – Batch 01
+
+**Repository path:** `docs/04-design/golden-images/`
+
+Approved visual assets:
+- `GS-WEB-01-home-service-launcher.webp` — **STYLE ANCHOR**
+- `GS-WEB-02-unified-work-inbox.webp`
+- `GS-WEB-04-tham-muu-van-ban.webp`
+- `GS-WEB-05-hoan-thien-van-ban.webp`
+- `GS-WEB-06-xu-ly-van-ban-den.webp`
+
+Batch commit: `08b0b9ff3191b8da55f5b7072cc9166733901eef`
+
+Implementation rule:
+1. Read `docs/04-design/golden-images/README.md`.
+2. Use GS-WEB-01 shell, navigation, typography, spacing, surfaces and component language as the visual baseline.
+3. Use the relevant Golden Screen as composition reference for each flow.
+4. Generated mockup copy is illustrative; canonical Screen/BRULE/Permission/API specs control behavior.
+5. Do not invent a new module theme or alternate app shell without approved design change.

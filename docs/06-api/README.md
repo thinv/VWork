@@ -4,6 +4,7 @@
 - [x] VWORK-API-CATALOG-v1.0.md
 - [x] openapi/vwork-openapi.yaml — 372 API-ID baseline
 - [x] VWORK-INTEGRATION-CONTRACT-v1.0.md
+- [x] VWORK-EXTERNAL-ACTION-DEEPLINK-CONTRACT-v1.0.md
 - [x] VWORK-EVENT-CATALOG-v1.0.md
 - [x] VWORK-REPORTING-API-EXTENSION-v1.0.md
 

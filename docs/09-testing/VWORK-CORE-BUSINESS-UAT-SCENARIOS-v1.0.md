@@ -165,6 +165,42 @@ Brief đã sinh phải giữ source reference/version; source đổi thì brief 
 # UAT-48 Assistant Scope Revocation
 Conversation cũ không cho phép RAG tiếp tục dùng nguồn đã bị thu hồi quyền; mọi message mới retrieval theo scope hiện tại.
 
+# UAT-49 Document Upload & Quarantine
+Upload file hợp lệ tạo Document/Version; file malware bị quarantine, không preview/OCR/extract.
+
+# UAT-50 Document Duplicate
+Upload tài liệu trùng phải cảnh báo, hiển thị bản nghi trùng và không tự tạo duplicate nếu người dùng chưa xác nhận.
+
+# UAT-51 Document Version Immutability
+Bản FINAL không sửa trực tiếp; thay đổi tạo version mới, lịch sử và compare vẫn truy được.
+
+# UAT-52 OCR Low Confidence
+OCR confidence thấp phải đánh dấu để rà soát; correction lưu người sửa và audit.
+
+# UAT-53 Extracted Field Verification
+FACT/INFERENCE/MISSING hiển thị rõ; field chưa xác minh không được coi là official fact.
+
+# UAT-54 Document Bulk
+Select All + bulk archive/export phải re-authorize từng item và trả partial result với item immutable/out-of-scope.
+
+# UAT-55 Incoming Registration
+Đăng ký văn bản đến lưu số đến, nguồn, file gốc, checksum, metadata và chống trùng số theo sổ/kỳ.
+
+# UAT-56 Incoming Missing/Ambiguous Deadline
+Không có hạn hoặc có nhiều hạn → giữ null/candidate; không tự gán deadline chính thức.
+
+# UAT-57 Incoming Routing
+AI chỉ đề xuất chủ trì/phối hợp; người có quyền xác nhận trước khi giao/tạo việc.
+
+# UAT-58 Incoming Multi-unit Ownership
+Một việc nhiều đơn vị phải có đúng một chủ trì và N đơn vị phối hợp.
+
+# UAT-59 Incoming Convert to Work
+Tạo Work Case/Task từ requirement đã xác nhận, giữ source/provenance và không tạo duplicate chính ngoài policy.
+
+# UAT-60 Response Package
+Bộ hồ sơ phản hồi phải pin nguồn, context, template/version; thiếu context thì không tạo official package.
+
 # Exit Criteria
 - 100% UAT P0 PASS.
 - Không workaround cho lỗi thẩm quyền, data loss, versioning, tenant isolation.

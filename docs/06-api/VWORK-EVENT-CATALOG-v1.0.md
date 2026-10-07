@@ -145,7 +145,15 @@ EVT-MTG-004 decision.candidate-created.v1
 EVT-MTG-005 decision.confirmed.v1  
 EVT-MTG-006 meeting-task.created.v1  
 EVT-MTG-007 minutes.generated.v1  
-EVT-MTG-008 minutes.submitted.v1
+EVT-MTG-008 minutes.submitted.v1  
+EVT-MTG-009 participant.updated.v1  
+EVT-MTG-010 attendance.updated.v1  
+EVT-MTG-011 transcript.corrected.v1  
+EVT-MTG-012 decision.updated.v1  
+EVT-MTG-013 decision.reconciliation-required.v1  
+EVT-MTG-014 decision.task-reconciled.v1  
+EVT-MTG-015 minutes.updated.v1  
+EVT-MTG-016 meeting.archived.v1
 
 ---
 

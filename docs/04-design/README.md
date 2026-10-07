@@ -60,3 +60,14 @@
 - [ ] Component implementation / Storybook-equivalent
 
 Baseline theo Screen ID hiện có 117 Web màn/route-level views (97 Core + 20 Shared/Master Data) và 34 Mobile screens. Mỗi màn hình phải trace Screen ID → UC → FR → API → Entity → Test và có loading/empty/error/permission state.
+
+## Golden Image Pack
+- [x] `golden-images/README.md`
+- [x] GS-WEB-01 — Home / Service Launcher
+- [x] GS-WEB-02 — Unified Work Inbox
+- [x] GS-WEB-04 — Tham mưu văn bản
+- [x] GS-WEB-05 — Hoàn thiện văn bản
+- [x] GS-WEB-06 — Xử lý văn bản đến
+
+**Visual style anchor:** GS-WEB-01.  
+**Batch 01 commit:** `08b0b9ff3191b8da55f5b7072cc9166733901eef`.

@@ -6,6 +6,7 @@
 - [x] VWORK-WIREFRAME-SPEC-v1.0.md
 - [x] VWORK-UI-SPEC-v1.0.md
 - [x] VWORK-DESIGN-SYSTEM-v1.0.md
+- [x] VWORK-CRUD-BULK-INTERACTION-STANDARD-v1.0.md
 
 ## Tiếp theo
 - [ ] High-fidelity mockups P0

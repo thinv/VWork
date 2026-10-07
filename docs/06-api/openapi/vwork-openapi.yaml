@@ -25,6 +25,7 @@ paths:
     get:
       tags: [Identity]
       operationId: api_iam_003
+      summary: "API-IAM-003 - GET /me"
       x-api-id: API-IAM-003
       x-fr: [FR-001]
       responses:
@@ -38,6 +39,7 @@ paths:
     get:
       tags: [Identity]
       operationId: api_iam_004
+      summary: "API-IAM-004 - GET /me/sessions"
       x-api-id: API-IAM-004
       x-fr: [FR-002]
       responses:
@@ -51,6 +53,7 @@ paths:
     delete:
       tags: [Identity]
       operationId: api_iam_005
+      summary: "API-IAM-005 - DELETE /me/sessions/{id}"
       x-api-id: API-IAM-005
       x-fr: [FR-002]
       parameters:
@@ -69,6 +72,7 @@ paths:
     get:
       tags: [Identity]
       operationId: api_iam_006
+      summary: "API-IAM-006 - GET /tenants/{tenantId}"
       x-api-id: API-IAM-006
       x-fr: [FR-003]
       parameters:
@@ -86,6 +90,7 @@ paths:
     patch:
       tags: [Identity]
       operationId: api_iam_007
+      summary: "API-IAM-007 - PATCH /tenants/{tenantId}"
       x-api-id: API-IAM-007
       x-fr: [FR-003]
       parameters:
@@ -109,6 +114,7 @@ paths:
     get:
       tags: [Identity]
       operationId: api_iam_008
+      summary: "API-IAM-008 - GET /organization-units"
       x-api-id: API-IAM-008
       x-fr: [FR-004]
       responses:
@@ -121,6 +127,7 @@ paths:
     post:
       tags: [Identity]
       operationId: api_iam_009
+      summary: "API-IAM-009 - POST /organization-units"
       x-api-id: API-IAM-009
       x-fr: [FR-004]
       requestBody:
@@ -140,6 +147,7 @@ paths:
     patch:
       tags: [Identity]
       operationId: api_iam_010
+      summary: "API-IAM-010 - PATCH /organization-units/{id}"
       x-api-id: API-IAM-010
       x-fr: [FR-004]
       parameters:
@@ -163,6 +171,7 @@ paths:
     get:
       tags: [Identity]
       operationId: api_iam_011
+      summary: "API-IAM-011 - GET /users"
       x-api-id: API-IAM-011
       x-fr: [FR-005]
       responses:
@@ -175,6 +184,7 @@ paths:
     post:
       tags: [Identity]
       operationId: api_iam_012
+      summary: "API-IAM-012 - POST /users"
       x-api-id: API-IAM-012
       x-fr: [FR-005]
       requestBody:
@@ -194,6 +204,7 @@ paths:
     patch:
       tags: [Identity]
       operationId: api_iam_013
+      summary: "API-IAM-013 - PATCH /users/{id}"
       x-api-id: API-IAM-013
       x-fr: [FR-005]
       parameters:
@@ -217,6 +228,7 @@ paths:
     get:
       tags: [Identity]
       operationId: api_iam_014
+      summary: "API-IAM-014 - GET /roles"
       x-api-id: API-IAM-014
       x-fr: [FR-006]
       responses:
@@ -230,6 +242,7 @@ paths:
     post:
       tags: [Identity]
       operationId: api_iam_015
+      summary: "API-IAM-015 - POST /role-assignments"
       x-api-id: API-IAM-015
       x-fr: [FR-006, FR-007]
       requestBody:
@@ -249,6 +262,7 @@ paths:
     delete:
       tags: [Identity]
       operationId: api_iam_016
+      summary: "API-IAM-016 - DELETE /role-assignments/{id}"
       x-api-id: API-IAM-016
       x-fr: [FR-006]
       parameters:
@@ -267,6 +281,7 @@ paths:
     post:
       tags: [Identity]
       operationId: api_iam_017
+      summary: "API-IAM-017 - POST /delegations"
       x-api-id: API-IAM-017
       x-fr: [FR-008]
       requestBody:
@@ -285,6 +300,7 @@ paths:
     get:
       tags: [Identity]
       operationId: api_iam_018
+      summary: "API-IAM-018 - GET /delegations"
       x-api-id: API-IAM-018
       x-fr: [FR-008]
       responses:
@@ -298,6 +314,7 @@ paths:
     post:
       tags: [Identity]
       operationId: api_iam_019
+      summary: "API-IAM-019 - POST /document-profiles"
       x-api-id: API-IAM-019
       x-fr: [FR-009]
       requestBody:
@@ -316,6 +333,7 @@ paths:
     get:
       tags: [Identity]
       operationId: api_iam_020
+      summary: "API-IAM-020 - GET /document-profiles"
       x-api-id: API-IAM-020
       x-fr: [FR-009]
       responses:
@@ -329,6 +347,7 @@ paths:
     post:
       tags: [Documents]
       operationId: api_doc_001
+      summary: "API-DOC-001 - POST /documents/upload-init"
       x-api-id: API-DOC-001
       x-fr: [FR-010]
       requestBody:
@@ -348,6 +367,7 @@ paths:
     post:
       tags: [Documents]
       operationId: api_doc_002
+      summary: "API-DOC-002 - POST /documents/complete-upload"
       x-api-id: API-DOC-002
       x-fr: [FR-010]
       requestBody:
@@ -367,6 +387,7 @@ paths:
     post:
       tags: [Documents]
       operationId: api_doc_003
+      summary: "API-DOC-003 - POST /documents/batch"
       x-api-id: API-DOC-003
       x-fr: [FR-011]
       requestBody:
@@ -386,6 +407,7 @@ paths:
     get:
       tags: [Documents]
       operationId: api_doc_004
+      summary: "API-DOC-004 - GET /documents"
       x-api-id: API-DOC-004
       x-fr: [FR-015, FR-016]
       responses:
@@ -399,6 +421,7 @@ paths:
     get:
       tags: [Documents]
       operationId: api_doc_005
+      summary: "API-DOC-005 - GET /documents/{id}"
       x-api-id: API-DOC-005
       x-fr: [FR-015]
       parameters:
@@ -417,6 +440,7 @@ paths:
     patch:
       tags: [Documents]
       operationId: api_doc_006
+      summary: "API-DOC-006 - PATCH /documents/{id}/metadata"
       x-api-id: API-DOC-006
       x-fr: [FR-016]
       parameters:
@@ -440,6 +464,7 @@ paths:
     get:
       tags: [Documents]
       operationId: api_doc_007
+      summary: "API-DOC-007 - GET /documents/{id}/versions"
       x-api-id: API-DOC-007
       x-fr: [FR-017]
       parameters:
@@ -457,6 +482,7 @@ paths:
     post:
       tags: [Documents]
       operationId: api_doc_008
+      summary: "API-DOC-008 - POST /documents/{id}/versions"
       x-api-id: API-DOC-008
       x-fr: [FR-017]
       parameters:
@@ -481,6 +507,7 @@ paths:
     get:
       tags: [Documents]
       operationId: api_doc_009
+      summary: "API-DOC-009 - GET /document-versions/{versionId}/preview"
       x-api-id: API-DOC-009
       x-fr: [FR-015]
       parameters:
@@ -499,6 +526,7 @@ paths:
     get:
       tags: [Documents]
       operationId: api_doc_010
+      summary: "API-DOC-010 - GET /documents/{id}/compare"
       x-api-id: API-DOC-010
       x-fr: [FR-018]
       parameters:
@@ -517,6 +545,7 @@ paths:
     post:
       tags: [Documents]
       operationId: api_doc_011
+      summary: "API-DOC-011 - POST /documents/{id}/archive"
       x-api-id: API-DOC-011
       x-fr: [FR-017]
       parameters:
@@ -541,6 +570,7 @@ paths:
     post:
       tags: [Documents]
       operationId: api_doc_012
+      summary: "API-DOC-012 - POST /exports"
       x-api-id: API-DOC-012
       x-fr: [FR-019]
       requestBody:
@@ -560,6 +590,7 @@ paths:
     get:
       tags: [Documents]
       operationId: api_doc_013
+      summary: "API-DOC-013 - GET /exports/{id}"
       x-api-id: API-DOC-013
       x-fr: [FR-019]
       parameters:
@@ -578,6 +609,7 @@ paths:
     get:
       tags: [Documents]
       operationId: api_doc_014
+      summary: "API-DOC-014 - GET /files/{assetId}/download-url"
       x-api-id: API-DOC-014
       x-fr: [FR-019]
       parameters:
@@ -596,6 +628,7 @@ paths:
     get:
       tags: [Documents]
       operationId: api_doc_015
+      summary: "API-DOC-015 - GET /documents/{id}/relations"
       x-api-id: API-DOC-015
       x-fr: [FR-020]
       parameters:
@@ -613,6 +646,7 @@ paths:
     post:
       tags: [Documents]
       operationId: api_doc_016
+      summary: "API-DOC-016 - POST /documents/{id}/relations"
       x-api-id: API-DOC-016
       x-fr: [FR-020]
       parameters:
@@ -637,6 +671,7 @@ paths:
     post:
       tags: [Intelligence]
       operationId: api_int_001
+      summary: "API-INT-001 - POST /document-versions/{id}/extract"
       x-api-id: API-INT-001
       x-fr: [FR-021, FR-023, FR-024, FR-025, FR-026]
       x-async: true
@@ -661,6 +696,7 @@ paths:
     get:
       tags: [Intelligence]
       operationId: api_int_002
+      summary: "API-INT-002 - GET /extraction-runs/{id}"
       x-api-id: API-INT-002
       x-fr: [FR-021]
       parameters:
@@ -679,6 +715,7 @@ paths:
     get:
       tags: [Intelligence]
       operationId: api_int_003
+      summary: "API-INT-003 - GET /document-versions/{id}/extracted-fields"
       x-api-id: API-INT-003
       x-fr: [FR-024, FR-025, FR-026]
       parameters:
@@ -697,6 +734,7 @@ paths:
     patch:
       tags: [Intelligence]
       operationId: api_int_004
+      summary: "API-INT-004 - PATCH /extracted-fields/{id}/verify"
       x-api-id: API-INT-004
       x-fr: [FR-022, FR-028]
       parameters:
@@ -720,6 +758,7 @@ paths:
     get:
       tags: [Intelligence]
       operationId: api_int_005
+      summary: "API-INT-005 - GET /provenance/{id}"
       x-api-id: API-INT-005
       x-fr: [FR-027]
       parameters:
@@ -738,6 +777,7 @@ paths:
     get:
       tags: [Intelligence]
       operationId: api_int_006
+      summary: "API-INT-006 - GET /ocr-pages/{id}"
       x-api-id: API-INT-006
       x-fr: [FR-022]
       parameters:
@@ -755,6 +795,7 @@ paths:
     patch:
       tags: [Intelligence]
       operationId: api_int_007
+      summary: "API-INT-007 - PATCH /ocr-pages/{id}"
       x-api-id: API-INT-007
       x-fr: [FR-022]
       parameters:
@@ -778,6 +819,7 @@ paths:
     post:
       tags: [Intelligence]
       operationId: api_int_008
+      summary: "API-INT-008 - POST /document-versions/{id}/classify"
       x-api-id: API-INT-008
       x-fr: [FR-023]
       x-async: true
@@ -802,6 +844,7 @@ paths:
     get:
       tags: [Intelligence]
       operationId: api_int_009
+      summary: "API-INT-009 - GET /document-versions/{id}/classifications"
       x-api-id: API-INT-009
       x-fr: [FR-023]
       parameters:
@@ -820,6 +863,7 @@ paths:
     post:
       tags: [Drafts]
       operationId: api_drf_001
+      summary: "API-DRF-001 - POST /drafts"
       x-api-id: API-DRF-001
       x-fr: [FR-029, FR-030, FR-031]
       requestBody:
@@ -838,6 +882,7 @@ paths:
     get:
       tags: [Drafts]
       operationId: api_drf_002
+      summary: "API-DRF-002 - GET /drafts"
       x-api-id: API-DRF-002
       x-fr: [FR-029]
       responses:
@@ -851,6 +896,7 @@ paths:
     get:
       tags: [Drafts]
       operationId: api_drf_003
+      summary: "API-DRF-003 - GET /drafts/{id}"
       x-api-id: API-DRF-003
       x-fr: [FR-029]
       parameters:
@@ -869,6 +915,7 @@ paths:
     post:
       tags: [Drafts]
       operationId: api_drf_004
+      summary: "API-DRF-004 - POST /drafts/{id}/generate"
       x-api-id: API-DRF-004
       x-fr: [FR-029, FR-032, FR-033, FR-035]
       x-async: true
@@ -893,6 +940,7 @@ paths:
     post:
       tags: [Drafts]
       operationId: api_drf_005
+      summary: "API-DRF-005 - POST /drafts/{id}/versions"
       x-api-id: API-DRF-005
       x-fr: [FR-035]
       parameters:
@@ -916,6 +964,7 @@ paths:
     get:
       tags: [Drafts]
       operationId: api_drf_006
+      summary: "API-DRF-006 - GET /drafts/{id}/versions"
       x-api-id: API-DRF-006
       x-fr: [FR-035]
       parameters:
@@ -934,6 +983,7 @@ paths:
     post:
       tags: [Drafts]
       operationId: api_drf_007
+      summary: "API-DRF-007 - POST /draft-versions/{id}/review"
       x-api-id: API-DRF-007
       x-fr: [FR-036, FR-037, FR-038, FR-041]
       x-async: true
@@ -958,6 +1008,7 @@ paths:
     get:
       tags: [Drafts]
       operationId: api_drf_008
+      summary: "API-DRF-008 - GET /review-runs/{id}"
       x-api-id: API-DRF-008
       x-fr: [FR-036]
       parameters:
@@ -976,6 +1027,7 @@ paths:
     patch:
       tags: [Drafts]
       operationId: api_drf_009
+      summary: "API-DRF-009 - PATCH /review-findings/{id}"
       x-api-id: API-DRF-009
       x-fr: [FR-039, FR-041]
       parameters:
@@ -999,6 +1051,7 @@ paths:
     post:
       tags: [Drafts]
       operationId: api_drf_010
+      summary: "API-DRF-010 - POST /draft-versions/{id}/rewrite"
       x-api-id: API-DRF-010
       x-fr: [FR-040]
       x-async: true
@@ -1023,6 +1076,7 @@ paths:
     post:
       tags: [Drafts]
       operationId: api_drf_011
+      summary: "API-DRF-011 - POST /document-packages"
       x-api-id: API-DRF-011
       x-fr: [FR-034]
       x-async: true
@@ -1042,6 +1096,7 @@ paths:
     get:
       tags: [Drafts]
       operationId: api_drf_012
+      summary: "API-DRF-012 - GET /document-packages/{id}"
       x-api-id: API-DRF-012
       x-fr: [FR-034]
       parameters:
@@ -1060,6 +1115,7 @@ paths:
     post:
       tags: [Incoming]
       operationId: api_inc_001
+      summary: "API-INC-001 - POST /incoming-records"
       x-api-id: API-INC-001
       x-fr: [FR-042]
       requestBody:
@@ -1078,6 +1134,7 @@ paths:
     get:
       tags: [Incoming]
       operationId: api_inc_002
+      summary: "API-INC-002 - GET /incoming-records"
       x-api-id: API-INC-002
       x-fr: [FR-042]
       responses:
@@ -1091,6 +1148,7 @@ paths:
     get:
       tags: [Incoming]
       operationId: api_inc_003
+      summary: "API-INC-003 - GET /incoming-records/{id}"
       x-api-id: API-INC-003
       x-fr: [FR-042]
       parameters:
@@ -1109,6 +1167,7 @@ paths:
     post:
       tags: [Incoming]
       operationId: api_inc_004
+      summary: "API-INC-004 - POST /incoming-records/{id}/analyze"
       x-api-id: API-INC-004
       x-fr: [FR-043, FR-044, FR-045, FR-046]
       x-async: true
@@ -1133,6 +1192,7 @@ paths:
     get:
       tags: [Incoming]
       operationId: api_inc_005
+      summary: "API-INC-005 - GET /incoming-records/{id}/requirements"
       x-api-id: API-INC-005
       x-fr: [FR-044]
       parameters:
@@ -1151,6 +1211,7 @@ paths:
     patch:
       tags: [Incoming]
       operationId: api_inc_006
+      summary: "API-INC-006 - PATCH /incoming-requirements/{id}/verify"
       x-api-id: API-INC-006
       x-fr: [FR-044]
       parameters:
@@ -1174,6 +1235,7 @@ paths:
     get:
       tags: [Incoming]
       operationId: api_inc_007
+      summary: "API-INC-007 - GET /incoming-records/{id}/suggestions"
       x-api-id: API-INC-007
       x-fr: [FR-045, FR-046]
       parameters:
@@ -1192,6 +1254,7 @@ paths:
     post:
       tags: [Incoming]
       operationId: api_inc_008
+      summary: "API-INC-008 - POST /incoming-records/{id}/convert-to-work-case"
       x-api-id: API-INC-008
       x-fr: [FR-047]
       parameters:
@@ -1216,6 +1279,7 @@ paths:
     post:
       tags: [Incoming]
       operationId: api_inc_009
+      summary: "API-INC-009 - POST /incoming-requirements/{id}/convert-to-task"
       x-api-id: API-INC-009
       x-fr: [FR-048]
       parameters:
@@ -1240,6 +1304,7 @@ paths:
     post:
       tags: [Incoming]
       operationId: api_inc_010
+      summary: "API-INC-010 - POST /incoming-records/{id}/generate-response-package"
       x-api-id: API-INC-010
       x-fr: [FR-049]
       x-async: true
@@ -1264,6 +1329,7 @@ paths:
     post:
       tags: [Work]
       operationId: api_wrk_001
+      summary: "API-WRK-001 - POST /work-cases"
       x-api-id: API-WRK-001
       x-fr: [FR-050]
       requestBody:
@@ -1282,6 +1348,7 @@ paths:
     get:
       tags: [Work]
       operationId: api_wrk_002
+      summary: "API-WRK-002 - GET /work-cases"
       x-api-id: API-WRK-002
       x-fr: [FR-050, FR-051]
       responses:
@@ -1295,6 +1362,7 @@ paths:
     get:
       tags: [Work]
       operationId: api_wrk_003
+      summary: "API-WRK-003 - GET /work-cases/{id}"
       x-api-id: API-WRK-003
       x-fr: [FR-050, FR-051]
       parameters:
@@ -1312,6 +1380,7 @@ paths:
     patch:
       tags: [Work]
       operationId: api_wrk_004
+      summary: "API-WRK-004 - PATCH /work-cases/{id}"
       x-api-id: API-WRK-004
       x-fr: [FR-050]
       parameters:
@@ -1335,6 +1404,7 @@ paths:
     get:
       tags: [Work]
       operationId: api_wrk_005
+      summary: "API-WRK-005 - GET /work-cases/{id}/timeline"
       x-api-id: API-WRK-005
       x-fr: [FR-051]
       parameters:
@@ -1353,6 +1423,7 @@ paths:
     post:
       tags: [Work]
       operationId: api_wrk_006
+      summary: "API-WRK-006 - POST /work-cases/{id}/tasks"
       x-api-id: API-WRK-006
       x-fr: [FR-052]
       parameters:
@@ -1377,6 +1448,7 @@ paths:
     get:
       tags: [Work]
       operationId: api_wrk_007
+      summary: "API-WRK-007 - GET /tasks"
       x-api-id: API-WRK-007
       x-fr: [FR-052, FR-055]
       responses:
@@ -1390,6 +1462,7 @@ paths:
     get:
       tags: [Work]
       operationId: api_wrk_008
+      summary: "API-WRK-008 - GET /tasks/{id}"
       x-api-id: API-WRK-008
       x-fr: [FR-052, FR-055]
       parameters:
@@ -1408,6 +1481,7 @@ paths:
     post:
       tags: [Work]
       operationId: api_wrk_009
+      summary: "API-WRK-009 - POST /tasks/{id}/assign"
       x-api-id: API-WRK-009
       x-fr: [FR-053]
       parameters:
@@ -1432,6 +1506,7 @@ paths:
     post:
       tags: [Work]
       operationId: api_wrk_010
+      summary: "API-WRK-010 - POST /tasks/{id}/accept"
       x-api-id: API-WRK-010
       x-fr: [FR-054]
       parameters:
@@ -1456,6 +1531,7 @@ paths:
     patch:
       tags: [Work]
       operationId: api_wrk_011
+      summary: "API-WRK-011 - PATCH /tasks/{id}/progress"
       x-api-id: API-WRK-011
       x-fr: [FR-055]
       parameters:
@@ -1479,6 +1555,7 @@ paths:
     post:
       tags: [Work]
       operationId: api_wrk_012
+      summary: "API-WRK-012 - POST /tasks/{id}/evidence"
       x-api-id: API-WRK-012
       x-fr: [FR-056]
       parameters:
@@ -1503,6 +1580,7 @@ paths:
     post:
       tags: [Work]
       operationId: api_wrk_013
+      summary: "API-WRK-013 - POST /tasks/{id}/complete"
       x-api-id: API-WRK-013
       x-fr: [FR-057]
       parameters:
@@ -1527,6 +1605,7 @@ paths:
     post:
       tags: [Work]
       operationId: api_wrk_014
+      summary: "API-WRK-014 - POST /tasks/{id}/handover"
       x-api-id: API-WRK-014
       x-fr: [FR-060]
       parameters:
@@ -1551,6 +1630,7 @@ paths:
     post:
       tags: [Work]
       operationId: api_wrk_015
+      summary: "API-WRK-015 - POST /tasks/{id}/comments"
       x-api-id: API-WRK-015
       x-fr: [FR-060]
       parameters:
@@ -1575,6 +1655,7 @@ paths:
     get:
       tags: [Work]
       operationId: api_wrk_016
+      summary: "API-WRK-016 - GET /tasks/{id}/history"
       x-api-id: API-WRK-016
       x-fr: [FR-060]
       parameters:
@@ -1593,6 +1674,7 @@ paths:
     get:
       tags: [Workflow]
       operationId: api_wfl_001
+      summary: "API-WFL-001 - GET /workflow-definitions"
       x-api-id: API-WFL-001
       x-fr: [FR-061]
       responses:
@@ -1605,6 +1687,7 @@ paths:
     post:
       tags: [Workflow]
       operationId: api_wfl_002
+      summary: "API-WFL-002 - POST /workflow-definitions"
       x-api-id: API-WFL-002
       x-fr: [FR-061]
       requestBody:
@@ -1624,6 +1707,7 @@ paths:
     post:
       tags: [Workflow]
       operationId: api_wfl_003
+      summary: "API-WFL-003 - POST /workflow-definitions/{id}/versions"
       x-api-id: API-WFL-003
       x-fr: [FR-061]
       parameters:
@@ -1648,6 +1732,7 @@ paths:
     post:
       tags: [Workflow]
       operationId: api_wfl_004
+      summary: "API-WFL-004 - POST /workflow-definitions/{id}/publish"
       x-api-id: API-WFL-004
       x-fr: [FR-061]
       parameters:
@@ -1672,6 +1757,7 @@ paths:
     post:
       tags: [Workflow]
       operationId: api_wfl_005
+      summary: "API-WFL-005 - POST /workflow-instances"
       x-api-id: API-WFL-005
       x-fr: [FR-062]
       requestBody:
@@ -1691,6 +1777,7 @@ paths:
     get:
       tags: [Workflow]
       operationId: api_wfl_006
+      summary: "API-WFL-006 - GET /workflow-instances/{id}"
       x-api-id: API-WFL-006
       x-fr: [FR-062, FR-070]
       parameters:
@@ -1709,6 +1796,7 @@ paths:
     get:
       tags: [Workflow]
       operationId: api_wfl_007
+      summary: "API-WFL-007 - GET /approvals"
       x-api-id: API-WFL-007
       x-fr: [FR-063]
       responses:
@@ -1722,6 +1810,7 @@ paths:
     get:
       tags: [Workflow]
       operationId: api_wfl_008
+      summary: "API-WFL-008 - GET /approvals/{id}"
       x-api-id: API-WFL-008
       x-fr: [FR-064]
       parameters:
@@ -1740,6 +1829,7 @@ paths:
     post:
       tags: [Workflow]
       operationId: api_wfl_009
+      summary: "API-WFL-009 - POST /approvals/{id}/approve"
       x-api-id: API-WFL-009
       x-fr: [FR-065]
       parameters:
@@ -1764,6 +1854,7 @@ paths:
     post:
       tags: [Workflow]
       operationId: api_wfl_010
+      summary: "API-WFL-010 - POST /approvals/{id}/return"
       x-api-id: API-WFL-010
       x-fr: [FR-066]
       parameters:
@@ -1788,6 +1879,7 @@ paths:
     post:
       tags: [Workflow]
       operationId: api_wfl_011
+      summary: "API-WFL-011 - POST /approvals/{id}/reject"
       x-api-id: API-WFL-011
       x-fr: [FR-067]
       parameters:
@@ -1812,6 +1904,7 @@ paths:
     post:
       tags: [Workflow]
       operationId: api_wfl_012
+      summary: "API-WFL-012 - POST /approvals/{id}/request-clarification"
       x-api-id: API-WFL-012
       x-fr: [FR-068]
       parameters:
@@ -1836,6 +1929,7 @@ paths:
     post:
       tags: [Workflow]
       operationId: api_wfl_013
+      summary: "API-WFL-013 - POST /approvals/{id}/delegate"
       x-api-id: API-WFL-013
       x-fr: [FR-069]
       parameters:
@@ -1860,6 +1954,7 @@ paths:
     post:
       tags: [Meetings]
       operationId: api_mtg_001
+      summary: "API-MTG-001 - POST /meetings"
       x-api-id: API-MTG-001
       x-fr: [FR-071]
       requestBody:
@@ -1878,6 +1973,7 @@ paths:
     get:
       tags: [Meetings]
       operationId: api_mtg_002
+      summary: "API-MTG-002 - GET /meetings"
       x-api-id: API-MTG-002
       x-fr: [FR-071]
       responses:
@@ -1891,6 +1987,7 @@ paths:
     get:
       tags: [Meetings]
       operationId: api_mtg_003
+      summary: "API-MTG-003 - GET /meetings/{id}"
       x-api-id: API-MTG-003
       x-fr: [FR-071]
       parameters:
@@ -1908,6 +2005,7 @@ paths:
     patch:
       tags: [Meetings]
       operationId: api_mtg_004
+      summary: "API-MTG-004 - PATCH /meetings/{id}"
       x-api-id: API-MTG-004
       x-fr: [FR-071]
       parameters:
@@ -1931,6 +2029,7 @@ paths:
     post:
       tags: [Meetings]
       operationId: api_mtg_005
+      summary: "API-MTG-005 - POST /meetings/{id}/parse-invitation"
       x-api-id: API-MTG-005
       x-fr: [FR-072]
       x-async: true
@@ -1955,6 +2054,7 @@ paths:
     post:
       tags: [Meetings]
       operationId: api_mtg_006
+      summary: "API-MTG-006 - POST /meetings/{id}/audio"
       x-api-id: API-MTG-006
       x-fr: [FR-073]
       parameters:
@@ -1979,6 +2079,7 @@ paths:
     post:
       tags: [Meetings]
       operationId: api_mtg_007
+      summary: "API-MTG-007 - POST /meetings/{id}/transcribe"
       x-api-id: API-MTG-007
       x-fr: [FR-074]
       x-async: true
@@ -2003,6 +2104,7 @@ paths:
     get:
       tags: [Meetings]
       operationId: api_mtg_008
+      summary: "API-MTG-008 - GET /transcripts/{id}"
       x-api-id: API-MTG-008
       x-fr: [FR-075]
       parameters:
@@ -2021,6 +2123,7 @@ paths:
     patch:
       tags: [Meetings]
       operationId: api_mtg_009
+      summary: "API-MTG-009 - PATCH /transcript-segments/{id}"
       x-api-id: API-MTG-009
       x-fr: [FR-075]
       parameters:
@@ -2044,6 +2147,7 @@ paths:
     post:
       tags: [Meetings]
       operationId: api_mtg_010
+      summary: "API-MTG-010 - POST /meetings/{id}/extract-decisions"
       x-api-id: API-MTG-010
       x-fr: [FR-076]
       x-async: true
@@ -2068,6 +2172,7 @@ paths:
     patch:
       tags: [Meetings]
       operationId: api_mtg_011
+      summary: "API-MTG-011 - PATCH /meeting-decisions/{id}/confirm"
       x-api-id: API-MTG-011
       x-fr: [FR-077]
       parameters:
@@ -2091,6 +2196,7 @@ paths:
     post:
       tags: [Meetings]
       operationId: api_mtg_012
+      summary: "API-MTG-012 - POST /meeting-decisions/{id}/create-task"
       x-api-id: API-MTG-012
       x-fr: [FR-079]
       parameters:
@@ -2115,6 +2221,7 @@ paths:
     post:
       tags: [Meetings]
       operationId: api_mtg_013
+      summary: "API-MTG-013 - POST /meetings/{id}/generate-minutes"
       x-api-id: API-MTG-013
       x-fr: [FR-078]
       x-async: true
@@ -2139,6 +2246,7 @@ paths:
     post:
       tags: [Reporting]
       operationId: api_rpt_001
+      summary: "API-RPT-001 - POST /reporting-cycles"
       x-api-id: API-RPT-001
       x-fr: [FR-080]
       requestBody:
@@ -2157,6 +2265,7 @@ paths:
     get:
       tags: [Reporting]
       operationId: api_rpt_002
+      summary: "API-RPT-002 - GET /reporting-cycles"
       x-api-id: API-RPT-002
       x-fr: [FR-080]
       responses:
@@ -2170,6 +2279,7 @@ paths:
     get:
       tags: [Reporting]
       operationId: api_rpt_003
+      summary: "API-RPT-003 - GET /reporting-cycles/{id}"
       x-api-id: API-RPT-003
       x-fr: [FR-080]
       parameters:
@@ -2188,6 +2298,7 @@ paths:
     post:
       tags: [Reporting]
       operationId: api_rpt_004
+      summary: "API-RPT-004 - POST /reporting-cycles/{id}/obligations"
       x-api-id: API-RPT-004
       x-fr: [FR-081]
       parameters:
@@ -2211,6 +2322,7 @@ paths:
     get:
       tags: [Reporting]
       operationId: api_rpt_005
+      summary: "API-RPT-005 - GET /reporting-cycles/{id}/obligations"
       x-api-id: API-RPT-005
       x-fr: [FR-081]
       parameters:
@@ -2229,6 +2341,7 @@ paths:
     post:
       tags: [Reporting]
       operationId: api_rpt_006
+      summary: "API-RPT-006 - POST /reporting-cycles/{id}/submissions"
       x-api-id: API-RPT-006
       x-fr: [FR-082]
       parameters:
@@ -2253,6 +2366,7 @@ paths:
     post:
       tags: [Reporting]
       operationId: api_rpt_007
+      summary: "API-RPT-007 - POST /reporting-cycles/{id}/suggest-schema"
       x-api-id: API-RPT-007
       x-fr: [FR-083]
       x-async: true
@@ -2277,6 +2391,7 @@ paths:
     get:
       tags: [Reporting]
       operationId: api_rpt_008
+      summary: "API-RPT-008 - GET /metric-schemas/{id}"
       x-api-id: API-RPT-008
       x-fr: [FR-084]
       parameters:
@@ -2295,6 +2410,7 @@ paths:
     post:
       tags: [Reporting]
       operationId: api_rpt_009
+      summary: "API-RPT-009 - POST /metric-schemas/{id}/versions"
       x-api-id: API-RPT-009
       x-fr: [FR-084]
       parameters:
@@ -2319,6 +2435,7 @@ paths:
     post:
       tags: [Reporting]
       operationId: api_rpt_010
+      summary: "API-RPT-010 - POST /metric-schema-versions/{id}/approve"
       x-api-id: API-RPT-010
       x-fr: [FR-084]
       parameters:
@@ -2343,6 +2460,7 @@ paths:
     post:
       tags: [Reporting]
       operationId: api_rpt_011
+      summary: "API-RPT-011 - POST /reporting-cycles/{id}/extract"
       x-api-id: API-RPT-011
       x-fr: [FR-085]
       x-async: true
@@ -2367,6 +2485,7 @@ paths:
     post:
       tags: [Reporting]
       operationId: api_rpt_012
+      summary: "API-RPT-012 - POST /reporting-cycles/{id}/quality-check"
       x-api-id: API-RPT-012
       x-fr: [FR-086]
       x-async: true
@@ -2391,6 +2510,7 @@ paths:
     get:
       tags: [Reporting]
       operationId: api_rpt_013
+      summary: "API-RPT-013 - GET /reporting-cycles/{id}/quality-findings"
       x-api-id: API-RPT-013
       x-fr: [FR-086]
       parameters:
@@ -2409,6 +2529,7 @@ paths:
     post:
       tags: [Reporting]
       operationId: api_rpt_014
+      summary: "API-RPT-014 - POST /reporting-cycles/{id}/reconcile"
       x-api-id: API-RPT-014
       x-fr: [FR-087]
       x-async: true
@@ -2433,6 +2554,7 @@ paths:
     post:
       tags: [Reporting]
       operationId: api_rpt_015
+      summary: "API-RPT-015 - POST /reporting-cycles/{id}/aggregate"
       x-api-id: API-RPT-015
       x-fr: [FR-088]
       x-async: true
@@ -2457,6 +2579,7 @@ paths:
     get:
       tags: [Reporting]
       operationId: api_rpt_016
+      summary: "API-RPT-016 - GET /reporting-cycles/{id}/aggregations"
       x-api-id: API-RPT-016
       x-fr: [FR-089]
       parameters:
@@ -2475,6 +2598,7 @@ paths:
     post:
       tags: [Reporting]
       operationId: api_rpt_017
+      summary: "API-RPT-017 - POST /reporting-cycles/{id}/generate-report"
       x-api-id: API-RPT-017
       x-fr: [FR-090]
       x-async: true
@@ -2499,6 +2623,7 @@ paths:
     post:
       tags: [Reporting]
       operationId: api_rpt_018
+      summary: "API-RPT-018 - POST /reporting-cycles/{id}/export"
       x-api-id: API-RPT-018
       x-fr: [FR-091]
       x-async: true
@@ -2523,6 +2648,7 @@ paths:
     post:
       tags: [Knowledge]
       operationId: api_kno_001
+      summary: "API-KNO-001 - POST /templates"
       x-api-id: API-KNO-001
       x-fr: [FR-092]
       requestBody:
@@ -2541,6 +2667,7 @@ paths:
     get:
       tags: [Knowledge]
       operationId: api_kno_002
+      summary: "API-KNO-002 - GET /templates"
       x-api-id: API-KNO-002
       x-fr: [FR-092, FR-094]
       responses:
@@ -2554,6 +2681,7 @@ paths:
     get:
       tags: [Knowledge]
       operationId: api_kno_003
+      summary: "API-KNO-003 - GET /templates/{id}"
       x-api-id: API-KNO-003
       x-fr: [FR-092]
       parameters:
@@ -2572,6 +2700,7 @@ paths:
     post:
       tags: [Knowledge]
       operationId: api_kno_004
+      summary: "API-KNO-004 - POST /templates/{id}/versions"
       x-api-id: API-KNO-004
       x-fr: [FR-095]
       parameters:
@@ -2596,6 +2725,7 @@ paths:
     post:
       tags: [Knowledge]
       operationId: api_kno_005
+      summary: "API-KNO-005 - POST /template-versions/{id}/publish"
       x-api-id: API-KNO-005
       x-fr: [FR-095]
       parameters:
@@ -2620,6 +2750,7 @@ paths:
     post:
       tags: [Knowledge]
       operationId: api_kno_006
+      summary: "API-KNO-006 - POST /knowledge-sources"
       x-api-id: API-KNO-006
       x-fr: [FR-096]
       requestBody:
@@ -2638,6 +2769,7 @@ paths:
     get:
       tags: [Knowledge]
       operationId: api_kno_007
+      summary: "API-KNO-007 - GET /knowledge-sources"
       x-api-id: API-KNO-007
       x-fr: [FR-096, FR-097]
       responses:
@@ -2651,6 +2783,7 @@ paths:
     get:
       tags: [Knowledge]
       operationId: api_kno_008
+      summary: "API-KNO-008 - GET /knowledge-sources/{id}"
       x-api-id: API-KNO-008
       x-fr: [FR-096]
       parameters:
@@ -2669,6 +2802,7 @@ paths:
     post:
       tags: [Knowledge]
       operationId: api_kno_009
+      summary: "API-KNO-009 - POST /knowledge-sources/{id}/versions"
       x-api-id: API-KNO-009
       x-fr: [FR-097]
       parameters:
@@ -2693,6 +2827,7 @@ paths:
     post:
       tags: [Knowledge]
       operationId: api_kno_010
+      summary: "API-KNO-010 - POST /knowledge-versions/{id}/publish"
       x-api-id: API-KNO-010
       x-fr: [FR-097]
       parameters:
@@ -2717,6 +2852,7 @@ paths:
     post:
       tags: [Knowledge]
       operationId: api_kno_011
+      summary: "API-KNO-011 - POST /knowledge-versions/{id}/reindex"
       x-api-id: API-KNO-011
       x-fr: [FR-100]
       x-async: true
@@ -2741,6 +2877,7 @@ paths:
     get:
       tags: [Knowledge]
       operationId: api_kno_012
+      summary: "API-KNO-012 - GET /knowledge/search"
       x-api-id: API-KNO-012
       x-fr: [FR-098]
       responses:
@@ -2754,6 +2891,7 @@ paths:
     post:
       tags: [Knowledge]
       operationId: api_kno_013
+      summary: "API-KNO-013 - POST /knowledge/query"
       x-api-id: API-KNO-013
       x-fr: [FR-099]
       x-async: true
@@ -2773,6 +2911,7 @@ paths:
     get:
       tags: [Executive]
       operationId: api_exe_001
+      summary: "API-EXE-001 - GET /executive/inbox"
       x-api-id: API-EXE-001
       x-fr: [FR-101, FR-102]
       responses:
@@ -2786,6 +2925,7 @@ paths:
     get:
       tags: [Executive]
       operationId: api_exe_002
+      summary: "API-EXE-002 - GET /executive/signals"
       x-api-id: API-EXE-002
       x-fr: [FR-107]
       responses:
@@ -2799,6 +2939,7 @@ paths:
     post:
       tags: [Executive]
       operationId: api_exe_003
+      summary: "API-EXE-003 - POST /executive/briefs/generate"
       x-api-id: API-EXE-003
       x-fr: [FR-103, FR-104]
       x-async: true
@@ -2818,6 +2959,7 @@ paths:
     get:
       tags: [Executive]
       operationId: api_exe_004
+      summary: "API-EXE-004 - GET /executive/briefs"
       x-api-id: API-EXE-004
       x-fr: [FR-103, FR-104]
       responses:
@@ -2831,6 +2973,7 @@ paths:
     get:
       tags: [Executive]
       operationId: api_exe_005
+      summary: "API-EXE-005 - GET /executive/briefs/{id}"
       x-api-id: API-EXE-005
       x-fr: [FR-103, FR-104]
       parameters:
@@ -2849,6 +2992,7 @@ paths:
     post:
       tags: [Executive]
       operationId: api_ast_001
+      summary: "API-AST-001 - POST /assistant/conversations"
       x-api-id: API-AST-001
       x-fr: [FR-105]
       requestBody:
@@ -2868,6 +3012,7 @@ paths:
     get:
       tags: [Executive]
       operationId: api_ast_002
+      summary: "API-AST-002 - GET /assistant/conversations/{id}"
       x-api-id: API-AST-002
       x-fr: [FR-105]
       parameters:
@@ -2886,6 +3031,7 @@ paths:
     post:
       tags: [Executive]
       operationId: api_ast_003
+      summary: "API-AST-003 - POST /assistant/conversations/{id}/messages"
       x-api-id: API-AST-003
       x-fr: [FR-105, FR-106]
       x-async: true
@@ -2909,6 +3055,7 @@ paths:
     get:
       tags: [Executive]
       operationId: api_ast_004
+      summary: "API-AST-004 - GET /assistant/conversations/{id}/messages"
       x-api-id: API-AST-004
       x-fr: [FR-105]
       parameters:
@@ -2927,6 +3074,7 @@ paths:
     get:
       tags: [Governance]
       operationId: api_gov_001
+      summary: "API-GOV-001 - GET /audit-events"
       x-api-id: API-GOV-001
       x-fr: [FR-109]
       responses:
@@ -2940,6 +3088,7 @@ paths:
     get:
       tags: [Governance]
       operationId: api_gov_002
+      summary: "API-GOV-002 - GET /ai/providers"
       x-api-id: API-GOV-002
       x-fr: [FR-110]
       responses:
@@ -2952,6 +3101,7 @@ paths:
     post:
       tags: [Governance]
       operationId: api_gov_003
+      summary: "API-GOV-003 - POST /ai/providers"
       x-api-id: API-GOV-003
       x-fr: [FR-110]
       requestBody:
@@ -2971,6 +3121,7 @@ paths:
     get:
       tags: [Governance]
       operationId: api_gov_004
+      summary: "API-GOV-004 - GET /ai/models"
       x-api-id: API-GOV-004
       x-fr: [FR-110]
       responses:
@@ -2983,6 +3134,7 @@ paths:
     post:
       tags: [Governance]
       operationId: api_gov_005
+      summary: "API-GOV-005 - POST /ai/models"
       x-api-id: API-GOV-005
       x-fr: [FR-110]
       requestBody:
@@ -3002,6 +3154,7 @@ paths:
     get:
       tags: [Governance]
       operationId: api_gov_006
+      summary: "API-GOV-006 - GET /prompts"
       x-api-id: API-GOV-006
       x-fr: [FR-111]
       responses:
@@ -3015,6 +3168,7 @@ paths:
     post:
       tags: [Governance]
       operationId: api_gov_007
+      summary: "API-GOV-007 - POST /prompts/{id}/versions"
       x-api-id: API-GOV-007
       x-fr: [FR-111]
       parameters:
@@ -3039,6 +3193,7 @@ paths:
     post:
       tags: [Governance]
       operationId: api_gov_008
+      summary: "API-GOV-008 - POST /evaluations/run"
       x-api-id: API-GOV-008
       x-fr: [FR-112]
       x-async: true
@@ -3058,6 +3213,7 @@ paths:
     get:
       tags: [Governance]
       operationId: api_gov_009
+      summary: "API-GOV-009 - GET /ai/usage"
       x-api-id: API-GOV-009
       x-fr: [FR-113]
       responses:
@@ -3071,6 +3227,7 @@ paths:
     get:
       tags: [Governance]
       operationId: api_gov_010
+      summary: "API-GOV-010 - GET /integrations"
       x-api-id: API-GOV-010
       x-fr: [FR-115]
       responses:
@@ -3083,6 +3240,7 @@ paths:
     post:
       tags: [Governance]
       operationId: api_gov_011
+      summary: "API-GOV-011 - POST /integrations"
       x-api-id: API-GOV-011
       x-fr: [FR-115]
       requestBody:
@@ -3102,6 +3260,7 @@ paths:
     patch:
       tags: [Governance]
       operationId: api_gov_012
+      summary: "API-GOV-012 - PATCH /integrations/{id}"
       x-api-id: API-GOV-012
       x-fr: [FR-115]
       parameters:
@@ -3125,6 +3284,7 @@ paths:
     get:
       tags: [Governance]
       operationId: api_gov_013
+      summary: "API-GOV-013 - GET /jobs"
       x-api-id: API-GOV-013
       x-fr: [FR-116]
       responses:
@@ -3138,6 +3298,7 @@ paths:
     get:
       tags: [Governance]
       operationId: api_gov_014
+      summary: "API-GOV-014 - GET /jobs/{id}"
       x-api-id: API-GOV-014
       x-fr: [FR-116]
       parameters:
@@ -3156,6 +3317,7 @@ paths:
     post:
       tags: [Governance]
       operationId: api_gov_015
+      summary: "API-GOV-015 - POST /jobs/{id}/retry"
       x-api-id: API-GOV-015
       x-fr: [FR-117]
       parameters:
@@ -3180,6 +3342,7 @@ paths:
     get:
       tags: [Governance]
       operationId: api_gov_016
+      summary: "API-GOV-016 - GET /notifications"
       x-api-id: API-GOV-016
       x-fr: [FR-118]
       responses:
@@ -3193,6 +3356,7 @@ paths:
     post:
       tags: [Governance]
       operationId: api_gov_017
+      summary: "API-GOV-017 - POST /notifications/{id}/read"
       x-api-id: API-GOV-017
       x-fr: [FR-118]
       parameters:
@@ -3217,6 +3381,7 @@ paths:
     get:
       tags: [Governance]
       operationId: api_gov_018
+      summary: "API-GOV-018 - GET /retention-policies"
       x-api-id: API-GOV-018
       x-fr: [FR-119]
       responses:
@@ -3230,6 +3395,7 @@ paths:
     put:
       tags: [Governance]
       operationId: api_gov_019
+      summary: "API-GOV-019 - PUT /retention-policies/{objectType}"
       x-api-id: API-GOV-019
       x-fr: [FR-119]
       parameters:
@@ -3253,6 +3419,7 @@ paths:
     get:
       tags: [Governance]
       operationId: api_gov_020
+      summary: "API-GOV-020 - GET /health/ready"
       x-api-id: API-GOV-020
       x-fr: [FR-121]
       security: []
@@ -3265,6 +3432,7 @@ paths:
     get:
       tags: [Governance]
       operationId: api_gov_021
+      summary: "API-GOV-021 - GET /health/live"
       x-api-id: API-GOV-021
       x-fr: [FR-121]
       security: []

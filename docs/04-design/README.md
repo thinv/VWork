@@ -14,4 +14,4 @@
 - [ ] High-fidelity mockups P0
 - [ ] Component implementation / Storybook-equivalent
 
-Mỗi màn hình phải trace Screen ID → UC → FR → API → Entity → Test và có loading/empty/error/permission state.
+Baseline Web hiện có 109 màn/route-level views (89 Core + 20 Shared/Master Data). Mỗi màn hình phải trace Screen ID → UC → FR → API → Entity → Test và có loading/empty/error/permission state.

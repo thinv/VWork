@@ -1,0 +1,24 @@
+{
+  "name": "@vwork/mobile",
+  "private": true,
+  "version": "0.1.0",
+  "main": "expo-router/entry",
+  "scripts": {
+    "dev": "expo start",
+    "build": "expo export --platform all",
+    "lint": "node -e \"console.log('mobile lint pending')\"",
+    "typecheck": "tsc --noEmit",
+    "test": "node -e \"console.log('mobile tests pending')\""
+  },
+  "dependencies": {
+    "expo": "~57.0.0",
+    "expo-router": "~7.0.0",
+    "react": "19.2.0",
+    "react-native": "0.86.0",
+    "@vwork/contracts": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "typescript": "^5.9.0"
+  }
+}

@@ -21,6 +21,43 @@ tags:
   - name: Executive
   - name: Governance
 paths:
+  /auth/login:
+    post:
+      tags: [Identity]
+      operationId: api_iam_001
+      summary: "API-IAM-001 - POST /auth/login"
+      x-api-id: API-IAM-001
+      x-fr: [FR-001]
+      security: []
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /auth/logout:
+    post:
+      tags: [Identity]
+      operationId: api_iam_002
+      summary: "API-IAM-002 - POST /auth/logout"
+      x-api-id: API-IAM-002
+      x-fr: [FR-002]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
   /me:
     get:
       tags: [Identity]

@@ -9,5 +9,7 @@
 - VWORK-THREAT-MODEL-v1.0.md
 - [x] VWORK-PERMISSION-CATALOG-v1.0.md
 - [x] VWORK-AUDIT-EVENT-CATALOG-v1.0.md
+- [x] VWORK-REPORTING-PERMISSION-APPENDIX-v1.0.md
+- [x] VWORK-REPORTING-AUDIT-APPENDIX-v1.0.md
 
 Security là yêu cầu xuyên suốt, không phải pha cuối dự án.

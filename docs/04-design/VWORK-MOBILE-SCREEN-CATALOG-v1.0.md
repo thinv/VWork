@@ -94,7 +94,7 @@ Global:
 | MOB-PRO-003 | Phiên đăng nhập | profile/sessions | All | IAM-004/005 |
 | MOB-PRO-004 | Thiết lập ứng dụng | settings | All | local/server prefs |
 
-**Tổng:** 32 màn.
+**Tổng theo Screen ID:** 34 màn.
 
 ---
 

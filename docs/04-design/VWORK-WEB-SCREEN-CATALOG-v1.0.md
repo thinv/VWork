@@ -51,7 +51,7 @@ Global:
 
 | ID | Màn hình | Route | Actor | API |
 |---|---|---|---|---|
-| WEB-DOC-001 | Danh sách văn bản | /documents | ACT-02/03/04 | DOC-004 |
+| WEB-DOC-001 | Danh sách văn bản | /documents | ACT-02/03/04 | DOC-001..005/011/012/017 |
 | WEB-DOC-002 | Tải tài liệu | /documents/upload | ACT-02/03/04 | DOC-001..003 |
 | WEB-DOC-003 | Chi tiết văn bản | /documents/:id | authorized | DOC-005/007/015 |
 | WEB-DOC-004 | Trình xem tài liệu | /documents/:id/view | authorized | DOC-009 |
@@ -60,15 +60,15 @@ Global:
 | WEB-DOC-007 | So sánh phiên bản | /documents/:id/compare | ACT-03/05 | DOC-010 |
 | WEB-DOC-008 | OCR & rà soát | /documents/:id/ocr | ACT-02/03 | INT-001/006/007 |
 | WEB-DOC-009 | Dữ liệu trích xuất | /documents/:id/extraction | ACT-02/03 | INT-002..005 |
-| WEB-DOC-010 | Quan hệ văn bản | /documents/:id/relations | authorized | DOC-015/016 |
+| WEB-DOC-010 | Quan hệ văn bản | /documents/:id/relations | authorized | DOC-015/016/018 |
 
 ## D. Văn bản đến
 
 | ID | Màn hình | Route | Actor | API |
 |---|---|---|---|---|
-| WEB-INC-001 | Danh sách văn bản đến | /incoming | ACT-02/03/01 | INC-002 |
+| WEB-INC-001 | Danh sách văn bản đến | /incoming | ACT-02/03/01 | INC-001..003/011..013 |
 | WEB-INC-002 | Đăng ký văn bản đến | /incoming/new | ACT-02 | INC-001 |
-| WEB-INC-003 | Chi tiết xử lý | /incoming/:id | ACT-02/03/01 | INC-003/004 |
+| WEB-INC-003 | Chi tiết xử lý | /incoming/:id | ACT-02/03/01 | INC-003/004/008..010/012/013 |
 | WEB-INC-004 | Yêu cầu AI bóc tách | /incoming/:id/requirements | ACT-03 | INC-005/006 |
 | WEB-INC-005 | Phương án xử lý | /incoming/:id/advice | ACT-03/01 | INC-007 |
 | WEB-INC-006 | Tạo hồ sơ công việc | /incoming/:id/create-case | ACT-03/01 | INC-008 |

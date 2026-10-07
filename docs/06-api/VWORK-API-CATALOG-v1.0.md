@@ -317,7 +317,20 @@ API-KNO-009 POST /knowledge-sources/{id}/versions
 API-KNO-010 POST /knowledge-versions/{id}/publish  
 API-KNO-011 POST /knowledge-versions/{id}/reindex  
 API-KNO-012 GET /knowledge/search  
-API-KNO-013 POST /knowledge/query
+API-KNO-013 POST /knowledge/query  
+API-KNO-014 PATCH /templates/{id}  
+API-KNO-015 POST /templates/{id}/archive  
+API-KNO-016 POST /templates/bulk-action  
+API-KNO-017 PATCH /knowledge-sources/{id}  
+API-KNO-018 POST /knowledge-sources/{id}/archive  
+API-KNO-019 POST /knowledge-sources/{id}/restore  
+API-KNO-020 POST /knowledge-sources/bulk-action  
+API-KNO-021 PUT /knowledge-sources/{id}/taxonomy  
+API-KNO-022 GET /knowledge/citations/{id}  
+API-KNO-023 GET /knowledge/queries/{id}/retrieval-trace  
+API-KNO-024 POST /knowledge-versions/{id}/revoke  
+API-KNO-025 POST /knowledge-versions/{id}/restore  
+API-KNO-026 POST /knowledge/search/bulk-action
 
 Trace: FR-092..100.
 

@@ -42,8 +42,8 @@ Global:
 |---|---|---|---|---|
 | MOB-INB-001 | Executive Inbox | inbox | ACT-01 | EXE-001 |
 | MOB-INB-002 | Chi tiết Inbox item | inbox/:id | ACT-01 | resource API |
-| MOB-APR-001 | Danh sách cần duyệt | approvals | ACT-01/05 | WFL-007 |
-| MOB-APR-002 | Chi tiết hồ sơ trình | approvals/:id | ACT-01/05 | WFL-008 |
+| MOB-APR-001 | Danh sách cần duyệt | approvals | ACT-01/05 | WFL-007/014 |
+| MOB-APR-002 | Chi tiết hồ sơ trình | approvals/:id | ACT-01/05 | WFL-008 + subject API |
 | MOB-APR-003 | Cho ý kiến/Phê duyệt | approvals/:id/action | ACT-01/05 | WFL-009..013 |
 
 ## Documents

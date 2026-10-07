@@ -1,0 +1,118 @@
+# VWork – Code List Catalog v1.0
+
+## 1. System Code Lists
+
+### CL-001 DOCUMENT_STATUS
+DRAFT, PROCESSING, READY, REVIEW_REQUIRED, APPROVAL, FINAL, ARCHIVED, FAILED, QUARANTINED.
+
+### CL-002 TASK_STATUS
+DRAFT, ASSIGNED, ACCEPTED, IN_PROGRESS, WAITING, REVIEW, COMPLETED, CANCELLED.
+
+### CL-003 WORK_CASE_STATUS
+DRAFT, OPEN, IN_PROGRESS, WAITING, REVIEW, COMPLETED, ARCHIVED, CANCELLED.
+
+### CL-004 PRIORITY
+LOW, NORMAL, HIGH, URGENT.
+
+### CL-005 APPROVAL_STATUS
+PENDING, APPROVED, RETURNED, REJECTED, CLARIFICATION_REQUIRED, DELEGATED, CANCELLED.
+
+### CL-006 WORKFLOW_STATUS
+CREATED, RUNNING, WAITING, COMPLETED, FAILED, CANCELLED.
+
+### CL-007 GROUNDING_TYPE
+FACT, INFERENCE, MISSING.
+
+### CL-008 VERIFICATION_STATUS
+UNVERIFIED, VERIFIED, CORRECTED, REJECTED.
+
+### CL-009 REVIEW_SEVERITY
+INFO, WARNING, ERROR, BLOCKER.
+
+### CL-010 JOB_STATUS
+QUEUED, RUNNING, RETRYING, SUCCEEDED, FAILED, CANCELLED, DEAD_LETTER.
+
+### CL-011 AI_CONFIDENCE_BAND
+HIGH, MEDIUM, LOW, UNKNOWN.
+
+### CL-012 REPORTING_PERIOD_TYPE
+DAILY, WEEKLY, MONTHLY, QUARTERLY, HALF_YEAR, YEARLY, AD_HOC.
+
+### CL-013 METRIC_DATA_TYPE
+INTEGER, DECIMAL, PERCENT, TEXT, BOOLEAN, DATE, DATETIME.
+
+### CL-014 AGGREGATION_TYPE
+SUM, AVG, MIN, MAX, COUNT, COUNT_DISTINCT, LAST, NONE, CUSTOM.
+
+### CL-015 SUBMISSION_STATUS
+NOT_SUBMITTED, SUBMITTED, LATE, VALIDATING, ACCEPTED, REJECTED, REPLACED.
+
+### CL-016 DATA_QUALITY_SEVERITY
+INFO, WARNING, ERROR, BLOCKER.
+
+### CL-017 SOURCE_TYPE
+UPLOAD, DMS, EMAIL, API, SCAN, MANUAL, MEETING, REPORT, KNOWLEDGE.
+
+### CL-018 EVIDENCE_TYPE
+FILE, DOCUMENT, COMMENT, URL, FORM, METRIC, MEETING_DECISION.
+
+### CL-019 NOTIFICATION_TYPE
+ASSIGNMENT, APPROVAL, DUE_SOON, OVERDUE, RETURNED, REJECTED, COMMENT, SYSTEM.
+
+### CL-020 DEPLOYMENT_PROFILE
+SAAS, PRIVATE_CLOUD, ON_PREMISE, AIR_GAPPED.
+
+---
+
+## 2. Tenant-extensible Code Lists
+
+### CL-T01 DOCUMENT_TYPE
+Ví dụ: công văn, thông báo, kế hoạch, báo cáo, tờ trình, quyết định, giấy mời, biên bản.
+
+### CL-T02 DOCUMENT_FIELD
+Lĩnh vực quản lý nội bộ.
+
+### CL-T03 RECIPIENT_GROUP
+Nơi nhận thường dùng.
+
+### CL-T04 WORK_CASE_TYPE
+Loại hồ sơ công việc.
+
+### CL-T05 MEETING_TYPE
+Loại cuộc họp.
+
+### CL-T06 REPORT_TYPE
+Loại báo cáo.
+
+### CL-T07 TAXONOMY
+Chủ đề/kho tri thức.
+
+---
+
+## 3. Governance
+
+System code list:
+- không tenant sửa code;
+- có thể localization label;
+- thay semantic phải version major.
+
+Tenant-extensible:
+- tenant thêm item;
+- không trùng code trong scope;
+- có effective date;
+- có audit.
+
+---
+
+## 4. Implementation Rule
+
+Không được:
+- tự tạo enum khác tên nhưng cùng nghĩa ở từng service;
+- dùng label làm khóa;
+- dùng số thứ tự hiển thị làm identifier.
+
+Phải:
+- dùng canonical code;
+- mapping ra label tại UI;
+- validate code tại API boundary;
+- pin version với danh mục có effective-date semantics.

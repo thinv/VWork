@@ -4954,6 +4954,452 @@ paths:
         '403': { $ref: '#/components/responses/Forbidden' }
         '409': { $ref: '#/components/responses/Conflict' }
         '422': { $ref: '#/components/responses/Validation' }
+  /meetings/bulk-action:
+    post:
+      tags: [Meeting]
+      operationId: api_mtg_014
+      summary: "API-MTG-014 - POST /meetings/bulk-action"
+      x-api-id: API-MTG-014
+      x-fr: [FR-065]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /meetings/{id}/archive:
+    post:
+      tags: [Meeting]
+      operationId: api_mtg_015
+      summary: "API-MTG-015 - POST /meetings/{id}/archive"
+      x-api-id: API-MTG-015
+      x-fr: [FR-065]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /meetings/{id}/participants:
+    get:
+      tags: [Meeting]
+      operationId: api_mtg_016
+      summary: "API-MTG-016 - GET /meetings/{id}/participants"
+      x-api-id: API-MTG-016
+      x-fr: [FR-066]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /meetings/{id}/participants:
+    post:
+      tags: [Meeting]
+      operationId: api_mtg_017
+      summary: "API-MTG-017 - POST /meetings/{id}/participants"
+      x-api-id: API-MTG-017
+      x-fr: [FR-066]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /meeting-participants/{id}:
+    patch:
+      tags: [Meeting]
+      operationId: api_mtg_018
+      summary: "API-MTG-018 - PATCH /meeting-participants/{id}"
+      x-api-id: API-MTG-018
+      x-fr: [FR-066]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /meeting-participants/{id}:
+    delete:
+      tags: [Meeting]
+      operationId: api_mtg_019
+      summary: "API-MTG-019 - DELETE /meeting-participants/{id}"
+      x-api-id: API-MTG-019
+      x-fr: [FR-066]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /meeting-participants/bulk-action:
+    post:
+      tags: [Meeting]
+      operationId: api_mtg_020
+      summary: "API-MTG-020 - POST /meeting-participants/bulk-action"
+      x-api-id: API-MTG-020
+      x-fr: [FR-066]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /meetings/{id}/agenda:
+    get:
+      tags: [Meeting]
+      operationId: api_mtg_021
+      summary: "API-MTG-021 - GET /meetings/{id}/agenda"
+      x-api-id: API-MTG-021
+      x-fr: [FR-066]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /meetings/{id}/agenda:
+    post:
+      tags: [Meeting]
+      operationId: api_mtg_022
+      summary: "API-MTG-022 - POST /meetings/{id}/agenda"
+      x-api-id: API-MTG-022
+      x-fr: [FR-066]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /meeting-agenda-items/{id}:
+    patch:
+      tags: [Meeting]
+      operationId: api_mtg_023
+      summary: "API-MTG-023 - PATCH /meeting-agenda-items/{id}"
+      x-api-id: API-MTG-023
+      x-fr: [FR-066]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /meeting-agenda-items/{id}:
+    delete:
+      tags: [Meeting]
+      operationId: api_mtg_024
+      summary: "API-MTG-024 - DELETE /meeting-agenda-items/{id}"
+      x-api-id: API-MTG-024
+      x-fr: [FR-066]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /meeting-agenda-items/bulk-action:
+    post:
+      tags: [Meeting]
+      operationId: api_mtg_025
+      summary: "API-MTG-025 - POST /meeting-agenda-items/bulk-action"
+      x-api-id: API-MTG-025
+      x-fr: [FR-066]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /meetings/{id}/attendance/bulk-action:
+    post:
+      tags: [Meeting]
+      operationId: api_mtg_026
+      summary: "API-MTG-026 - POST /meetings/{id}/attendance/bulk-action"
+      x-api-id: API-MTG-026
+      x-fr: [FR-066]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /transcript-segments/bulk-action:
+    post:
+      tags: [Meeting]
+      operationId: api_mtg_027
+      summary: "API-MTG-027 - POST /transcript-segments/bulk-action"
+      x-api-id: API-MTG-027
+      x-fr: [FR-067]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /meeting-decisions/{id}:
+    patch:
+      tags: [Meeting]
+      operationId: api_mtg_028
+      summary: "API-MTG-028 - PATCH /meeting-decisions/{id}"
+      x-api-id: API-MTG-028
+      x-fr: [FR-068]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /meeting-decisions/{id}/reconcile-task:
+    post:
+      tags: [Meeting]
+      operationId: api_mtg_029
+      summary: "API-MTG-029 - POST /meeting-decisions/{id}/reconcile-task"
+      x-api-id: API-MTG-029
+      x-fr: [FR-068]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /meetings/{id}/minutes:
+    get:
+      tags: [Meeting]
+      operationId: api_mtg_030
+      summary: "API-MTG-030 - GET /meetings/{id}/minutes"
+      x-api-id: API-MTG-030
+      x-fr: [FR-069]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /meeting-minutes/{id}:
+    patch:
+      tags: [Meeting]
+      operationId: api_mtg_031
+      summary: "API-MTG-031 - PATCH /meeting-minutes/{id}"
+      x-api-id: API-MTG-031
+      x-fr: [FR-069]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /meeting-minutes/{id}/submit:
+    post:
+      tags: [Meeting]
+      operationId: api_mtg_032
+      summary: "API-MTG-032 - POST /meeting-minutes/{id}/submit"
+      x-api-id: API-MTG-032
+      x-fr: [FR-069]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /meeting-minutes/{id}/archive:
+    post:
+      tags: [Meeting]
+      operationId: api_mtg_033
+      summary: "API-MTG-033 - POST /meeting-minutes/{id}/archive"
+      x-api-id: API-MTG-033
+      x-fr: [FR-069]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
 components:
   securitySchemes:
     bearerAuth:

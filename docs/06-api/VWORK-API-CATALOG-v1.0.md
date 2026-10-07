@@ -290,7 +290,44 @@ Trace: FR-109..124.
 
 ---
 
-## 14. Async Pattern
+## 14. Shared & Master Data
+
+API-MD-001 GET /code-lists  
+API-MD-002 POST /code-lists  
+API-MD-003 GET /code-lists/{code}  
+API-MD-004 PATCH /code-lists/{code}  
+API-MD-005 POST /code-lists/{code}/versions  
+API-MD-006 GET /code-lists/{code}/items  
+API-MD-007 POST /code-lists/{code}/items  
+API-MD-008 PATCH /code-list-items/{id}  
+API-MD-009 POST /code-list-items/{id}/activate  
+API-MD-010 POST /code-list-items/{id}/deactivate  
+API-MD-011 POST /code-list-items/{id}/retire  
+API-MD-012 POST /code-list-items/bulk-action  
+API-MD-013 GET /administrative-units  
+API-MD-014 GET /administrative-units/{code}  
+API-MD-015 POST /administrative-units/import  
+API-MD-016 GET /master-data-imports/{id}  
+API-MD-017 POST /master-data-imports/{id}/apply  
+API-MD-018 GET /external-agencies  
+API-MD-019 POST /external-agencies  
+API-MD-020 PATCH /external-agencies/{id}  
+API-MD-021 GET /units-of-measure  
+API-MD-022 POST /units-of-measure  
+API-MD-023 PATCH /units-of-measure/{code}  
+API-MD-024 POST /units-of-measure/{code}/retire  
+API-MD-025 GET /taxonomy  
+API-MD-026 POST /taxonomy/nodes  
+API-MD-027 PATCH /taxonomy/nodes/{id}  
+API-MD-028 POST /taxonomy/nodes/{id}/move  
+API-MD-029 POST /taxonomy/nodes/{id}/retire  
+API-MD-030 GET /master-data/history
+
+Trace: Shared/Master Data Governance; cross-cutting CRUD and administration.
+
+---
+
+## 15. Async Pattern
 
 Các tác vụ dài trả về HTTP 202 và Job resource:
 
@@ -313,7 +350,7 @@ Các tác vụ dài trả về HTTP 202 và Job resource:
 
 ---
 
-## 15. Authorization
+## 16. Authorization
 
 - Client không truyền role như nguồn tin cậy.
 - Tenant lấy từ authenticated context.
@@ -325,7 +362,7 @@ Các tác vụ dài trả về HTTP 202 và Job resource:
 
 ---
 
-## 16. API Traceability
+## 17. API Traceability
 
 OpenAPI phải dùng vendor extension:
 - x-api-id

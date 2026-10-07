@@ -9,6 +9,9 @@ Tổ chức bằng chứng phát triển VWork theo hướng tương thích CMMI
 - [x] VWORK-PROCESS-AND-PRODUCT-QA-v1.0.md
 - [x] VWORK-RISK-REGISTER-v1.0.md
 - [x] VWORK-MID-WAVE-CONSISTENCY-AUDIT-v1.0.md
+- [x] VWORK-FINAL-GAP-CLOSURE-v1.0.md
+- [x] VWORK-CROSS-DOMAIN-TRACEABILITY-AUDIT-v1.0.md
+- [x] VWORK-FINAL-151-SCREEN-AUDIT-v2.0.md
 
 ## Tiếp theo
 - [ ] VWORK-CONFIGURATION-MANAGEMENT-PLAN-v1.0.md

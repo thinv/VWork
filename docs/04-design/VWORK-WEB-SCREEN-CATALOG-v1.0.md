@@ -14,6 +14,7 @@
 7. Báo cáo
 8. Kho tri thức
 9. Quản trị
+10. Dữ liệu dùng chung
 
 Global:
 - Search
@@ -182,7 +183,14 @@ Global:
 | WEB-ADM-012 | Retention | /admin/retention | ACT-10 | GOV-018/019 |
 | WEB-ADM-013 | Job Operations | /admin/jobs | ACT-11 | GOV-013..015 |
 
-**Tổng catalog:** 89 màn/route-level views, trong đó một số side panel/modal dùng chung không tính thành màn riêng.
+## M. Dữ liệu dùng chung / Master Data
+
+Chi tiết đầy đủ xem: `VWORK-SHARED-MASTER-DATA-SCREEN-CATALOG-v1.0.md`.
+
+Nhóm này gồm WEB-MD-001..020: Code Lists, Administrative Units, External Agencies, Units of Measure, Document Types, Domains, Recipient Groups, Work Case Types, Meeting Types, Report Types, Taxonomy, Import/Diff và History.
+
+
+**Tổng catalog Core trước Shared/Master Data:** 89 màn/route-level views. Bộ `VWORK-SHARED-MASTER-DATA-SCREEN-CATALOG-v1.0.md` bổ sung 20 màn quản trị dữ liệu dùng chung, nâng tổng baseline Web lên **109 màn/route-level views**. Một số side panel/modal dùng chung không tính thành màn riêng.
 
 ---
 

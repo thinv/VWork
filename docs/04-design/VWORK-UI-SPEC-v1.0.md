@@ -377,6 +377,54 @@ Core:
 - AudioPlayer
 - TranscriptSegment
 - MetricSchemaGrid
+- SelectAllCheckbox
+- RowSelectionCheckbox
+- BulkActionBar
+- SelectionSummary
+- ConfirmBulkDialog
+- CreateButton
+- EditAction
+- DeleteArchiveAction
+
+---
+
+---
+
+# 24A. CRUD & Bulk Selection Standard
+
+Mọi màn hình quản lý dữ liệu phải hỗ trợ:
+- Thêm mới;
+- Sửa;
+- Xóa/Lưu trữ/Vô hiệu hóa/Thu hồi theo semantics;
+- checkbox từng dòng;
+- Chọn tất cả;
+- Bỏ chọn tất cả;
+- Bulk Action Bar.
+
+Select All:
+- mặc định áp dụng cho page hiện tại;
+- nếu muốn chọn toàn bộ kết quả filter phải có bước xác nhận riêng;
+- đổi filter/search phải reset selection hoặc cảnh báo.
+
+Destructive bulk actions:
+- luôn confirm;
+- hiển thị số item;
+- backend re-authorize từng item hoặc toàn query scope;
+- trả kết quả partial success/failure rõ ràng.
+
+Dữ liệu immutable:
+- không cho sửa/xóa vật lý;
+- dùng tạo version mới, lưu trữ, thu hồi hoặc vô hiệu hóa.
+
+Component bổ sung:
+- SelectAllCheckbox
+- RowSelectionCheckbox
+- BulkActionBar
+- SelectionSummary
+- ConfirmBulkDialog
+- CreateButton
+- EditAction
+- DeleteArchiveAction
 
 ---
 

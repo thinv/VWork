@@ -3484,7 +3484,7 @@ paths:
       operationId: api_md_001
       summary: "API-MD-001 - GET /code-lists"
       x-api-id: API-MD-001
-      x-fr: [FR-109]
+      x-fr: [FR-125]
       responses:
         '200': { $ref: '#/components/responses/Success' }
         '400': { $ref: '#/components/responses/BadRequest' }
@@ -3498,7 +3498,7 @@ paths:
       operationId: api_md_002
       summary: "API-MD-002 - POST /code-lists"
       x-api-id: API-MD-002
-      x-fr: [FR-109]
+      x-fr: [FR-125]
       requestBody:
         required: false
         content:
@@ -3518,7 +3518,7 @@ paths:
       operationId: api_md_003
       summary: "API-MD-003 - GET /code-lists/{code}"
       x-api-id: API-MD-003
-      x-fr: [FR-109]
+      x-fr: [FR-125]
       parameters:
         - name: code
           in: path
@@ -3537,7 +3537,7 @@ paths:
       operationId: api_md_004
       summary: "API-MD-004 - PATCH /code-lists/{code}"
       x-api-id: API-MD-004
-      x-fr: [FR-109]
+      x-fr: [FR-125]
       parameters:
         - name: code
           in: path
@@ -3561,7 +3561,7 @@ paths:
       operationId: api_md_005
       summary: "API-MD-005 - POST /code-lists/{code}/versions"
       x-api-id: API-MD-005
-      x-fr: [FR-109]
+      x-fr: [FR-125]
       parameters:
         - name: code
           in: path
@@ -3586,7 +3586,7 @@ paths:
       operationId: api_md_006
       summary: "API-MD-006 - GET /code-lists/{code}/items"
       x-api-id: API-MD-006
-      x-fr: [FR-109]
+      x-fr: [FR-126]
       parameters:
         - name: code
           in: path
@@ -3605,7 +3605,7 @@ paths:
       operationId: api_md_007
       summary: "API-MD-007 - POST /code-lists/{code}/items"
       x-api-id: API-MD-007
-      x-fr: [FR-109]
+      x-fr: [FR-126]
       parameters:
         - name: code
           in: path
@@ -3630,7 +3630,7 @@ paths:
       operationId: api_md_008
       summary: "API-MD-008 - PATCH /code-list-items/{id}"
       x-api-id: API-MD-008
-      x-fr: [FR-109]
+      x-fr: [FR-126]
       parameters:
         - name: id
           in: path
@@ -3654,7 +3654,7 @@ paths:
       operationId: api_md_009
       summary: "API-MD-009 - POST /code-list-items/{id}/activate"
       x-api-id: API-MD-009
-      x-fr: [FR-109]
+      x-fr: [FR-126]
       parameters:
         - name: id
           in: path
@@ -3679,7 +3679,7 @@ paths:
       operationId: api_md_010
       summary: "API-MD-010 - POST /code-list-items/{id}/deactivate"
       x-api-id: API-MD-010
-      x-fr: [FR-109]
+      x-fr: [FR-126]
       parameters:
         - name: id
           in: path
@@ -3704,7 +3704,7 @@ paths:
       operationId: api_md_011
       summary: "API-MD-011 - POST /code-list-items/{id}/retire"
       x-api-id: API-MD-011
-      x-fr: [FR-109]
+      x-fr: [FR-126]
       parameters:
         - name: id
           in: path
@@ -3729,7 +3729,7 @@ paths:
       operationId: api_md_012
       summary: "API-MD-012 - POST /code-list-items/bulk-action"
       x-api-id: API-MD-012
-      x-fr: [FR-109]
+      x-fr: [FR-126]
       requestBody:
         required: false
         content:
@@ -3749,7 +3749,7 @@ paths:
       operationId: api_md_013
       summary: "API-MD-013 - GET /administrative-units"
       x-api-id: API-MD-013
-      x-fr: [FR-109]
+      x-fr: [FR-127, FR-132]
       responses:
         '200': { $ref: '#/components/responses/Success' }
         '400': { $ref: '#/components/responses/BadRequest' }
@@ -3763,7 +3763,7 @@ paths:
       operationId: api_md_014
       summary: "API-MD-014 - GET /administrative-units/{code}"
       x-api-id: API-MD-014
-      x-fr: [FR-109]
+      x-fr: [FR-127, FR-132]
       parameters:
         - name: code
           in: path
@@ -3782,7 +3782,7 @@ paths:
       operationId: api_md_015
       summary: "API-MD-015 - POST /administrative-units/import"
       x-api-id: API-MD-015
-      x-fr: [FR-109]
+      x-fr: [FR-127, FR-132]
       requestBody:
         required: false
         content:
@@ -3802,7 +3802,7 @@ paths:
       operationId: api_md_016
       summary: "API-MD-016 - GET /master-data-imports/{id}"
       x-api-id: API-MD-016
-      x-fr: [FR-109]
+      x-fr: [FR-127, FR-132]
       parameters:
         - name: id
           in: path
@@ -3821,7 +3821,7 @@ paths:
       operationId: api_md_017
       summary: "API-MD-017 - POST /master-data-imports/{id}/apply"
       x-api-id: API-MD-017
-      x-fr: [FR-109]
+      x-fr: [FR-127, FR-132]
       parameters:
         - name: id
           in: path
@@ -3846,7 +3846,7 @@ paths:
       operationId: api_md_018
       summary: "API-MD-018 - GET /external-agencies"
       x-api-id: API-MD-018
-      x-fr: [FR-109]
+      x-fr: [FR-128]
       responses:
         '200': { $ref: '#/components/responses/Success' }
         '400': { $ref: '#/components/responses/BadRequest' }
@@ -3860,7 +3860,7 @@ paths:
       operationId: api_md_019
       summary: "API-MD-019 - POST /external-agencies"
       x-api-id: API-MD-019
-      x-fr: [FR-109]
+      x-fr: [FR-128]
       requestBody:
         required: false
         content:
@@ -3880,7 +3880,7 @@ paths:
       operationId: api_md_020
       summary: "API-MD-020 - PATCH /external-agencies/{id}"
       x-api-id: API-MD-020
-      x-fr: [FR-109]
+      x-fr: [FR-128]
       parameters:
         - name: id
           in: path
@@ -3904,7 +3904,7 @@ paths:
       operationId: api_md_021
       summary: "API-MD-021 - GET /units-of-measure"
       x-api-id: API-MD-021
-      x-fr: [FR-109]
+      x-fr: [FR-129]
       responses:
         '200': { $ref: '#/components/responses/Success' }
         '400': { $ref: '#/components/responses/BadRequest' }
@@ -3918,7 +3918,7 @@ paths:
       operationId: api_md_022
       summary: "API-MD-022 - POST /units-of-measure"
       x-api-id: API-MD-022
-      x-fr: [FR-109]
+      x-fr: [FR-129]
       requestBody:
         required: false
         content:
@@ -3938,7 +3938,7 @@ paths:
       operationId: api_md_023
       summary: "API-MD-023 - PATCH /units-of-measure/{code}"
       x-api-id: API-MD-023
-      x-fr: [FR-109]
+      x-fr: [FR-129]
       parameters:
         - name: code
           in: path
@@ -3962,7 +3962,7 @@ paths:
       operationId: api_md_024
       summary: "API-MD-024 - POST /units-of-measure/{code}/retire"
       x-api-id: API-MD-024
-      x-fr: [FR-109]
+      x-fr: [FR-129]
       parameters:
         - name: code
           in: path
@@ -3987,7 +3987,7 @@ paths:
       operationId: api_md_025
       summary: "API-MD-025 - GET /taxonomy"
       x-api-id: API-MD-025
-      x-fr: [FR-109]
+      x-fr: [FR-131]
       responses:
         '200': { $ref: '#/components/responses/Success' }
         '400': { $ref: '#/components/responses/BadRequest' }
@@ -4001,7 +4001,7 @@ paths:
       operationId: api_md_026
       summary: "API-MD-026 - POST /taxonomy/nodes"
       x-api-id: API-MD-026
-      x-fr: [FR-109]
+      x-fr: [FR-131]
       requestBody:
         required: false
         content:
@@ -4021,7 +4021,7 @@ paths:
       operationId: api_md_027
       summary: "API-MD-027 - PATCH /taxonomy/nodes/{id}"
       x-api-id: API-MD-027
-      x-fr: [FR-109]
+      x-fr: [FR-131]
       parameters:
         - name: id
           in: path
@@ -4045,7 +4045,7 @@ paths:
       operationId: api_md_028
       summary: "API-MD-028 - POST /taxonomy/nodes/{id}/move"
       x-api-id: API-MD-028
-      x-fr: [FR-109]
+      x-fr: [FR-131]
       parameters:
         - name: id
           in: path
@@ -4070,7 +4070,7 @@ paths:
       operationId: api_md_029
       summary: "API-MD-029 - POST /taxonomy/nodes/{id}/retire"
       x-api-id: API-MD-029
-      x-fr: [FR-109]
+      x-fr: [FR-131]
       parameters:
         - name: id
           in: path
@@ -4095,7 +4095,7 @@ paths:
       operationId: api_md_030
       summary: "API-MD-030 - GET /master-data/history"
       x-api-id: API-MD-030
-      x-fr: [FR-109]
+      x-fr: [FR-133]
       responses:
         '200': { $ref: '#/components/responses/Success' }
         '400': { $ref: '#/components/responses/BadRequest' }
@@ -4614,7 +4614,7 @@ paths:
       operationId: api_wrk_017
       summary: "API-WRK-017 - POST /work-cases/{id}/complete"
       x-api-id: API-WRK-017
-      x-fr: [FR-049]
+      x-fr: [FR-050]
       parameters:
         - name: id
           in: path
@@ -4639,7 +4639,7 @@ paths:
       operationId: api_wrk_018
       summary: "API-WRK-018 - POST /work-cases/{id}/reopen"
       x-api-id: API-WRK-018
-      x-fr: [FR-049]
+      x-fr: [FR-050]
       parameters:
         - name: id
           in: path
@@ -4664,7 +4664,7 @@ paths:
       operationId: api_wrk_019
       summary: "API-WRK-019 - POST /work-cases/{id}/archive"
       x-api-id: API-WRK-019
-      x-fr: [FR-049]
+      x-fr: [FR-050]
       parameters:
         - name: id
           in: path
@@ -4689,7 +4689,7 @@ paths:
       operationId: api_wrk_020
       summary: "API-WRK-020 - POST /work-cases/bulk-action"
       x-api-id: API-WRK-020
-      x-fr: [FR-049]
+      x-fr: [FR-050]
       requestBody:
         required: false
         content:
@@ -4709,7 +4709,7 @@ paths:
       operationId: api_wrk_021
       summary: "API-WRK-021 - GET /work-cases/{id}/outputs"
       x-api-id: API-WRK-021
-      x-fr: [FR-049]
+      x-fr: [FR-056]
       parameters:
         - name: id
           in: path
@@ -4728,7 +4728,7 @@ paths:
       operationId: api_wrk_022
       summary: "API-WRK-022 - POST /work-cases/{id}/outputs"
       x-api-id: API-WRK-022
-      x-fr: [FR-049]
+      x-fr: [FR-056]
       parameters:
         - name: id
           in: path
@@ -4753,7 +4753,7 @@ paths:
       operationId: api_wrk_023
       summary: "API-WRK-023 - DELETE /work-case-outputs/{id}"
       x-api-id: API-WRK-023
-      x-fr: [FR-049]
+      x-fr: [FR-056]
       parameters:
         - name: id
           in: path
@@ -4960,7 +4960,7 @@ paths:
       operationId: api_mtg_014
       summary: "API-MTG-014 - POST /meetings/bulk-action"
       x-api-id: API-MTG-014
-      x-fr: [FR-065]
+      x-fr: [FR-071]
       requestBody:
         required: false
         content:
@@ -4980,7 +4980,7 @@ paths:
       operationId: api_mtg_015
       summary: "API-MTG-015 - POST /meetings/{id}/archive"
       x-api-id: API-MTG-015
-      x-fr: [FR-065]
+      x-fr: [FR-071]
       parameters:
         - name: id
           in: path
@@ -5005,7 +5005,7 @@ paths:
       operationId: api_mtg_016
       summary: "API-MTG-016 - GET /meetings/{id}/participants"
       x-api-id: API-MTG-016
-      x-fr: [FR-066]
+      x-fr: [FR-071]
       parameters:
         - name: id
           in: path
@@ -5024,7 +5024,7 @@ paths:
       operationId: api_mtg_017
       summary: "API-MTG-017 - POST /meetings/{id}/participants"
       x-api-id: API-MTG-017
-      x-fr: [FR-066]
+      x-fr: [FR-071]
       parameters:
         - name: id
           in: path
@@ -5049,7 +5049,7 @@ paths:
       operationId: api_mtg_018
       summary: "API-MTG-018 - PATCH /meeting-participants/{id}"
       x-api-id: API-MTG-018
-      x-fr: [FR-066]
+      x-fr: [FR-071]
       parameters:
         - name: id
           in: path
@@ -5073,7 +5073,7 @@ paths:
       operationId: api_mtg_019
       summary: "API-MTG-019 - DELETE /meeting-participants/{id}"
       x-api-id: API-MTG-019
-      x-fr: [FR-066]
+      x-fr: [FR-071]
       parameters:
         - name: id
           in: path
@@ -5092,7 +5092,7 @@ paths:
       operationId: api_mtg_020
       summary: "API-MTG-020 - POST /meeting-participants/bulk-action"
       x-api-id: API-MTG-020
-      x-fr: [FR-066]
+      x-fr: [FR-071]
       requestBody:
         required: false
         content:
@@ -5112,7 +5112,7 @@ paths:
       operationId: api_mtg_021
       summary: "API-MTG-021 - GET /meetings/{id}/agenda"
       x-api-id: API-MTG-021
-      x-fr: [FR-066]
+      x-fr: [FR-072]
       parameters:
         - name: id
           in: path
@@ -5131,7 +5131,7 @@ paths:
       operationId: api_mtg_022
       summary: "API-MTG-022 - POST /meetings/{id}/agenda"
       x-api-id: API-MTG-022
-      x-fr: [FR-066]
+      x-fr: [FR-072]
       parameters:
         - name: id
           in: path
@@ -5156,7 +5156,7 @@ paths:
       operationId: api_mtg_023
       summary: "API-MTG-023 - PATCH /meeting-agenda-items/{id}"
       x-api-id: API-MTG-023
-      x-fr: [FR-066]
+      x-fr: [FR-072]
       parameters:
         - name: id
           in: path
@@ -5180,7 +5180,7 @@ paths:
       operationId: api_mtg_024
       summary: "API-MTG-024 - DELETE /meeting-agenda-items/{id}"
       x-api-id: API-MTG-024
-      x-fr: [FR-066]
+      x-fr: [FR-072]
       parameters:
         - name: id
           in: path
@@ -5199,7 +5199,7 @@ paths:
       operationId: api_mtg_025
       summary: "API-MTG-025 - POST /meeting-agenda-items/bulk-action"
       x-api-id: API-MTG-025
-      x-fr: [FR-066]
+      x-fr: [FR-072]
       requestBody:
         required: false
         content:
@@ -5219,7 +5219,7 @@ paths:
       operationId: api_mtg_026
       summary: "API-MTG-026 - POST /meetings/{id}/attendance/bulk-action"
       x-api-id: API-MTG-026
-      x-fr: [FR-066]
+      x-fr: [FR-071]
       parameters:
         - name: id
           in: path
@@ -5244,7 +5244,7 @@ paths:
       operationId: api_mtg_027
       summary: "API-MTG-027 - POST /transcript-segments/bulk-action"
       x-api-id: API-MTG-027
-      x-fr: [FR-067]
+      x-fr: [FR-075]
       requestBody:
         required: false
         content:
@@ -5264,7 +5264,7 @@ paths:
       operationId: api_mtg_028
       summary: "API-MTG-028 - PATCH /meeting-decisions/{id}"
       x-api-id: API-MTG-028
-      x-fr: [FR-068]
+      x-fr: [FR-077]
       parameters:
         - name: id
           in: path
@@ -5288,7 +5288,7 @@ paths:
       operationId: api_mtg_029
       summary: "API-MTG-029 - POST /meeting-decisions/{id}/reconcile-task"
       x-api-id: API-MTG-029
-      x-fr: [FR-068]
+      x-fr: [FR-079]
       parameters:
         - name: id
           in: path
@@ -5313,7 +5313,7 @@ paths:
       operationId: api_mtg_030
       summary: "API-MTG-030 - GET /meetings/{id}/minutes"
       x-api-id: API-MTG-030
-      x-fr: [FR-069]
+      x-fr: [FR-078]
       parameters:
         - name: id
           in: path
@@ -5332,7 +5332,7 @@ paths:
       operationId: api_mtg_031
       summary: "API-MTG-031 - PATCH /meeting-minutes/{id}"
       x-api-id: API-MTG-031
-      x-fr: [FR-069]
+      x-fr: [FR-078]
       parameters:
         - name: id
           in: path
@@ -5356,7 +5356,7 @@ paths:
       operationId: api_mtg_032
       summary: "API-MTG-032 - POST /meeting-minutes/{id}/submit"
       x-api-id: API-MTG-032
-      x-fr: [FR-069]
+      x-fr: [FR-078]
       parameters:
         - name: id
           in: path
@@ -5381,7 +5381,7 @@ paths:
       operationId: api_mtg_033
       summary: "API-MTG-033 - POST /meeting-minutes/{id}/archive"
       x-api-id: API-MTG-033
-      x-fr: [FR-069]
+      x-fr: [FR-078]
       parameters:
         - name: id
           in: path
@@ -5708,7 +5708,7 @@ paths:
       operationId: api_rpt_032
       summary: "API-RPT-032 - POST /metric-schema-versions/{id}/metrics"
       x-api-id: API-RPT-032
-      x-fr: [FR-083]
+      x-fr: [FR-084]
       parameters:
         - name: id
           in: path
@@ -5733,7 +5733,7 @@ paths:
       operationId: api_rpt_033
       summary: "API-RPT-033 - PATCH /metric-definitions/{id}"
       x-api-id: API-RPT-033
-      x-fr: [FR-083]
+      x-fr: [FR-084]
       parameters:
         - name: id
           in: path
@@ -5757,7 +5757,7 @@ paths:
       operationId: api_rpt_034
       summary: "API-RPT-034 - POST /metric-definitions/{id}/retire"
       x-api-id: API-RPT-034
-      x-fr: [FR-083]
+      x-fr: [FR-084]
       parameters:
         - name: id
           in: path
@@ -5782,7 +5782,7 @@ paths:
       operationId: api_rpt_035
       summary: "API-RPT-035 - POST /metric-definitions/bulk-action"
       x-api-id: API-RPT-035
-      x-fr: [FR-083]
+      x-fr: [FR-084]
       requestBody:
         required: false
         content:
@@ -5802,7 +5802,7 @@ paths:
       operationId: api_rpt_036
       summary: "API-RPT-036 - GET /reporting-cycles/{id}/extracted-values"
       x-api-id: API-RPT-036
-      x-fr: [FR-084]
+      x-fr: [FR-085]
       parameters:
         - name: id
           in: path
@@ -5821,7 +5821,7 @@ paths:
       operationId: api_rpt_037
       summary: "API-RPT-037 - PATCH /extracted-metric-values/{id}/verify"
       x-api-id: API-RPT-037
-      x-fr: [FR-084]
+      x-fr: [FR-085]
       parameters:
         - name: id
           in: path
@@ -5845,7 +5845,7 @@ paths:
       operationId: api_rpt_038
       summary: "API-RPT-038 - POST /extracted-metric-values/bulk-action"
       x-api-id: API-RPT-038
-      x-fr: [FR-084]
+      x-fr: [FR-085]
       requestBody:
         required: false
         content:
@@ -5865,7 +5865,7 @@ paths:
       operationId: api_rpt_039
       summary: "API-RPT-039 - POST /data-quality-findings/{id}/resolve"
       x-api-id: API-RPT-039
-      x-fr: [FR-085]
+      x-fr: [FR-086]
       parameters:
         - name: id
           in: path
@@ -5890,7 +5890,7 @@ paths:
       operationId: api_rpt_040
       summary: "API-RPT-040 - POST /data-quality-findings/{id}/override"
       x-api-id: API-RPT-040
-      x-fr: [FR-085]
+      x-fr: [FR-086]
       parameters:
         - name: id
           in: path
@@ -5915,7 +5915,7 @@ paths:
       operationId: api_rpt_041
       summary: "API-RPT-041 - POST /data-quality-findings/bulk-action"
       x-api-id: API-RPT-041
-      x-fr: [FR-085]
+      x-fr: [FR-086]
       requestBody:
         required: false
         content:
@@ -5935,7 +5935,7 @@ paths:
       operationId: api_rpt_042
       summary: "API-RPT-042 - GET /reporting-cycles/{id}/reconciliation-results"
       x-api-id: API-RPT-042
-      x-fr: [FR-086]
+      x-fr: [FR-087]
       parameters:
         - name: id
           in: path
@@ -5954,7 +5954,7 @@ paths:
       operationId: api_rpt_043
       summary: "API-RPT-043 - POST /reconciliation-results/{id}/override"
       x-api-id: API-RPT-043
-      x-fr: [FR-086]
+      x-fr: [FR-087]
       parameters:
         - name: id
           in: path
@@ -5979,7 +5979,7 @@ paths:
       operationId: api_rpt_044
       summary: "API-RPT-044 - GET /report-drafts/{id}"
       x-api-id: API-RPT-044
-      x-fr: [FR-089]
+      x-fr: [FR-090]
       parameters:
         - name: id
           in: path
@@ -5998,7 +5998,7 @@ paths:
       operationId: api_rpt_045
       summary: "API-RPT-045 - PATCH /report-drafts/{id}"
       x-api-id: API-RPT-045
-      x-fr: [FR-089]
+      x-fr: [FR-090]
       parameters:
         - name: id
           in: path
@@ -6022,7 +6022,7 @@ paths:
       operationId: api_rpt_046
       summary: "API-RPT-046 - POST /report-drafts/{id}/submit"
       x-api-id: API-RPT-046
-      x-fr: [FR-089]
+      x-fr: [FR-090]
       parameters:
         - name: id
           in: path
@@ -6066,7 +6066,7 @@ paths:
       operationId: api_kno_014
       summary: "API-KNO-014 - PATCH /templates/{id}"
       x-api-id: API-KNO-014
-      x-fr: [FR-092]
+      x-fr: [FR-095]
       parameters:
         - name: id
           in: path
@@ -6090,7 +6090,7 @@ paths:
       operationId: api_kno_015
       summary: "API-KNO-015 - POST /templates/{id}/archive"
       x-api-id: API-KNO-015
-      x-fr: [FR-092]
+      x-fr: [FR-095]
       parameters:
         - name: id
           in: path
@@ -6115,7 +6115,7 @@ paths:
       operationId: api_kno_016
       summary: "API-KNO-016 - POST /templates/bulk-action"
       x-api-id: API-KNO-016
-      x-fr: [FR-092]
+      x-fr: [FR-095]
       requestBody:
         required: false
         content:
@@ -6135,7 +6135,7 @@ paths:
       operationId: api_kno_017
       summary: "API-KNO-017 - PATCH /knowledge-sources/{id}"
       x-api-id: API-KNO-017
-      x-fr: [FR-094]
+      x-fr: [FR-096, FR-097]
       parameters:
         - name: id
           in: path
@@ -6159,7 +6159,7 @@ paths:
       operationId: api_kno_018
       summary: "API-KNO-018 - POST /knowledge-sources/{id}/archive"
       x-api-id: API-KNO-018
-      x-fr: [FR-094]
+      x-fr: [FR-096, FR-097]
       parameters:
         - name: id
           in: path
@@ -6184,7 +6184,7 @@ paths:
       operationId: api_kno_019
       summary: "API-KNO-019 - POST /knowledge-sources/{id}/restore"
       x-api-id: API-KNO-019
-      x-fr: [FR-094]
+      x-fr: [FR-096, FR-097]
       parameters:
         - name: id
           in: path
@@ -6209,7 +6209,7 @@ paths:
       operationId: api_kno_020
       summary: "API-KNO-020 - POST /knowledge-sources/bulk-action"
       x-api-id: API-KNO-020
-      x-fr: [FR-094]
+      x-fr: [FR-096, FR-097]
       requestBody:
         required: false
         content:
@@ -6229,7 +6229,7 @@ paths:
       operationId: api_kno_021
       summary: "API-KNO-021 - PUT /knowledge-sources/{id}/taxonomy"
       x-api-id: API-KNO-021
-      x-fr: [FR-094]
+      x-fr: [FR-096, FR-097]
       parameters:
         - name: id
           in: path
@@ -6291,7 +6291,7 @@ paths:
       operationId: api_kno_024
       summary: "API-KNO-024 - POST /knowledge-versions/{id}/revoke"
       x-api-id: API-KNO-024
-      x-fr: [FR-095]
+      x-fr: [FR-097, FR-100]
       parameters:
         - name: id
           in: path
@@ -6316,7 +6316,7 @@ paths:
       operationId: api_kno_025
       summary: "API-KNO-025 - POST /knowledge-versions/{id}/restore"
       x-api-id: API-KNO-025
-      x-fr: [FR-095]
+      x-fr: [FR-097, FR-100]
       parameters:
         - name: id
           in: path
@@ -6341,7 +6341,7 @@ paths:
       operationId: api_kno_026
       summary: "API-KNO-026 - POST /knowledge/search/bulk-action"
       x-api-id: API-KNO-026
-      x-fr: [FR-096]
+      x-fr: [FR-098]
       requestBody:
         required: false
         content:
@@ -6911,7 +6911,7 @@ paths:
       operationId: api_gov_024
       summary: "API-GOV-024 - PATCH /ai/providers/{id}"
       x-api-id: API-GOV-024
-      x-fr: [FR-111]
+      x-fr: [FR-110]
       parameters:
         - name: id
           in: path
@@ -6935,7 +6935,7 @@ paths:
       operationId: api_gov_025
       summary: "API-GOV-025 - POST /ai/providers/{id}/disable"
       x-api-id: API-GOV-025
-      x-fr: [FR-111]
+      x-fr: [FR-110]
       parameters:
         - name: id
           in: path
@@ -6960,7 +6960,7 @@ paths:
       operationId: api_gov_026
       summary: "API-GOV-026 - PATCH /ai/models/{id}"
       x-api-id: API-GOV-026
-      x-fr: [FR-111]
+      x-fr: [FR-110]
       parameters:
         - name: id
           in: path
@@ -6984,7 +6984,7 @@ paths:
       operationId: api_gov_027
       summary: "API-GOV-027 - POST /ai/models/{id}/disable"
       x-api-id: API-GOV-027
-      x-fr: [FR-111]
+      x-fr: [FR-110]
       parameters:
         - name: id
           in: path
@@ -7009,7 +7009,7 @@ paths:
       operationId: api_gov_028
       summary: "API-GOV-028 - POST /ai/providers/bulk-action"
       x-api-id: API-GOV-028
-      x-fr: [FR-111]
+      x-fr: [FR-110]
       requestBody:
         required: false
         content:
@@ -7029,7 +7029,7 @@ paths:
       operationId: api_gov_029
       summary: "API-GOV-029 - POST /ai/models/bulk-action"
       x-api-id: API-GOV-029
-      x-fr: [FR-111]
+      x-fr: [FR-110]
       requestBody:
         required: false
         content:
@@ -7049,7 +7049,7 @@ paths:
       operationId: api_gov_030
       summary: "API-GOV-030 - POST /prompts"
       x-api-id: API-GOV-030
-      x-fr: [FR-112]
+      x-fr: [FR-111]
       requestBody:
         required: false
         content:
@@ -7069,7 +7069,7 @@ paths:
       operationId: api_gov_031
       summary: "API-GOV-031 - GET /prompts/{id}"
       x-api-id: API-GOV-031
-      x-fr: [FR-112]
+      x-fr: [FR-111]
       parameters:
         - name: id
           in: path
@@ -7088,7 +7088,7 @@ paths:
       operationId: api_gov_032
       summary: "API-GOV-032 - POST /prompts/{id}/publish"
       x-api-id: API-GOV-032
-      x-fr: [FR-112]
+      x-fr: [FR-111]
       parameters:
         - name: id
           in: path
@@ -7113,7 +7113,7 @@ paths:
       operationId: api_gov_033
       summary: "API-GOV-033 - POST /prompts/{id}/archive"
       x-api-id: API-GOV-033
-      x-fr: [FR-112]
+      x-fr: [FR-111]
       parameters:
         - name: id
           in: path
@@ -7138,7 +7138,7 @@ paths:
       operationId: api_gov_034
       summary: "API-GOV-034 - POST /prompts/bulk-action"
       x-api-id: API-GOV-034
-      x-fr: [FR-112]
+      x-fr: [FR-111]
       requestBody:
         required: false
         content:
@@ -7158,7 +7158,7 @@ paths:
       operationId: api_gov_035
       summary: "API-GOV-035 - GET /evaluations"
       x-api-id: API-GOV-035
-      x-fr: [FR-113]
+      x-fr: [FR-112]
       responses:
         '200': { $ref: '#/components/responses/Success' }
         '400': { $ref: '#/components/responses/BadRequest' }
@@ -7172,7 +7172,7 @@ paths:
       operationId: api_gov_036
       summary: "API-GOV-036 - GET /evaluations/{id}"
       x-api-id: API-GOV-036
-      x-fr: [FR-113]
+      x-fr: [FR-112]
       parameters:
         - name: id
           in: path
@@ -7191,7 +7191,7 @@ paths:
       operationId: api_gov_037
       summary: "API-GOV-037 - POST /evaluations/{id}/cancel"
       x-api-id: API-GOV-037
-      x-fr: [FR-113]
+      x-fr: [FR-112]
       parameters:
         - name: id
           in: path
@@ -7216,7 +7216,7 @@ paths:
       operationId: api_gov_038
       summary: "API-GOV-038 - POST /ai/usage/export"
       x-api-id: API-GOV-038
-      x-fr: [FR-114]
+      x-fr: [FR-113]
       requestBody:
         required: false
         content:
@@ -7331,7 +7331,7 @@ paths:
       operationId: api_gov_043
       summary: "API-GOV-043 - POST /audit-events/export"
       x-api-id: API-GOV-043
-      x-fr: [FR-116]
+      x-fr: [FR-109]
       requestBody:
         required: false
         content:
@@ -7351,7 +7351,7 @@ paths:
       operationId: api_gov_044
       summary: "API-GOV-044 - POST /retention-policies/bulk-action"
       x-api-id: API-GOV-044
-      x-fr: [FR-117]
+      x-fr: [FR-119]
       requestBody:
         required: false
         content:
@@ -7371,7 +7371,7 @@ paths:
       operationId: api_gov_045
       summary: "API-GOV-045 - POST /jobs/bulk-action"
       x-api-id: API-GOV-045
-      x-fr: [FR-118]
+      x-fr: [FR-116, FR-117]
       requestBody:
         required: false
         content:
@@ -7391,7 +7391,7 @@ paths:
       operationId: api_gov_046
       summary: "API-GOV-046 - GET /notification-preferences"
       x-api-id: API-GOV-046
-      x-fr: [FR-119]
+      x-fr: [FR-118]
       responses:
         '200': { $ref: '#/components/responses/Success' }
         '400': { $ref: '#/components/responses/BadRequest' }
@@ -7405,7 +7405,7 @@ paths:
       operationId: api_gov_047
       summary: "API-GOV-047 - PUT /notification-preferences"
       x-api-id: API-GOV-047
-      x-fr: [FR-119]
+      x-fr: [FR-118]
       requestBody:
         required: false
         content:
@@ -7443,7 +7443,7 @@ paths:
       operationId: api_md_031
       summary: "API-MD-031 - POST /code-lists/{code}/retire"
       x-api-id: API-MD-031
-      x-fr: [FR-120]
+      x-fr: [FR-125]
       parameters:
         - name: code
           in: path
@@ -7468,7 +7468,7 @@ paths:
       operationId: api_md_032
       summary: "API-MD-032 - POST /code-lists/bulk-action"
       x-api-id: API-MD-032
-      x-fr: [FR-120]
+      x-fr: [FR-125]
       requestBody:
         required: false
         content:
@@ -7488,7 +7488,7 @@ paths:
       operationId: api_md_033
       summary: "API-MD-033 - POST /administrative-units/staging"
       x-api-id: API-MD-033
-      x-fr: [FR-121]
+      x-fr: [FR-127]
       requestBody:
         required: false
         content:
@@ -7508,7 +7508,7 @@ paths:
       operationId: api_md_034
       summary: "API-MD-034 - PATCH /administrative-units/staging/{id}"
       x-api-id: API-MD-034
-      x-fr: [FR-121]
+      x-fr: [FR-127]
       parameters:
         - name: id
           in: path
@@ -7532,7 +7532,7 @@ paths:
       operationId: api_md_035
       summary: "API-MD-035 - POST /administrative-units/staging/{id}/validate"
       x-api-id: API-MD-035
-      x-fr: [FR-121]
+      x-fr: [FR-127]
       parameters:
         - name: id
           in: path
@@ -7557,7 +7557,7 @@ paths:
       operationId: api_md_036
       summary: "API-MD-036 - POST /administrative-units/staging/{id}/publish"
       x-api-id: API-MD-036
-      x-fr: [FR-121]
+      x-fr: [FR-127]
       parameters:
         - name: id
           in: path
@@ -7582,7 +7582,7 @@ paths:
       operationId: api_md_037
       summary: "API-MD-037 - POST /administrative-units/{code}/retire"
       x-api-id: API-MD-037
-      x-fr: [FR-121]
+      x-fr: [FR-127]
       parameters:
         - name: code
           in: path
@@ -7607,7 +7607,7 @@ paths:
       operationId: api_md_038
       summary: "API-MD-038 - POST /administrative-units/{code}/map-successor"
       x-api-id: API-MD-038
-      x-fr: [FR-121]
+      x-fr: [FR-127]
       parameters:
         - name: code
           in: path
@@ -7632,7 +7632,7 @@ paths:
       operationId: api_md_039
       summary: "API-MD-039 - POST /administrative-units/bulk-action"
       x-api-id: API-MD-039
-      x-fr: [FR-121]
+      x-fr: [FR-127]
       requestBody:
         required: false
         content:
@@ -7652,7 +7652,7 @@ paths:
       operationId: api_md_040
       summary: "API-MD-040 - POST /external-agencies/{id}/retire"
       x-api-id: API-MD-040
-      x-fr: [FR-122]
+      x-fr: [FR-128]
       parameters:
         - name: id
           in: path
@@ -7677,7 +7677,7 @@ paths:
       operationId: api_md_041
       summary: "API-MD-041 - POST /external-agencies/bulk-action"
       x-api-id: API-MD-041
-      x-fr: [FR-122]
+      x-fr: [FR-128]
       requestBody:
         required: false
         content:
@@ -7697,7 +7697,7 @@ paths:
       operationId: api_md_042
       summary: "API-MD-042 - POST /units-of-measure/{code}/versions"
       x-api-id: API-MD-042
-      x-fr: [FR-123]
+      x-fr: [FR-129]
       parameters:
         - name: code
           in: path
@@ -7722,7 +7722,7 @@ paths:
       operationId: api_md_043
       summary: "API-MD-043 - POST /units-of-measure/bulk-action"
       x-api-id: API-MD-043
-      x-fr: [FR-123]
+      x-fr: [FR-129]
       requestBody:
         required: false
         content:
@@ -7742,7 +7742,7 @@ paths:
       operationId: api_md_044
       summary: "API-MD-044 - POST /taxonomy/nodes/bulk-action"
       x-api-id: API-MD-044
-      x-fr: [FR-124]
+      x-fr: [FR-131]
       requestBody:
         required: false
         content:
@@ -7762,7 +7762,7 @@ paths:
       operationId: api_md_045
       summary: "API-MD-045 - POST /master-data-imports/{id}/validate"
       x-api-id: API-MD-045
-      x-fr: [FR-125]
+      x-fr: [FR-132]
       parameters:
         - name: id
           in: path
@@ -7787,7 +7787,7 @@ paths:
       operationId: api_md_046
       summary: "API-MD-046 - GET /master-data-imports/{id}/diff"
       x-api-id: API-MD-046
-      x-fr: [FR-125]
+      x-fr: [FR-132]
       parameters:
         - name: id
           in: path
@@ -7806,7 +7806,7 @@ paths:
       operationId: api_md_047
       summary: "API-MD-047 - POST /master-data-imports/{id}/cancel"
       x-api-id: API-MD-047
-      x-fr: [FR-125]
+      x-fr: [FR-132]
       parameters:
         - name: id
           in: path
@@ -7831,7 +7831,7 @@ paths:
       operationId: api_md_048
       summary: "API-MD-048 - POST /master-data/history/export"
       x-api-id: API-MD-048
-      x-fr: [FR-126]
+      x-fr: [FR-133]
       requestBody:
         required: false
         content:
@@ -7851,7 +7851,7 @@ paths:
       operationId: api_md_049
       summary: "API-MD-049 - GET /master-data/overview"
       x-api-id: API-MD-049
-      x-fr: [FR-120]
+      x-fr: [FR-125, FR-134]
       responses:
         '200': { $ref: '#/components/responses/Success' }
         '400': { $ref: '#/components/responses/BadRequest' }
@@ -7865,7 +7865,7 @@ paths:
       operationId: api_md_050
       summary: "API-MD-050 - GET /master-data/datasets/{code}"
       x-api-id: API-MD-050
-      x-fr: [FR-120]
+      x-fr: [FR-125, FR-134]
       parameters:
         - name: code
           in: path

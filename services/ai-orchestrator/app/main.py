@@ -1,4 +1,5 @@
 from typing import Any, Literal
+
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
 

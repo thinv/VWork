@@ -61,6 +61,32 @@ Nguyên tắc:
 | API-IAM-019 | POST | /document-profiles | FR-009 |
 | API-IAM-020 | GET | /document-profiles | FR-009 |
 | API-IAM-021 | POST | /auth/reauth | FR-002 |
+API-IAM-022 POST /organization-units/{id}/retire
+API-IAM-023 POST /organization-units/bulk-action
+API-IAM-024 GET /users/{id}
+API-IAM-025 POST /users/{id}/deactivate
+API-IAM-026 POST /users/{id}/reactivate
+API-IAM-027 POST /users/bulk-action
+API-IAM-028 POST /roles
+API-IAM-029 GET /roles/{id}
+API-IAM-030 PATCH /roles/{id}
+API-IAM-031 POST /roles/{id}/archive
+API-IAM-032 POST /roles/bulk-action
+API-IAM-033 GET /permissions
+API-IAM-034 GET /data-scopes
+API-IAM-035 POST /role-assignments/bulk-action
+API-IAM-036 PATCH /delegations/{id}
+API-IAM-037 POST /delegations/{id}/revoke
+API-IAM-038 POST /delegations/bulk-action
+API-IAM-039 GET /document-profiles/{id}
+API-IAM-040 PATCH /document-profiles/{id}
+API-IAM-041 POST /document-profiles/{id}/versions
+API-IAM-042 POST /document-profiles/{id}/publish
+API-IAM-043 POST /document-profiles/{id}/archive
+API-IAM-044 POST /document-profiles/bulk-action
+API-IAM-045 POST /me/sessions/revoke-all
+API-IAM-046 GET /me/preferences
+API-IAM-047 PUT /me/preferences
 
 ---
 
@@ -384,6 +410,30 @@ API-GOV-020 GET /health/ready
 API-GOV-021 GET /health/live  
 API-GOV-022 POST /notifications/bulk-action  
 API-GOV-023 POST /jobs/{id}/cancel
+API-GOV-024 PATCH /ai/providers/{id}
+API-GOV-025 POST /ai/providers/{id}/disable
+API-GOV-026 PATCH /ai/models/{id}
+API-GOV-027 POST /ai/models/{id}/disable
+API-GOV-028 POST /ai/providers/bulk-action
+API-GOV-029 POST /ai/models/bulk-action
+API-GOV-030 POST /prompts
+API-GOV-031 GET /prompts/{id}
+API-GOV-032 POST /prompts/{id}/publish
+API-GOV-033 POST /prompts/{id}/archive
+API-GOV-034 POST /prompts/bulk-action
+API-GOV-035 GET /evaluations
+API-GOV-036 GET /evaluations/{id}
+API-GOV-037 POST /evaluations/{id}/cancel
+API-GOV-038 POST /ai/usage/export
+API-GOV-039 POST /integrations/{id}/test
+API-GOV-040 POST /integrations/{id}/disable
+API-GOV-041 POST /integrations/{id}/rotate-secret
+API-GOV-042 POST /integrations/bulk-action
+API-GOV-043 POST /audit-events/export
+API-GOV-044 POST /retention-policies/bulk-action
+API-GOV-045 POST /jobs/bulk-action
+API-GOV-046 GET /notification-preferences
+API-GOV-047 PUT /notification-preferences
 
 Trace: FR-109..124.
 

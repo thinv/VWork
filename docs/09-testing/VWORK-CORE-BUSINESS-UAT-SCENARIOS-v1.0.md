@@ -141,6 +141,30 @@ Chọn toàn bộ filtered result và bulk deactivate phải re-authorize, có c
 # UAT-40 Master Data referenced delete
 Item đã được tham chiếu không hard delete; chuyển inactive/retired.
 
+# UAT-41 Authentication
+Đăng nhập đúng/sai/disabled phải trả trạng thái phù hợp, không làm lộ username tồn tại.
+
+# UAT-42 Context Selection
+User nhiều membership chỉ được chọn membership ACTIVE; context bị revoke không được tiếp tục dùng.
+
+# UAT-43 Reauthentication
+Action nhạy cảm yêu cầu reauth; reauth fail không thực hiện action.
+
+# UAT-44 Notification Bulk
+Select All + bulk mark read/clear chỉ tác động notification của actor hiện tại và trả partial result nếu state thay đổi.
+
+# UAT-45 Job Operations
+Actor chỉ xem/retry/cancel job trong scope và chỉ khi job state cho phép.
+
+# UAT-46 Executive Inbox Stale
+Inbox item projection cũ phải re-check quyền và resource state trước khi mở/action.
+
+# UAT-47 Executive Brief Source Change
+Brief đã sinh phải giữ source reference/version; source đổi thì brief cũ được đánh dấu historical/stale.
+
+# UAT-48 Assistant Scope Revocation
+Conversation cũ không cho phép RAG tiếp tục dùng nguồn đã bị thu hồi quyền; mọi message mới retrieval theo scope hiện tại.
+
 # Exit Criteria
 - 100% UAT P0 PASS.
 - Không workaround cho lỗi thẩm quyền, data loss, versioning, tenant isolation.

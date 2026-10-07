@@ -479,7 +479,46 @@ Nguồn thay version/metadata sau khi tạo Draft/Approval/Task không được 
 State synchronization liên-domain phải dùng transactional/outbox event hoặc command orchestration có idempotency; consumer phải deduplicate.
 
 ---
-# 16. Business Rule → Requirement Mapping
+
+# 16. Knowledge / RAG Governance
+
+## BRULE-133 – Retrieval Authorization Before Ranking
+Mọi truy vấn RAG phải áp tenant/data-scope/source-state filter trước semantic ranking/reranking. Không xếp hạng trước rồi mới lọc quyền.
+
+## BRULE-134 – Knowledge Source Authority
+Mỗi Knowledge Source phải có authorityLevel/sourceType/owner/effective period. Khi nguồn xung đột, hệ thống phải nêu conflict hoặc áp authority policy có giải thích.
+
+## BRULE-135 – Knowledge Version Pinning
+Citation/answer phải pin exact KnowledgeVersion/DocumentVersion đã dùng. Citation lịch sử luôn mở đúng version đó nếu actor còn quyền.
+
+## BRULE-136 – Knowledge Revoke Invalidation
+Knowledge Source/Version bị revoke/archive/permission-reduced phải bị loại khỏi retrieval cache/index trong SLA invalidation; không chỉ ẩn ở UI.
+
+## BRULE-137 – Evidence Sufficiency Gate
+Nếu evidence không đủ, assistant phải trả insufficient-evidence state thay vì suy diễn thành FACT.
+
+## BRULE-138 – Conflicting Evidence Handling
+Nếu các nguồn authoritative mâu thuẫn mà không có deterministic precedence đủ mạnh, answer phải nêu conflict và citation từng phía.
+
+## BRULE-139 – Prompt Injection Isolation
+Nội dung nguồn được coi là untrusted data. Instruction bên trong source không được override system/developer/tenant policy hoặc tool permission.
+
+## BRULE-140 – Citation Completeness
+Claim được đánh dấu grounded phải có tối thiểu một citation phù hợp; claim tổng hợp nhiều nguồn phải có citation đủ support.
+
+## BRULE-141 – RAG Context Snapshot
+Mỗi AI answer lưu retrieval query/context snapshot tối thiểu: source/version refs, policy/filter version, model/prompt version, timestamp và correlationId.
+
+## BRULE-142 – Taxonomy Integrity
+Taxonomy assignment phải dùng canonical node/version; không cho circular hierarchy hoặc assignment tới retired node ngoài historical read.
+
+## BRULE-143 – Template Version Immutability
+TemplateVersion đã published/used không sửa in-place. Thay đổi tạo version mới; draft/approval pin exact template version.
+
+## BRULE-144 – Assistant Conversation Scope Re-evaluation
+Mỗi assistant message phải re-evaluate current permissions và source state; conversation history không cấp quyền truy cập nguồn đã bị revoke.
+
+# 17. Business Rule → Requirement Mapping
 
 | Nhóm rule | BRD chính |
 |---|---|
@@ -497,10 +536,11 @@ State synchronization liên-domain phải dùng transactional/outbox event hoặ
 | 097–110 | BR-060..072 |
 | 111–120 | Cross-cutting CRUD/UI/Data Governance |
 | 121–132 | Cross-Domain Orchestration |
+| 133–144 | Knowledge / RAG Governance |
 
 ---
 
-# 17. Rule Enforcement Layers
+# 18. Rule Enforcement Layers
 
 | Layer | Ví dụ |
 |---|---|
@@ -516,7 +556,7 @@ State synchronization liên-domain phải dùng transactional/outbox event hoặ
 
 ---
 
-# 18. Exit Criteria
+# 19. Exit Criteria
 
 Business Rule Catalog được coi là baseline khi:
 - các rule trọng yếu của 12 domain đều được định danh;

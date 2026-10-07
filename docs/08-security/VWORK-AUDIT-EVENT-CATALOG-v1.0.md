@@ -1,6 +1,6 @@
 # VWork – Audit Event Catalog v1.0
 
-**Phạm vi khởi tạo:** SC-01 Identity / Shell / Executive.
+**Phạm vi hiện tại:** SC-01 Identity / Shell / Executive + SC-02 Document / Incoming.
 
 ## 1. Quy ước
 Audit ID: `AUD-<DOMAIN>-NNN`.

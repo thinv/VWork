@@ -6060,6 +6060,301 @@ paths:
         '403': { $ref: '#/components/responses/Forbidden' }
         '409': { $ref: '#/components/responses/Conflict' }
         '422': { $ref: '#/components/responses/Validation' }
+  /templates/{id}:
+    patch:
+      tags: [Knowledge]
+      operationId: api_kno_014
+      summary: "API-KNO-014 - PATCH /templates/{id}"
+      x-api-id: API-KNO-014
+      x-fr: [FR-092]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /templates/{id}/archive:
+    post:
+      tags: [Knowledge]
+      operationId: api_kno_015
+      summary: "API-KNO-015 - POST /templates/{id}/archive"
+      x-api-id: API-KNO-015
+      x-fr: [FR-092]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /templates/bulk-action:
+    post:
+      tags: [Knowledge]
+      operationId: api_kno_016
+      summary: "API-KNO-016 - POST /templates/bulk-action"
+      x-api-id: API-KNO-016
+      x-fr: [FR-092]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /knowledge-sources/{id}:
+    patch:
+      tags: [Knowledge]
+      operationId: api_kno_017
+      summary: "API-KNO-017 - PATCH /knowledge-sources/{id}"
+      x-api-id: API-KNO-017
+      x-fr: [FR-094]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /knowledge-sources/{id}/archive:
+    post:
+      tags: [Knowledge]
+      operationId: api_kno_018
+      summary: "API-KNO-018 - POST /knowledge-sources/{id}/archive"
+      x-api-id: API-KNO-018
+      x-fr: [FR-094]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /knowledge-sources/{id}/restore:
+    post:
+      tags: [Knowledge]
+      operationId: api_kno_019
+      summary: "API-KNO-019 - POST /knowledge-sources/{id}/restore"
+      x-api-id: API-KNO-019
+      x-fr: [FR-094]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /knowledge-sources/bulk-action:
+    post:
+      tags: [Knowledge]
+      operationId: api_kno_020
+      summary: "API-KNO-020 - POST /knowledge-sources/bulk-action"
+      x-api-id: API-KNO-020
+      x-fr: [FR-094]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /knowledge-sources/{id}/taxonomy:
+    put:
+      tags: [Knowledge]
+      operationId: api_kno_021
+      summary: "API-KNO-021 - PUT /knowledge-sources/{id}/taxonomy"
+      x-api-id: API-KNO-021
+      x-fr: [FR-094]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /knowledge/citations/{id}:
+    get:
+      tags: [Knowledge]
+      operationId: api_kno_022
+      summary: "API-KNO-022 - GET /knowledge/citations/{id}"
+      x-api-id: API-KNO-022
+      x-fr: [FR-099]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /knowledge/queries/{id}/retrieval-trace:
+    get:
+      tags: [Knowledge]
+      operationId: api_kno_023
+      summary: "API-KNO-023 - GET /knowledge/queries/{id}/retrieval-trace"
+      x-api-id: API-KNO-023
+      x-fr: [FR-099]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /knowledge-versions/{id}/revoke:
+    post:
+      tags: [Knowledge]
+      operationId: api_kno_024
+      summary: "API-KNO-024 - POST /knowledge-versions/{id}/revoke"
+      x-api-id: API-KNO-024
+      x-fr: [FR-095]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /knowledge-versions/{id}/restore:
+    post:
+      tags: [Knowledge]
+      operationId: api_kno_025
+      summary: "API-KNO-025 - POST /knowledge-versions/{id}/restore"
+      x-api-id: API-KNO-025
+      x-fr: [FR-095]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /knowledge/search/bulk-action:
+    post:
+      tags: [Knowledge]
+      operationId: api_kno_026
+      summary: "API-KNO-026 - POST /knowledge/search/bulk-action"
+      x-api-id: API-KNO-026
+      x-fr: [FR-096]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
 components:
   securitySchemes:
     bearerAuth:

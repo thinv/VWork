@@ -91,27 +91,27 @@ Global:
 
 | ID | Màn hình | Route | Actor | API |
 |---|---|---|---|---|
-| WEB-WC-001 | Danh sách hồ sơ | /work-cases | ACT-01/03/04 | WRK-002 |
+| WEB-WC-001 | Danh sách hồ sơ | /work-cases | ACT-01/03/04 | WRK-001..004/017..020 |
 | WEB-WC-002 | Tạo hồ sơ | /work-cases/new | ACT-03/04 | WRK-001 |
-| WEB-WC-003 | Tổng quan hồ sơ | /work-cases/:id | authorized | WRK-003 |
+| WEB-WC-003 | Tổng quan hồ sơ | /work-cases/:id | authorized | WRK-003/004/017..019/021 |
 | WEB-WC-004 | Timeline | /work-cases/:id/timeline | authorized | WRK-005 |
 | WEB-WC-005 | Tài liệu liên quan | /work-cases/:id/documents | authorized | DOC-004 |
-| WEB-WC-006 | Nhiệm vụ trong hồ sơ | /work-cases/:id/tasks | authorized | WRK-006/007 |
+| WEB-WC-006 | Nhiệm vụ trong hồ sơ | /work-cases/:id/tasks | authorized | WRK-006..009/028/031 |
 | WEB-WC-007 | Cuộc họp liên quan | /work-cases/:id/meetings | authorized | MTG-002 |
-| WEB-WC-008 | Kết quả/đầu ra | /work-cases/:id/outputs | authorized | DOC/WRK |
+| WEB-WC-008 | Kết quả/đầu ra | /work-cases/:id/outputs | authorized | WRK-021..023 |
 
 ## G. Công việc
 
 | ID | Màn hình | Route | Actor | API |
 |---|---|---|---|---|
 | WEB-TSK-001 | Việc của tôi | /tasks/my | ACT-04/03/01 | WRK-007 |
-| WEB-TSK-002 | Toàn bộ công việc | /tasks | authorized manager | WRK-007 |
-| WEB-TSK-003 | Chi tiết Task | /tasks/:id | authorized | WRK-008 |
+| WEB-TSK-002 | Toàn bộ công việc | /tasks | authorized manager | WRK-006..009/024/027..029/031 |
+| WEB-TSK-003 | Chi tiết Task | /tasks/:id | authorized | WRK-008..016/024..030 |
 | WEB-TSK-004 | Tạo/Giao Task | /work-cases/:id/tasks/new | ACT-01/03 | WRK-006/009 |
 | WEB-TSK-005 | Cập nhật tiến độ | /tasks/:id/progress | ACT-04 | WRK-011 |
-| WEB-TSK-006 | Nộp kết quả | /tasks/:id/evidence | ACT-04 | WRK-012 |
+| WEB-TSK-006 | Nộp kết quả | /tasks/:id/evidence | ACT-04 | WRK-012/013/030 |
 | WEB-TSK-007 | Lịch sử & bàn giao | /tasks/:id/history | authorized | WRK-014/016 |
-| WEB-TSK-008 | Quá hạn/Blocked | /tasks/risks | manager | WRK-007 |
+| WEB-TSK-008 | Quá hạn/Blocked | /tasks/risks | manager | WRK-007/028/031 |
 
 ## H. Trình duyệt
 

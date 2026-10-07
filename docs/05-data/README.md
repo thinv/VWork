@@ -10,7 +10,7 @@
 - [x] VWORK-SHARED-DATA-BOUNDARY-v1.0.md
 
 ## Tiếp theo
-- [ ] VWORK-MASTER-DATA-GOVERNANCE-v1.0.md
+- [x] VWORK-MASTER-DATA-GOVERNANCE-v1.0.md
 - [ ] VWORK-DATA-RETENTION-v1.0.md
 - [ ] Physical migrations cho shared/master data
 

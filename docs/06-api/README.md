@@ -2,9 +2,10 @@
 
 ## Hoàn thành baseline
 - [x] VWORK-API-CATALOG-v1.0.md
-- [x] openapi/vwork-openapi.yaml — 259 API-ID baseline
+- [x] openapi/vwork-openapi.yaml — 288 API-ID baseline
 - [x] VWORK-INTEGRATION-CONTRACT-v1.0.md
 - [x] VWORK-EVENT-CATALOG-v1.0.md
+- [x] VWORK-REPORTING-API-EXTENSION-v1.0.md
 
 ## Tiếp theo
 - [ ] Typed request/response schema chi tiết theo từng vertical slice

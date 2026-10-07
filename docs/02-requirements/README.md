@@ -17,6 +17,8 @@ Chứa toàn bộ hồ sơ yêu cầu nghiệp vụ và phần mềm.
 - [x] VWORK-INCOMING-OUTGOING-DOCUMENT-BUSINESS-SPEC-v1.0.md
 - [x] VWORK-WORK-CASE-TASK-BUSINESS-SPEC-v1.0.md
 - [x] VWORK-WORKFLOW-APPROVAL-DELEGATION-BUSINESS-SPEC-v1.0.md
+- [x] VWORK-REPORTING-DETAILED-BUSINESS-SPEC-v1.0.md
+- [x] VWORK-MEETING-DETAILED-BUSINESS-SPEC-v1.0.md
 
 ## Baseline counts
 - 12 Business Processes
@@ -53,8 +55,7 @@ Research/Capability → Business Process → BRD → Actor → Authority → Use
 ID đã cấp giữ ổn định. Requirement/rule/use case loại bỏ phải Deprecated/Removed, không tái sử dụng ID.
 
 ## Trọng tâm tiếp theo
-- Detail nghiệp vụ văn bản đến/phát hành
-- Detail hồ sơ công việc/giao việc
-- Detail workflow/phê duyệt
-- Detail báo cáo
-- Detail Master Data Governance
+- Rà chéo toàn bộ 109 Web screens với CRUD/Authority/State/Exception
+- Rà 32 Mobile screens theo nghiệp vụ và quyền
+- Bổ sung domain-specific UAT/Acceptance Matrix
+- Khóa API/OpenAPI cho nhóm Shared/Master Data

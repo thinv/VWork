@@ -221,3 +221,27 @@ TEST DESIGN READY: PASS
 ENGINEERING HANDOFF: APPROVED FOR IMPLEMENTATION
 
 Release/UAT approval remains separate.
+
+## 15. Validated Technical Evidence
+Validated technical SHA: 18f62a1f32d3cd401fa4d2f428718bcf9b35d5ea  
+GitHub Actions run: 37613779021  
+Result: PASS
+
+Passed steps:
+- contracts typecheck
+- core-api typecheck/build
+- web typecheck/build
+- mobile typecheck
+- Redocly OpenAPI lint
+- migration 0001 smoke
+- AI orchestrator install
+- Ruff
+- Pytest
+
+OpenAPI structural baseline at validation:
+- 322 unique paths
+- 372 unique operationIds
+- 372 unique x-api-id
+- 0 duplicate path
+- 0 duplicate method
+- API Catalog/OpenAPI parity 372/372

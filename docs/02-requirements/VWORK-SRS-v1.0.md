@@ -635,10 +635,10 @@ Client phải hiển thị lỗi có thể hành động; không lộ stack trac
 
 Core v1 chỉ đủ điều kiện qualification khi:
 
-1. 124 FR được phân loại release và P0 hoàn tất.
+1. 134 FR được phân loại release và P0 hoàn tất.
 2. 94 NFR có test/evidence phù hợp.
-3. 110 Business Rules trọng yếu được enforce hoặc documented exception.
-4. 96 Use Cases có coverage.
+3. 176 Business Rules trọng yếu được enforce hoặc documented exception.
+4. 104 Use Cases có coverage.
 5. Không có P0 traceability gap.
 6. Cross-tenant/security gate PASS.
 7. API contract tests PASS.
@@ -743,11 +743,11 @@ SRS v1.0 được coi là đủ baseline khi:
 
 - 12 Core Domains
 - 12 Business Processes
-- 72 Business Requirements
+- 80 Business Requirements
 - 14 Business Actors
-- 96 Use Cases
-- 110 Business Rules
-- 124 Functional Requirements
+- 104 Use Cases
+- 176 Business Rules
+- 134 Functional Requirements
 - 94 Non-Functional Requirements
 
 Tài liệu này là **baseline yêu cầu phần mềm chính thức** để VWork bước sang Architecture, Data, API và Screen Design.

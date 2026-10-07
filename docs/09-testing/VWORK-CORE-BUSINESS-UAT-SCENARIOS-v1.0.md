@@ -429,6 +429,72 @@ Mobile citation mở exact source/version/locator; stale/revoked source xử lý
 # UAT-136 Knowledge Search Bulk
 Select All + bulk archive/reindex/taxonomy action re-authorize từng source và trả partial result.
 
+# UAT-137 Organization Retirement
+Referenced org unit không hard delete; retire giữ effective dates/history/successor khi có.
+
+# UAT-138 User Deactivation
+Deactivate user/membership revoke effective access/session theo SLA nhưng giữ audit/ownership.
+
+# UAT-139 Privilege Escalation
+Admin không cấp role/permission/data scope vượt thẩm quyền quản trị của chính mình.
+
+# UAT-140 Role/Data Scope Assignment
+Role assignment luôn gắn membership + explicit data scope; bulk assignment partial-safe.
+
+# UAT-141 Delegation Window
+Delegation chỉ hiệu lực trong window/scope/action; expired/revoked không authorize action mới.
+
+# UAT-142 Delegation No Chain
+Chain delegation mặc định bị chặn.
+
+# UAT-143 Document Profile Versioning
+Published profile immutable; thay đổi tạo version mới; document lịch sử pin version cũ.
+
+# UAT-144 AI Provider Secret
+Raw secret không trả lại/log/export; UI chỉ masked metadata.
+
+# UAT-145 AI Provider/Model Disable
+Disabled provider/model không nhận run mới; fallback chỉ allowlist policy.
+
+# UAT-146 Prompt Publish Gate
+Production run pin promptVersionId published; draft prompt bị chặn theo policy.
+
+# UAT-147 Evaluation Reproducibility
+Evaluation pin dataset/model/provider/prompt/config/metric version.
+
+# UAT-148 Integration Secret Rotation
+Rotate secret không log raw secret; failure không silently mất active credential.
+
+# UAT-149 Integration Disable
+Disabled integration không phát outbound call mới ngoài in-flight policy explicit.
+
+# UAT-150 Audit Append-only
+Audit UI không sửa/xóa event; export cần permission/scope/filter snapshot và tạo audit event.
+
+# UAT-151 Retention Legal Hold
+Retention/bulk retention không xóa object dưới legal hold.
+
+# UAT-152 Job State Operations
+Retry/cancel/bulk chỉ đúng job state; SUCCEEDED không retry ngoài rerun contract.
+
+# UAT-153 Session Revocation
+User chỉ revoke session của mình; revoke-all đúng policy và audit.
+
+# UAT-154 Personal Profile
+User sửa hồ sơ cá nhân qua self-service API, không dùng admin User API.
+
+# UAT-155 Notification Preferences
+Preference channel/digest/quiet-hours hợp lệ; không ảnh hưởng authorization.
+
+# UAT-156 App Preferences
+Theme/language/view preference thay đổi presentation, không security policy.
+
+# UAT-157 Governance Bulk
+Select All + bulk actions ở Org/User/Role/Delegation/AI/Integration/Retention/Jobs re-authorize từng item và trả partial result.
+
+# UAT-158 Governance Cross-tenant
+Tenant admin A không xem/sửa/export config/audit/user/role của tenant B.
+
 # Exit Criteria
 - 100% UAT P0 PASS.
 - Không workaround cho lỗi thẩm quyền, data loss, versioning, tenant isolation.

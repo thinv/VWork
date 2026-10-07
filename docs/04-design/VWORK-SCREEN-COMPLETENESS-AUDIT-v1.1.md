@@ -1,0 +1,59 @@
+# VWork – Screen Completeness Audit v1.1 – Rolling Progress
+
+**Baseline gốc:** VWORK-SCREEN-COMPLETENESS-AUDIT-v1.0.md  
+**Tổng Screen ID:** 151 = 117 Web + 34 Mobile.
+
+# 1. Trạng thái sau Batch SC-01
+- PASS / ENGINEERING READY: **19**
+- PARTIAL: **108**
+- GAP: **24**
+- Tổng: 151
+
+SC-01 đã đóng 9 GAP + 10 PARTIAL từ baseline v1.0.
+
+# 2. Batch SC-01 – PASS
+
+| Screen ID | CRUD | Bulk | Permission | State | BRULE | API | Master Data | Exception | Audit | Test/UAT | Status |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| WEB-AUTH-001 | PASS | N/A | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | ENGINEERING READY |
+| WEB-AUTH-002 | PASS | N/A | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | ENGINEERING READY |
+| WEB-SHELL-001 | PASS | N/A | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | ENGINEERING READY |
+| WEB-SHELL-002 | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | ENGINEERING READY |
+| WEB-SHELL-003 | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | ENGINEERING READY |
+| WEB-EXE-001 | N/A | N/A | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | ENGINEERING READY |
+| WEB-EXE-002 | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | ENGINEERING READY |
+| WEB-EXE-003 | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | ENGINEERING READY |
+| WEB-EXE-004 | PASS | N/A | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | ENGINEERING READY |
+| WEB-EXE-005 | PASS | N/A | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | ENGINEERING READY |
+| WEB-EXE-006 | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | ENGINEERING READY |
+| MOB-AUTH-001 | PASS | N/A | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | ENGINEERING READY |
+| MOB-AUTH-002 | PASS | N/A | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | ENGINEERING READY |
+| MOB-AUTH-003 | PASS | N/A | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | ENGINEERING READY |
+| MOB-HOME-001 | N/A | N/A | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | ENGINEERING READY |
+| MOB-HOME-002 | PASS | N/A | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | ENGINEERING READY |
+| MOB-HOME-003 | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | ENGINEERING READY |
+| MOB-INB-001 | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | ENGINEERING READY |
+| MOB-INB-002 | PASS | N/A | PASS | PASS | PASS | PASS | PASS | PASS | PASS | PASS | ENGINEERING READY |
+
+# 3. Evidence
+- Screen Spec: VWORK-SCREEN-SPEC-v1.1-SC01-IDENTITY-SHELL-EXECUTIVE.md
+- Permission: VWORK-PERMISSION-CATALOG-v1.0.md
+- Audit Events: VWORK-AUDIT-EVENT-CATALOG-v1.0.md
+- Exceptions: VWORK-IDENTITY-EXECUTIVE-EXCEPTION-CATALOG-v1.0.md
+- API Catalog: API-IAM-021, API-EXE-006..008, API-AST-005..008, API-GOV-022..023 bổ sung
+- OpenAPI: 210 operation IDs
+- Test: VWORK-SCREEN-TEST-CASES-v1.1-SC01.md
+- UAT: UAT-41..48
+
+# 4. Remaining Batches
+SC-02 Document/Incoming  
+SC-03 Draft/Workflow  
+SC-04 Work Case/Task  
+SC-05 Meeting  
+SC-06 Reporting  
+SC-07 Knowledge/AI  
+SC-08 Governance  
+SC-09 Shared/Master Data
+
+# 5. Rule
+Màn chưa nằm trong batch đã đóng vẫn sử dụng trạng thái của Audit v1.0; không tự động coi PASS chỉ vì có global rule.

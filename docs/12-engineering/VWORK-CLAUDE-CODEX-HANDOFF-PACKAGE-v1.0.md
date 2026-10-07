@@ -9,12 +9,13 @@
 - VWORK-CORE-TOOLS-SKILL-CATALOG-v1.0.md
 - VWORK-BRD-v2.0.md
 
-Cho tới khi Wave R3/R4 hoàn tất:
+Wave R3 đã hoàn tất. Cho tới khi Wave R4 hoàn tất:
 - technical baseline v1.x vẫn authoritative cho state/security/API/data semantics;
+- Product/System baseline v2 authoritative cho positioning, SoR, capability mode, Tool/Skill/Entitlement và Unified Work Inbox;
 - **không tiếp tục xây user-facing navigation/module theo IA v1 như một eOffice đầy đủ**;
 - không expose toàn bộ 151 screens cho ordinary users;
 - mọi UI mới phải chờ Screen Exposure Matrix + User-facing IA v2/Golden Screens hoặc được Product duyệt riêng;
-- backend foundation có thể tiếp tục nếu không phụ thuộc packaging/ownership đang refactor.
+- backend foundation có thể tiếp tục nếu không phụ thuộc Screen Exposure/Golden Screen đang chờ R4.
 
 Mục tiêu v2: AI-first, task-centric, integration-first; external System of Record được giữ nguyên khi tồn tại.
 
@@ -31,7 +32,7 @@ Engineering may start implementation theo feature/domain package, nhưng không 
 - Business Requirements: 80
 - Actors: 14
 - Use Cases: 104
-- Business Rules: 176
+- Business Rules: 200 (176 v1 + 24 Product v2)
 - Functional Requirements: 134
 - Non-Functional Requirements: 94
 - Screens: 151 = 117 Web + 34 Mobile
@@ -45,6 +46,15 @@ Global:
 3. VWORK-NATIVE-INTEGRATED-OPTIONAL-MATRIX-v1.0.md
 4. VWORK-CORE-TOOLS-SKILL-CATALOG-v1.0.md
 5. VWORK-BRD-v2.0.md
+6. VWORK-FUNCTIONAL-REQUIREMENTS-v2.0-DELTA.md
+7. VWORK-SRS-v2.0-DELTA.md
+8. VWORK-SYSTEM-OF-RECORD-REGISTRY-v1.0.md
+9. VWORK-INTEGRATION-PROFILE-SPEC-v1.0.md
+10. VWORK-TOOL-SKILL-ENTITLEMENT-MODEL-v1.0.md
+11. VWORK-UNIFIED-WORK-INBOX-BUSINESS-SYSTEM-SPEC-v1.0.md
+12. VWORK-EXTERNAL-ACTION-DEEPLINK-CONTRACT-v1.0.md
+13. VWORK-BUSINESS-RULE-v2-ADDITIONS-v1.0.md
+14. VWORK-V2-TRACEABILITY-DELTA-MATRIX-v1.0.md
 6. VWORK-PRODUCT-BOUNDARY-v1.0.md (technical history/baseline)
 2. VWORK-BUSINESS-PROCESS-SPEC-v1.0.md
 3. VWORK-BRD-v1.0.md
@@ -268,3 +278,15 @@ OpenAPI structural baseline at validation:
 - 0 duplicate path
 - 0 duplicate method
 - API Catalog/OpenAPI parity 372/372
+
+## 16. R3 Product/System Refactor Evidence
+R3 Closure: VWORK-PRODUCT-REQUIREMENT-REFACTOR-R3-CLOSURE-v1.0.md  
+Status: PASS
+
+R3 constraints:
+- 151 Screen IDs unchanged.
+- 372 API IDs unchanged.
+- no state/permission breaking change.
+- FR2-001..040 are Delta Requirements pending canonical merge decision in later change-control.
+- new v2 API IDs are intentionally not allocated until R4/R5 architecture placement.
+- R4 Screen Exposure/IA/Golden Screens is mandatory before ordinary-user UI implementation.

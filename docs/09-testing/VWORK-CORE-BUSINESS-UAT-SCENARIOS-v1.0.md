@@ -96,6 +96,51 @@ Tenant A không xem/sửa/xóa/search/RAG/export dữ liệu Tenant B.
 # UAT-25 Master Data retire
 Item đã tham chiếu không hard delete; chuyển inactive/retired.
 
+# UAT-26 Reporting submission version
+Nộp lại báo cáo phải tạo version mới; lịch sử version cũ còn truy cập được.
+
+# UAT-27 Reporting unit mismatch
+Metric dùng đơn vị đo khác canonical phải convert theo rule hoặc tạo blocker.
+
+# UAT-28 Reporting reconciliation mismatch
+Tổng khác chi tiết phải tạo finding và drill-down được về source.
+
+# UAT-29 Reporting narrative
+AI narrative không được thay đổi số liệu AggregationResult.
+
+# UAT-30 Meeting speaker uncertainty
+Speaker confidence thấp phải hiển thị UNKNOWN/low confidence, không tự gán chắc chắn.
+
+# UAT-31 Meeting decision candidate
+Candidate chưa xác nhận không được tạo Task chính thức.
+
+# UAT-32 Meeting decision correction
+Decision đã tạo Task rồi bị sửa phải tạo reconciliation warning, không silent update Task.
+
+# UAT-33 Knowledge revoked source
+Nguồn bị revoke/archived không còn xuất hiện trong retrieval sau SLA invalidation.
+
+# UAT-34 Knowledge conflicting sources
+RAG phải nêu conflict hoặc áp source authority policy có giải thích.
+
+# UAT-35 Knowledge source version
+Citation cũ phải mở đúng source version đã dùng tại thời điểm answer.
+
+# UAT-36 Master Data import diff
+Import phải có preview NEW/CHANGED/INVALID/CONFLICT trước khi apply.
+
+# UAT-37 Administrative data effective date
+Query lịch sử phải trả tên/mã theo version có hiệu lực tại thời điểm phát sinh.
+
+# UAT-38 Taxonomy circular move
+Không cho move node tạo vòng lặp hierarchy.
+
+# UAT-39 Master Data select all
+Chọn toàn bộ filtered result và bulk deactivate phải re-authorize, có confirm và audit.
+
+# UAT-40 Master Data referenced delete
+Item đã được tham chiếu không hard delete; chuyển inactive/retired.
+
 # Exit Criteria
 - 100% UAT P0 PASS.
 - Không workaround cho lỗi thẩm quyền, data loss, versioning, tenant isolation.

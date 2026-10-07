@@ -164,7 +164,22 @@ API-WRK-012 POST /tasks/{id}/evidence
 API-WRK-013 POST /tasks/{id}/complete  
 API-WRK-014 POST /tasks/{id}/handover  
 API-WRK-015 POST /tasks/{id}/comments  
-API-WRK-016 GET /tasks/{id}/history
+API-WRK-016 GET /tasks/{id}/history  
+API-WRK-017 POST /work-cases/{id}/complete  
+API-WRK-018 POST /work-cases/{id}/reopen  
+API-WRK-019 POST /work-cases/{id}/archive  
+API-WRK-020 POST /work-cases/bulk-action  
+API-WRK-021 GET /work-cases/{id}/outputs  
+API-WRK-022 POST /work-cases/{id}/outputs  
+API-WRK-023 DELETE /work-case-outputs/{id}  
+API-WRK-024 POST /tasks/{id}/cancel  
+API-WRK-025 POST /tasks/{id}/review/accept  
+API-WRK-026 POST /tasks/{id}/review/return  
+API-WRK-027 POST /tasks/{id}/reopen  
+API-WRK-028 POST /tasks/bulk-action  
+API-WRK-029 PATCH /tasks/{id}/deadline  
+API-WRK-030 DELETE /task-evidence/{id}  
+API-WRK-031 POST /tasks/{id}/remind
 
 Trace: FR-050..060.
 

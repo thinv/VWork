@@ -9,12 +9,12 @@
 - VWORK-CORE-TOOLS-SKILL-CATALOG-v1.0.md
 - VWORK-BRD-v2.0.md
 
-Wave R3 đã hoàn tất. Cho tới khi Wave R4 hoàn tất:
+Wave R3 và R4 đã hoàn tất. Product UI v2 baseline hiện authoritative cho user-facing exposure/navigation:
 - technical baseline v1.x vẫn authoritative cho state/security/API/data semantics;
 - Product/System baseline v2 authoritative cho positioning, SoR, capability mode, Tool/Skill/Entitlement và Unified Work Inbox;
 - **không tiếp tục xây user-facing navigation/module theo IA v1 như một eOffice đầy đủ**;
 - không expose toàn bộ 151 screens cho ordinary users;
-- mọi UI mới phải chờ Screen Exposure Matrix + User-facing IA v2/Golden Screens hoặc được Product duyệt riêng;
+- mọi UI mới phải bám VWORK-151-SCREEN-EXPOSURE-MATRIX-v2.0.md + User-facing IA v2 + Golden Screen Catalog + Visual Design Reference Pack;
 - backend foundation có thể tiếp tục nếu không phụ thuộc Screen Exposure/Golden Screen đang chờ R4.
 
 Mục tiêu v2: AI-first, task-centric, integration-first; external System of Record được giữ nguyên khi tồn tại.
@@ -55,6 +55,14 @@ Global:
 12. VWORK-EXTERNAL-ACTION-DEEPLINK-CONTRACT-v1.0.md
 13. VWORK-BUSINESS-RULE-v2-ADDITIONS-v1.0.md
 14. VWORK-V2-TRACEABILITY-DELTA-MATRIX-v1.0.md
+15. VWORK-151-SCREEN-EXPOSURE-MATRIX-v2.0.md
+16. VWORK-USER-FACING-IA-v2.0.md
+17. VWORK-SERVICE-LAUNCHER-HOME-SPEC-v1.0.md
+18. VWORK-WEB-NAVIGATION-v2.0.md
+19. VWORK-MOBILE-NAVIGATION-v2.0.md
+20. VWORK-GOLDEN-SCREEN-CATALOG-v1.0.md
+21. VWORK-VISUAL-DESIGN-REFERENCE-PACK-v1.0.md
+22. VWORK-CLAUDE-CODEX-UI-HANDOFF-v2.0.md
 6. VWORK-PRODUCT-BOUNDARY-v1.0.md (technical history/baseline)
 2. VWORK-BUSINESS-PROCESS-SPEC-v1.0.md
 3. VWORK-BRD-v1.0.md
@@ -289,4 +297,4 @@ R3 constraints:
 - no state/permission breaking change.
 - FR2-001..040 are Delta Requirements pending canonical merge decision in later change-control.
 - new v2 API IDs are intentionally not allocated until R4/R5 architecture placement.
-- R4 Screen Exposure/IA/Golden Screens is mandatory before ordinary-user UI implementation.
+- R4 Screen Exposure/IA/Golden Screens đã PASS; ordinary-user UI implementation được phép khi bám UI Handoff v2.

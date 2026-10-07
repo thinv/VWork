@@ -35,11 +35,11 @@ Chứa toàn bộ hồ sơ yêu cầu nghiệp vụ và phần mềm.
 
 ## Baseline counts
 - 12 Business Processes
-- 72 Business Requirements
+- 80 Business Requirements
 - 14 Business Actors
-- 96 Use Cases
+- 104 Use Cases
 - 176 Business Rules
-- 124 Functional Requirements
+- 134 Functional Requirements
 - 94 Non-Functional Requirements
 
 ## Business Validation Gate
@@ -68,7 +68,7 @@ Research/Capability → Business Process → BRD → Actor → Authority → Use
 ID đã cấp giữ ổn định. Requirement/rule/use case loại bỏ phải Deprecated/Removed, không tái sử dụng ID.
 
 ## Trọng tâm tiếp theo
-- Đóng gap 117 Web screens theo CRUD/Authority/State/Exception
-- Đóng gap 34 Mobile screens theo nghiệp vụ và quyền
-- Bổ sung domain-specific UAT/Acceptance Matrix
-- Khóa API/OpenAPI cho nhóm Shared/Master Data
+- Implementation theo Claude/Codex Handoff Package v1.0
+- Giữ traceability 372 API / 151 Screen / 176 UAT
+- Không thay đổi canonical state/permission/API/master data ngoài change control
+- Thu thập implementation/test/UAT/release evidence

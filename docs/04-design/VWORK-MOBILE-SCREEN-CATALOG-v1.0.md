@@ -1,6 +1,6 @@
 # VWork – Mobile Screen Catalog v1.0
 
-**Định vị:** Mobile client chính thức cho lãnh đạo và xử lý nhanh. Không phải bản sao Web.
+**Định vị:** Mobile client chính thức cho lãnh đạo và xử lý nhanh. Không phải bản sao Web. Với mọi danh sách quản lý dữ liệu có quyền chỉnh sửa, Mobile phải hỗ trợ Thêm – Sửa – Xóa/Lưu trữ, multi-select và Chọn tất cả; bulk action có thể triển khai qua selection mode/bottom sheet.
 
 ## 1. Bottom Navigation
 
@@ -228,16 +228,20 @@ Mobile Core v1 ưu tiên review, không làm transcript editor phức tạp như
 
 # 4. Mobile UX Rules
 
-1. Touch target đủ lớn.
-2. Primary action sticky ở màn duyệt/task.
-3. Không đặt nhiều hơn 1 destructive primary action.
-4. Push payload tối thiểu.
-5. Deep link luôn load resource từ server và authz lại.
-6. Secure storage cho token.
-7. Screenshot protection có thể bật ở tenant profile đặc thù.
-8. Không cache raw restricted document nếu policy không cho.
-9. Network error phải phân biệt chưa gửi/gửi thành công.
-10. Async AI job có state: queued/running/done/failed.
+1. Danh sách quản lý dữ liệu phải có selection mode: chọn từng item, Chọn tất cả, Bỏ chọn tất cả và bulk action.
+2. Thêm/Sửa/Xóa hoặc Lưu trữ phải có trên Mobile khi actor có quyền và nghiệp vụ phù hợp.
+3. Với dữ liệu immutable/audit/history chỉ cho phép chọn/export/share/compare; không sửa/xóa vật lý.
+4. Bulk destructive action phải confirm và hiển thị số item.
+5. Touch target đủ lớn.
+6. Primary action sticky ở màn duyệt/task.
+7. Không đặt nhiều hơn 1 destructive primary action.
+8. Push payload tối thiểu.
+9. Deep link luôn load resource từ server và authz lại.
+10. Secure storage cho token.
+11. Screenshot protection có thể bật ở tenant profile đặc thù.
+12. Không cache raw restricted document nếu policy không cho.
+13. Network error phải phân biệt chưa gửi/gửi thành công.
+14. Async AI job có state: queued/running/done/failed.
 
 ---
 

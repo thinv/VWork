@@ -2,7 +2,7 @@
 
 ## Hoàn thành baseline
 - [x] VWORK-API-CATALOG-v1.0.md
-- [x] openapi/vwork-openapi.yaml — 217 API-ID baseline
+- [x] openapi/vwork-openapi.yaml — 224 API-ID baseline
 - [x] VWORK-INTEGRATION-CONTRACT-v1.0.md
 - [x] VWORK-EVENT-CATALOG-v1.0.md
 

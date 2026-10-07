@@ -22,7 +22,7 @@ jobs:
       - run: pnpm --filter @vwork/core-api typecheck
       - run: pnpm --filter @vwork/web typecheck
       - run: pnpm --filter @vwork/mobile typecheck
-      - run: pnpm dlx @redocly/cli@2 lint docs/06-api/openapi/vwork-openapi.yaml
+      - run: pnpm --package=@redocly/cli@2 dlx redocly lint docs/06-api/openapi/vwork-openapi.yaml
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"

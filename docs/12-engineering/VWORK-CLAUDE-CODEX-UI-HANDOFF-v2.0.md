@@ -177,3 +177,26 @@ Approved assets:
 Batch commit: `21233f6c14133e4f8ade947c6ad7b83fddf141c7`
 
 Use GS-WEB-01 as global shell/style anchor; use GS-WEB-07..12 as composition references for Meeting, Reporting, Assistant, Knowledge, Leader and Admin surfaces.
+
+
+## 16. Mobile Golden Image Pack
+
+**Repository path:** `docs/04-design/golden-images/`
+
+Approved Mobile visual assets:
+- `GS-MOB-01-home-service-launcher.webp` — mobile shell anchor
+- `GS-MOB-02-unified-work-inbox.webp`
+- `GS-MOB-03-hoi-vwork.webp`
+- `GS-MOB-04-review-approval.webp`
+- `GS-MOB-05-tro-ly-cuoc-hop.webp`
+- `GS-MOB-06-mobile-tool-launcher.webp`
+- `GS-MOB-00-mobile-golden-pack-contact-sheet.webp`
+
+Batch commit: `8a24ee2637bc1e38bdc9b490c4d72fe7c3aa95f5`
+
+Implementation rules:
+1. GS-MOB-01 defines mobile shell/bottom-nav/card language.
+2. GS-MOB-03 defines assistant + citation + action-card language.
+3. GS-MOB-04 defines review/approval sticky CTA behavior.
+4. Mobile is not a squeezed desktop experience.
+5. Reuse shared source/citation/status semantics from Web Golden Pack.

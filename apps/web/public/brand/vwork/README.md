@@ -1,3 +1,6 @@
 # VWork Brand Assets
 
-Place official VWork logo assets here.
+Official runtime asset:
+- `logo-primary.webp`
+
+Source: approved VWork logo supplied for the website baseline.

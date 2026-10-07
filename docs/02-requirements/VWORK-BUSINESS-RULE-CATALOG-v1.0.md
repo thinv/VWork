@@ -518,7 +518,58 @@ TemplateVersion đã published/used không sửa in-place. Thay đổi tạo ver
 ## BRULE-144 – Assistant Conversation Scope Re-evaluation
 Mỗi assistant message phải re-evaluate current permissions và source state; conversation history không cấp quyền truy cập nguồn đã bị revoke.
 
-# 17. Business Rule → Requirement Mapping
+
+# 17. Governance / IAM / Platform Administration
+
+## BRULE-145 – Title Does Not Grant Permission
+Chức danh/chức vụ không tự cấp quyền hệ thống. Effective authorization = membership + role + permission + data scope + delegation + object state.
+
+## BRULE-146 – Role Assignment Requires Scope
+Mọi role assignment phải có tenant/membership và data scope rõ; role không scope không được suy diễn thành toàn tenant trừ system-defined role explicit.
+
+## BRULE-147 – Privilege Escalation Prevention
+Actor không được cấp role/permission/data scope vượt quá quyền quản trị mà chính actor được phép quản lý.
+
+## BRULE-148 – User Deactivation Revokes Effective Access
+User/membership bị deactivate phải mất session/effective access theo SLA; historical audit/ownership không bị xóa.
+
+## BRULE-149 – Organization Retirement Preserves History
+Organization Unit đã được tham chiếu không hard delete; retire/inactive và giữ successor/predecessor/effective dates khi áp dụng.
+
+## BRULE-150 – Delegation Is Bounded
+Delegation bắt buộc có effective window, scope, allowed actions và delegator/delegatee; mặc định không cho chain delegation.
+
+## BRULE-151 – Delegation Revocation Immediate
+Delegation revoke/expire phải vô hiệu authorization mới ngay; active approval/action phải re-authorize trước submit.
+
+## BRULE-152 – Governance Config Versioning
+Document Profile, Prompt, Retention Policy, Integration Config và AI Model/Provider config đã active/published phải version hoặc audit before/after; không silent overwrite.
+
+## BRULE-153 – Secret Separation
+API key/token/client secret không trả lại raw sau khi lưu; UI chỉ hiển thị masked metadata. Secret không xuất hiện trong log/audit/export.
+
+## BRULE-154 – AI Provider Fail-Safe
+Provider/model disabled/unhealthy không được dùng cho run mới; fallback chỉ theo explicit policy, không tự đổi sang model khác ngoài allowlist.
+
+## BRULE-155 – Prompt Publishing Gate
+Prompt version draft không dùng cho production use case nếu policy yêu cầu published/approved; run phải pin promptVersionId.
+
+## BRULE-156 – Evaluation Reproducibility
+Evaluation run phải pin dataset/version, model/provider, prompt version, configuration và metric definitions để tái lập kết quả.
+
+## BRULE-157 – Audit Append-Only and Export Controlled
+Audit event không sửa/xóa từ UI; export audit cần permission, scope, filter snapshot và export audit event.
+
+## BRULE-158 – Retention Cannot Bypass Legal Hold
+Retention/archival/deletion job không được xóa object dưới legal hold hoặc record-retention blocker.
+
+## BRULE-159 – Job Operations Are State-Aware
+Retry/cancel/bulk job operations chỉ hợp lệ theo job state và phải idempotent; không retry job đã succeeded trừ explicit rerun contract.
+
+## BRULE-160 – Session and Preference Scope
+Session revocation áp đúng user/session; app preference chỉ thay đổi presentation/user preference, không được dùng để thay đổi authorization/security policy.
+
+# 18. Business Rule → Requirement Mapping
 
 | Nhóm rule | BRD chính |
 |---|---|
@@ -537,10 +588,11 @@ Mỗi assistant message phải re-evaluate current permissions và source state;
 | 111–120 | Cross-cutting CRUD/UI/Data Governance |
 | 121–132 | Cross-Domain Orchestration |
 | 133–144 | Knowledge / RAG Governance |
+| 145–160 | Governance / IAM / Platform Administration |
 
 ---
 
-# 18. Rule Enforcement Layers
+# 19. Rule Enforcement Layers
 
 | Layer | Ví dụ |
 |---|---|
@@ -556,7 +608,7 @@ Mỗi assistant message phải re-evaluate current permissions và source state;
 
 ---
 
-# 19. Exit Criteria
+# 20. Exit Criteria
 
 Business Rule Catalog được coi là baseline khi:
 - các rule trọng yếu của 12 domain đều được định danh;

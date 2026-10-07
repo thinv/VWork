@@ -471,7 +471,7 @@ Catalog v1 được coi là đủ baseline khi:
 
 # 7. Bước kế tiếp
 
-Từ 96 Use Case này, tài liệu kế tiếp phải sinh:
+Từ 104 Use Case này, tài liệu kế tiếp phải sinh:
 1. VWORK-BUSINESS-RULE-CATALOG-v1.0.md
 2. VWORK-FUNCTIONAL-REQUIREMENTS-v1.0.md
 3. VWORK-NON-FUNCTIONAL-REQUIREMENTS-v1.0.md

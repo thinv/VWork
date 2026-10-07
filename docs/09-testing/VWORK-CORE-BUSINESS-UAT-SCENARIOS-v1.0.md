@@ -285,6 +285,42 @@ Mobile Task/Case action phải refresh authoritative state trước update; cach
 # UAT-88 Work Source Scope
 Related document/meeting/output bị revoke quyền không được leak qua Work Case/Task.
 
+# UAT-89 Meeting CRUD & Bulk
+Danh sách cuộc họp hỗ trợ Add/Edit/Archive/Select All/Bulk theo quyền; archive trả partial result khi có item không đủ điều kiện.
+
+# UAT-90 Participant & Attendance
+Participant CRUD, proxy/represented participant và attendance status phải được quản lý rõ; bulk attendance không tạo participant mới ngầm.
+
+# UAT-91 Agenda CRUD
+Agenda Add/Edit/Delete/Reorder/Select All/Bulk phải chống duplicate order/cycle logic không hợp lệ.
+
+# UAT-92 Audio Preservation
+Upload audio hợp lệ giữ source checksum/duration; transcript không được thay thế/xóa audio nguồn.
+
+# UAT-93 Transcript Correction
+Low-confidence segment hiển thị cảnh báo; sửa text/speaker phải audit và không mất original/reference.
+
+# UAT-94 Speaker Resolution
+Không chắc speaker phải giữ UNKNOWN; AI không được tự gán chắc chắn để tạo official decision.
+
+# UAT-95 Decision Confirmation
+Decision Candidate chỉ trở thành MeetingDecision sau human confirmation; reject candidate không tạo Task.
+
+# UAT-96 Meeting Decision to Task
+Task chỉ tạo từ confirmed decision; giữ meetingId/decisionId/timestamp/source provenance và đúng một primary owner.
+
+# UAT-97 Decision Correction Reconciliation
+Decision đã có Task rồi bị sửa phải tạo reconciliation warning; Task không silent update.
+
+# UAT-98 Minutes Generation
+Minutes sinh từ meeting metadata + attendance + transcript + confirmed decisions; thiếu context bắt buộc thì chặn hoặc đánh dấu draft/incomplete.
+
+# UAT-99 Minutes Versioning
+Minutes submitted/approved/final không sửa in-place; thay đổi tạo version mới và workflow lại theo policy.
+
+# UAT-100 Mobile Meeting Stale
+Mobile transcript/decision/action phải refresh authoritative state trước confirm/create Task; cached stale action bị conflict.
+
 # Exit Criteria
 - 100% UAT P0 PASS.
 - Không workaround cho lỗi thẩm quyền, data loss, versioning, tenant isolation.

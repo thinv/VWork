@@ -564,7 +564,51 @@ Trace: BR-072.
 
 ---
 
-# 14. Functional Acceptance Principles
+# 14. Shared / Master Data
+
+## FR-125 – Master Data Catalog
+**P0.** Hệ thống phải quản lý Code List theo ownership, lifecycle, version và scope.  
+Trace: BR-073..075; UC-097; BRULE-161..165.
+
+## FR-126 – Master Data Items
+**P0.** Code List Item phải hỗ trợ CRUD/lifecycle/bulk với stable code và referenced-delete protection.  
+Trace: BR-073..075; UC-097; BRULE-162..165,175.
+
+## FR-127 – Administrative Reference
+**P0.** Dữ liệu hành chính phải hỗ trợ staging, validate, publish, version/effective date, retire và successor mapping.  
+Trace: BR-076; UC-098; BRULE-165..167.
+
+## FR-128 – External Agencies
+**P0.** Hệ thống phải quản lý cơ quan bên ngoài theo source/external id, scope và lifecycle.  
+Trace: BR-073..075; UC-099; BRULE-161..165.
+
+## FR-129 – Unit of Measure
+**P0.** Hệ thống phải quản lý UoM và conversion rule canonical/versioned dùng cho reporting.  
+Trace: BR-077; UC-099; BRULE-168.
+
+## FR-130 – Tenant Business Reference Lists
+**P0.** Tenant phải quản lý Document Type, Domain, Recipient Group, Work Case Type, Meeting Type và Report Type theo shared-data policy.  
+Trace: BR-073..075; UC-100; BRULE-161..165,174..175.
+
+## FR-131 – Taxonomy Governance
+**P0.** Taxonomy phải hỗ trợ tree CRUD/move/retire/bulk, chống cycle/duplicate và giữ historical resolution.  
+Trace: BR-078; UC-101; BRULE-169,174..175.
+
+## FR-132 – Master Data Import
+**P0.** Import phải hỗ trợ upload/map/validate/diff/confirm/apply/cancel và idempotency.  
+Trace: BR-079; UC-102; BRULE-170..172,175.
+
+## FR-133 – Master Data History
+**P0.** Người có quyền phải xem/export lịch sử version/change/import theo filter snapshot; history append-only.  
+Trace: BR-080; UC-103; BRULE-174,176.
+
+## FR-134 – Master Data Publish & Invalidation
+**P0.** Publish/change master version phải phát invalidation và giữ historical snapshot/effective resolution.  
+Trace: BR-080; UC-104; BRULE-165,173..174.
+
+---
+
+# 15. Functional Acceptance Principles
 
 1. Mọi FR P0 phải có test case trước release Core v1.
 2. Mọi FR liên quan authorization phải test positive + negative + cross-tenant.
@@ -576,7 +620,7 @@ Trace: BR-072.
 
 ---
 
-# 15. Coverage Summary
+# 16. Coverage Summary
 
 - FR-001..009: Identity/Organization
 - FR-010..020: Document
@@ -590,5 +634,6 @@ Trace: BR-072.
 - FR-092..100: Template/Knowledge
 - FR-101..108: Executive
 - FR-109..124: Governance/AI/Integration
+- FR-125..134: Shared/Master Data
 
-**Tổng số: 124 Functional Requirements.**
+**Tổng số: 134 Functional Requirements.**

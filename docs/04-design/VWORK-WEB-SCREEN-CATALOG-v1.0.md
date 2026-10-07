@@ -78,10 +78,10 @@ Global:
 
 | ID | Màn hình | Route | Actor | API |
 |---|---|---|---|---|
-| WEB-DRF-001 | Danh sách dự thảo | /drafts | ACT-03/04 | DRF-002 |
+| WEB-DRF-001 | Danh sách dự thảo | /drafts | ACT-03/04 | DRF-001..003/013..015 |
 | WEB-DRF-002 | Tạo dự thảo – Brief | /drafts/new | ACT-03/04 | DRF-001 |
 | WEB-DRF-003 | Chọn nguồn & mẫu | /drafts/:id/context | ACT-03/04 | DOC-004, KNO-002 |
-| WEB-DRF-004 | AI Draft Workspace | /drafts/:id/editor | ACT-03/04 | DRF-003..006 |
+| WEB-DRF-004 | AI Draft Workspace | /drafts/:id/editor | ACT-03/04 | DRF-003..006, WFL-005 |
 | WEB-DRF-005 | AI Review Panel | /drafts/:id/review | ACT-03/04 | DRF-007..009 |
 | WEB-DRF-006 | Rewrite | editor side action | ACT-03/04 | DRF-010 |
 | WEB-DRF-007 | Document Package | /packages/:id | ACT-03 | DRF-011/012 |
@@ -117,10 +117,10 @@ Global:
 
 | ID | Màn hình | Route | Actor | API |
 |---|---|---|---|---|
-| WEB-APR-001 | Hàng đợi cần duyệt | /approvals | ACT-01/05 | WFL-007 |
+| WEB-APR-001 | Hàng đợi cần duyệt | /approvals | ACT-01/05 | WFL-007/009..014 |
 | WEB-APR-002 | Chi tiết hồ sơ trình | /approvals/:id | ACT-01/05 | WFL-008 |
 | WEB-APR-003 | Lịch sử workflow | /workflow/:id/history | authorized | WFL-006 |
-| WEB-APR-004 | Cấu hình workflow | /admin/workflows | ACT-10 | WFL-001..004 |
+| WEB-APR-004 | Cấu hình workflow | /admin/workflows | ACT-10 | WFL-001..004/015..017 |
 
 ## I. Họp
 

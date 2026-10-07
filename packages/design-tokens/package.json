@@ -1,0 +1,17 @@
+{
+  "name": "@vwork/design-tokens",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "lint": "node -e \"console.log('design token lint pending')\"",
+    "test": "node -e \"console.log('design token tests pending')\""
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0"
+  }
+}

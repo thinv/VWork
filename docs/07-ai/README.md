@@ -8,5 +8,6 @@
 - VWORK-MODEL-PROVIDER-GOVERNANCE-v1.0.md
 - VWORK-AI-EVALUATION-FRAMEWORK-v1.0.md
 - VWORK-AI-GUARDRAILS-v1.0.md
+- [x] VWORK-KNOWLEDGE-RAG-GOVERNANCE-v1.0.md
 
 Nguyên tắc: FACT / INFERENCE / MISSING; provenance khi có nguồn; human approval; model/provider abstraction.

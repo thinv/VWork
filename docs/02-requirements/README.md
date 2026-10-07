@@ -22,13 +22,16 @@ Chứa toàn bộ hồ sơ yêu cầu nghiệp vụ và phần mềm.
 - [x] VWORK-IDENTITY-EXECUTIVE-EXCEPTION-CATALOG-v1.0.md
 - [x] VWORK-DOCUMENT-INCOMING-EXCEPTION-CATALOG-v1.0.md
 - [x] VWORK-DRAFT-WORKFLOW-EXCEPTION-CATALOG-v1.0.md
+- [x] VWORK-WORK-TASK-EXCEPTION-CATALOG-v1.0.md
+- [x] VWORK-CROSS-DOMAIN-ORCHESTRATION-CONTRACT-v1.0.md
+- [x] VWORK-POST-APPROVAL-ACTION-CATALOG-v1.0.md
 
 ## Baseline counts
 - 12 Business Processes
 - 72 Business Requirements
 - 14 Business Actors
 - 96 Use Cases
-- 120 Business Rules
+- 132 Business Rules
 - 124 Functional Requirements
 - 94 Non-Functional Requirements
 

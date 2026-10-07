@@ -2,22 +2,18 @@
 
 This folder is the documentation index for the public website Golden Images.
 
-Canonical runtime copies should be placed under:
+Canonical runtime copies:
+- `apps/web/public/golden/marketing/WEB-MKT-01-vwork-homepage-desktop.webp`
+- `apps/web/public/golden/marketing/WEB-GOV-01-trolycongchuc-homepage-desktop.webp`
 
-`apps/web/public/golden/marketing/`
-
-Expected files:
-- `WEB-MKT-01-vwork-homepage-desktop.png`
-- `WEB-GOV-01-trolycongchuc-homepage-desktop.png`
-
-Official logos:
-- `apps/web/public/brand/vwork/logo-primary.png`
-- `apps/web/public/brand/trolycongchuc/logo-primary.png`
+Official brand assets:
+- `apps/web/public/brand/vwork/logo-primary.webp`
+- `apps/web/public/brand/trolycongchuc/logo-primary.webp`
 
 ## Current status
-
-- WEB-MKT-01: approved design direction, generated from selected split-screen source and official VWork logo.
-- WEB-GOV-01: approved design direction, generated from selected split-screen source and official trolycongchuc.vn logo.
+- WEB-MKT-01: approved desktop design baseline.
+- WEB-GOV-01: approved desktop design baseline.
+- Both runtime assets are WebP-optimized copies derived from the approved/source images.
 - Mobile Golden Images: next design task.
 
-Do not substitute prior red Government VWork branding; the attached trolycongchuc.vn blue/green logo is the current identity baseline.
+Do not substitute prior red Government VWork branding; the official trolycongchuc.vn blue/green identity is the current Government baseline.

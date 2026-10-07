@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: pnpm install --no-frozen-lockfile
+      - run: pnpm --filter @vwork/contracts typecheck
+      - run: pnpm --filter @vwork/core-api typecheck
+      - run: pnpm --filter @vwork/web typecheck
+      - run: pnpm --filter @vwork/mobile typecheck
+      - run: pnpm dlx @redocly/cli@2 lint docs/06-api/openapi/vwork-openapi.yaml

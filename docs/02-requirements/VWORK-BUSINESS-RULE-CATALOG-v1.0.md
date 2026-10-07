@@ -404,7 +404,42 @@ Tùy biến tenant phải ưu tiên config/extension; không fork source theo t�
 
 ---
 
-# 14. Business Rule → Requirement Mapping
+# 14. CRUD & Bulk Interaction
+
+
+## BRULE-111 – CRUD Availability
+Mọi đối tượng nghiệp vụ có thể quản lý phải expose Create/Read/Update/Delete-or-Archive theo quyền và trạng thái nghiệp vụ.
+
+## BRULE-112 – List Select All
+Mọi màn danh sách quản lý phải hỗ trợ chọn từng bản ghi và Chọn tất cả.
+
+## BRULE-113 – Bulk Action Authorization
+Bulk action phải kiểm tra authorization ở backend; UI selection không tạo quyền.
+
+## BRULE-114 – Destructive Bulk Confirmation
+Xóa/Lưu trữ/Vô hiệu hóa hàng loạt phải xác nhận và hiển thị số bản ghi ảnh hưởng.
+
+## BRULE-115 – Immutable Object Protection
+Đối tượng đã khóa/final/audit/history không được sửa hoặc hard-delete; phải dùng version mới/archive/revoke theo policy.
+
+## BRULE-116 – Selection Scope
+Select All mặc định chọn trang hiện tại; chọn toàn bộ tập kết quả phải lưu snapshot filter/query tại thời điểm thao tác.
+
+## BRULE-117 – Partial Bulk Result
+Bulk action phải trả được số thành công/thất bại và lý do từng nhóm khi không thể thực hiện toàn bộ.
+
+## BRULE-118 – Bulk Edit Safety
+Bulk edit chỉ cho phép trên field có semantic an toàn; không bulk edit nội dung văn bản chính thức.
+
+## BRULE-119 – Referential Delete Protection
+Bản ghi đã được tham chiếu không được hard delete nếu làm mất toàn vẹn lịch sử.
+
+## BRULE-120 – CRUD Audit
+Create/Update/Delete/Archive/Bulk action đối với dữ liệu nghiệp vụ phải tạo audit event khi thuộc phạm vi audit.
+
+---
+
+# 15. Business Rule → Requirement Mapping
 
 | Nhóm rule | BRD chính |
 |---|---|
@@ -420,10 +455,11 @@ Tùy biến tenant phải ưu tiên config/extension; không fork source theo t�
 | 085–092 | BR-045..050 |
 | 093–096 | BR-051..054 |
 | 097–110 | BR-060..072 |
+| 111–120 | Cross-cutting CRUD/UI/Data Governance |
 
 ---
 
-# 15. Rule Enforcement Layers
+# 16. Rule Enforcement Layers
 
 | Layer | Ví dụ |
 |---|---|
@@ -439,7 +475,7 @@ Tùy biến tenant phải ưu tiên config/extension; không fork source theo t�
 
 ---
 
-# 16. Exit Criteria
+# 17. Exit Criteria
 
 Business Rule Catalog được coi là baseline khi:
 - các rule trọng yếu của 12 domain đều được định danh;

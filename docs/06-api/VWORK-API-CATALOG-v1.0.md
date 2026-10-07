@@ -87,6 +87,7 @@ API-IAM-044 POST /document-profiles/bulk-action
 API-IAM-045 POST /me/sessions/revoke-all
 API-IAM-046 GET /me/preferences
 API-IAM-047 PUT /me/preferences
+API-IAM-048 PATCH /me/profile
 
 ---
 

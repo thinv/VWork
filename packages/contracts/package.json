@@ -1,0 +1,17 @@
+{
+  "name": "@vwork/contracts",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "tsc --noEmit",
+    "lint": "node -e \"console.log('contracts lint pending')\"",
+    "typecheck": "tsc --noEmit",
+    "test": "node -e \"console.log('contracts tests pending')\""
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0"
+  }
+}

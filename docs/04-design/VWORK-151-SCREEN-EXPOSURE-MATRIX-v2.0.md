@@ -7,7 +7,7 @@
 - Exposure: USER_PRIMARY | USER_SECONDARY | ADMIN | PLATFORM_INTERNAL | OPTIONAL
 - Mode: NATIVE | INTEGRATED | OPTIONAL
 - Audience: COMMON | SKILL_BASED | LEADER | ADMIN
-- SourceOfTruth: VWORK | EXTERNAL | HYBRID
+- SourceOfTruth: HYBRID=44, EXTERNAL=32, VWORK=75
 
 **Lưu ý:** Exposure không thay authorization. Mode/SoR được resolve runtime theo Integration Profile; bảng này là default product profile cho xã/phường.
 
@@ -25,14 +25,14 @@ SourceOfTruth: HYBRID=76, VWORK=75
 | MOB-AI-001 | Ask VWork | USER_PRIMARY | NATIVE | COMMON | HYBRID |  |
 | MOB-AI-002 | Chat theo hồ sơ | USER_PRIMARY | NATIVE | COMMON | HYBRID |  |
 | MOB-AI-003 | Nguồn trích dẫn | USER_SECONDARY | NATIVE | COMMON | HYBRID |  |
-| MOB-APR-001 | Danh sách cần duyệt | USER_PRIMARY | INTEGRATED | LEADER | HYBRID | Approval source có thể VWork hoặc external |
-| MOB-APR-002 | Chi tiết hồ sơ trình | USER_PRIMARY | INTEGRATED | LEADER | HYBRID | Approval source có thể VWork hoặc external |
-| MOB-APR-003 | Cho ý kiến/Phê duyệt | USER_PRIMARY | INTEGRATED | LEADER | HYBRID | Approval source có thể VWork hoặc external |
-| MOB-AUTH-001 | Đăng nhập | USER_SECONDARY | INTEGRATED | COMMON | HYBRID | SSO/identity external khi cấu hình; local fallback tùy deployment |
-| MOB-AUTH-002 | Chọn ngữ cảnh | USER_SECONDARY | INTEGRATED | COMMON | HYBRID | SSO/identity external khi cấu hình; local fallback tùy deployment |
-| MOB-AUTH-003 | Khóa/đăng nhập lại | USER_SECONDARY | INTEGRATED | COMMON | HYBRID | SSO/identity external khi cấu hình; local fallback tùy deployment |
-| MOB-DOC-001 | Danh sách văn bản | USER_SECONDARY | INTEGRATED | COMMON | HYBRID | Official document SoR external khi eOffice tồn tại |
-| MOB-DOC-002 | Xem văn bản | USER_SECONDARY | INTEGRATED | COMMON | HYBRID | Official document SoR external khi eOffice tồn tại |
+| MOB-APR-001 | Danh sách cần duyệt | USER_PRIMARY | INTEGRATED | LEADER | EXTERNAL | Approval source có thể VWork hoặc external |
+| MOB-APR-002 | Chi tiết hồ sơ trình | USER_PRIMARY | INTEGRATED | LEADER | EXTERNAL | Approval source có thể VWork hoặc external |
+| MOB-APR-003 | Cho ý kiến/Phê duyệt | USER_PRIMARY | INTEGRATED | LEADER | EXTERNAL | Approval source có thể VWork hoặc external |
+| MOB-AUTH-001 | Đăng nhập | USER_SECONDARY | INTEGRATED | COMMON | EXTERNAL | SSO/identity external khi cấu hình; local fallback tùy deployment |
+| MOB-AUTH-002 | Chọn ngữ cảnh | USER_SECONDARY | INTEGRATED | COMMON | EXTERNAL | SSO/identity external khi cấu hình; local fallback tùy deployment |
+| MOB-AUTH-003 | Khóa/đăng nhập lại | USER_SECONDARY | INTEGRATED | COMMON | EXTERNAL | SSO/identity external khi cấu hình; local fallback tùy deployment |
+| MOB-DOC-001 | Danh sách văn bản | USER_SECONDARY | INTEGRATED | COMMON | EXTERNAL | Official document SoR external khi eOffice tồn tại |
+| MOB-DOC-002 | Xem văn bản | USER_SECONDARY | INTEGRATED | COMMON | EXTERNAL | Official document SoR external khi eOffice tồn tại |
 | MOB-DOC-003 | AI tóm tắt văn bản | USER_PRIMARY | NATIVE | COMMON | HYBRID |  |
 | MOB-DOC-004 | Dữ liệu chính & deadline | USER_PRIMARY | NATIVE | COMMON | HYBRID |  |
 | MOB-HOME-001 | Home lãnh đạo | USER_PRIMARY | NATIVE | COMMON | HYBRID | RELABEL Home cá nhân / Service Launcher |
@@ -40,7 +40,7 @@ SourceOfTruth: HYBRID=76, VWORK=75
 | MOB-HOME-003 | Cảnh báo | USER_PRIMARY | NATIVE | LEADER | HYBRID |  |
 | MOB-INB-001 | Executive Inbox | USER_PRIMARY | NATIVE | LEADER | HYBRID |  |
 | MOB-INB-002 | Chi tiết Inbox item | USER_PRIMARY | NATIVE | LEADER | HYBRID |  |
-| MOB-MTG-001 | Lịch họp | USER_SECONDARY | INTEGRATED | COMMON | HYBRID |  |
+| MOB-MTG-001 | Lịch họp | USER_SECONDARY | INTEGRATED | COMMON | EXTERNAL |  |
 | MOB-MTG-002 | Chi tiết cuộc họp | USER_PRIMARY | NATIVE | COMMON | HYBRID |  |
 | MOB-MTG-003 | Transcript | USER_PRIMARY | NATIVE | COMMON | HYBRID |  |
 | MOB-MTG-004 | Kết luận & nhiệm vụ | USER_PRIMARY | NATIVE | COMMON | HYBRID |  |
@@ -51,13 +51,13 @@ SourceOfTruth: HYBRID=76, VWORK=75
 | MOB-PRO-003 | Phiên đăng nhập | USER_SECONDARY | NATIVE | COMMON | VWORK |  |
 | MOB-PRO-004 | Thiết lập ứng dụng | USER_SECONDARY | NATIVE | COMMON | VWORK |  |
 | MOB-WRK-001 | Việc của tôi | USER_PRIMARY | NATIVE | COMMON | HYBRID | RELABEL thành Unified Work Inbox |
-| MOB-WRK-002 | Chi tiết Task | USER_SECONDARY | INTEGRATED | COMMON | HYBRID |  |
+| MOB-WRK-002 | Chi tiết Task | USER_SECONDARY | INTEGRATED | COMMON | EXTERNAL |  |
 | MOB-WRK-003 | Cập nhật tiến độ | OPTIONAL | OPTIONAL | COMMON | VWORK |  |
 | MOB-WRK-004 | Nộp kết quả nhanh | OPTIONAL | OPTIONAL | COMMON | VWORK |  |
 | MOB-WRK-005 | Hồ sơ công việc | OPTIONAL | OPTIONAL | COMMON | VWORK |  |
 | MOB-WRK-006 | Giao việc nhanh | OPTIONAL | OPTIONAL | COMMON | VWORK |  |
-| WEB-ADM-001 | Cơ cấu tổ chức | ADMIN | INTEGRATED | ADMIN | HYBRID |  |
-| WEB-ADM-002 | Người dùng | ADMIN | INTEGRATED | ADMIN | HYBRID |  |
+| WEB-ADM-001 | Cơ cấu tổ chức | ADMIN | INTEGRATED | ADMIN | EXTERNAL |  |
+| WEB-ADM-002 | Người dùng | ADMIN | INTEGRATED | ADMIN | EXTERNAL |  |
 | WEB-ADM-003 | Vai trò & phạm vi | ADMIN | NATIVE | ADMIN | VWORK |  |
 | WEB-ADM-004 | Ủy quyền | ADMIN | NATIVE | ADMIN | VWORK |  |
 | WEB-ADM-005 | Hồ sơ văn bản | ADMIN | OPTIONAL | ADMIN | HYBRID |  |
@@ -69,22 +69,22 @@ SourceOfTruth: HYBRID=76, VWORK=75
 | WEB-ADM-011 | Audit | ADMIN | NATIVE | ADMIN | VWORK |  |
 | WEB-ADM-012 | Retention | ADMIN | NATIVE | ADMIN | VWORK |  |
 | WEB-ADM-013 | Job Operations | PLATFORM_INTERNAL | NATIVE | ADMIN | VWORK |  |
-| WEB-APR-001 | Hàng đợi cần duyệt | USER_PRIMARY | INTEGRATED | LEADER | HYBRID | Approval source có thể VWork hoặc external |
-| WEB-APR-002 | Chi tiết hồ sơ trình | USER_PRIMARY | INTEGRATED | LEADER | HYBRID | Approval source có thể VWork hoặc external |
-| WEB-APR-003 | Lịch sử workflow | USER_SECONDARY | INTEGRATED | LEADER | HYBRID | Approval source có thể VWork hoặc external |
+| WEB-APR-001 | Hàng đợi cần duyệt | USER_PRIMARY | INTEGRATED | LEADER | EXTERNAL | Approval source có thể VWork hoặc external |
+| WEB-APR-002 | Chi tiết hồ sơ trình | USER_PRIMARY | INTEGRATED | LEADER | EXTERNAL | Approval source có thể VWork hoặc external |
+| WEB-APR-003 | Lịch sử workflow | USER_SECONDARY | INTEGRATED | LEADER | EXTERNAL | Approval source có thể VWork hoặc external |
 | WEB-APR-004 | Cấu hình workflow | ADMIN | OPTIONAL | ADMIN | HYBRID |  |
-| WEB-AUTH-001 | Đăng nhập | USER_SECONDARY | INTEGRATED | COMMON | HYBRID | SSO/identity external khi cấu hình; local fallback tùy deployment |
-| WEB-AUTH-002 | Chọn tenant/ngữ cảnh | USER_SECONDARY | INTEGRATED | COMMON | HYBRID | SSO/identity external khi cấu hình; local fallback tùy deployment |
-| WEB-DOC-001 | Danh sách văn bản | USER_SECONDARY | INTEGRATED | COMMON | HYBRID | Official document SoR external khi eOffice tồn tại |
+| WEB-AUTH-001 | Đăng nhập | USER_SECONDARY | INTEGRATED | COMMON | EXTERNAL | SSO/identity external khi cấu hình; local fallback tùy deployment |
+| WEB-AUTH-002 | Chọn tenant/ngữ cảnh | USER_SECONDARY | INTEGRATED | COMMON | EXTERNAL | SSO/identity external khi cấu hình; local fallback tùy deployment |
+| WEB-DOC-001 | Danh sách văn bản | USER_SECONDARY | INTEGRATED | COMMON | EXTERNAL | Official document SoR external khi eOffice tồn tại |
 | WEB-DOC-002 | Tải tài liệu | USER_SECONDARY | NATIVE | COMMON | HYBRID |  |
-| WEB-DOC-003 | Chi tiết văn bản | USER_SECONDARY | INTEGRATED | COMMON | HYBRID | Official document SoR external khi eOffice tồn tại |
-| WEB-DOC-004 | Trình xem tài liệu | USER_SECONDARY | INTEGRATED | COMMON | HYBRID | Official document SoR external khi eOffice tồn tại |
-| WEB-DOC-005 | Metadata | USER_SECONDARY | INTEGRATED | COMMON | HYBRID | Official document SoR external khi eOffice tồn tại |
-| WEB-DOC-006 | Phiên bản | USER_SECONDARY | INTEGRATED | COMMON | HYBRID | Official document SoR external khi eOffice tồn tại |
+| WEB-DOC-003 | Chi tiết văn bản | USER_SECONDARY | INTEGRATED | COMMON | EXTERNAL | Official document SoR external khi eOffice tồn tại |
+| WEB-DOC-004 | Trình xem tài liệu | USER_SECONDARY | INTEGRATED | COMMON | EXTERNAL | Official document SoR external khi eOffice tồn tại |
+| WEB-DOC-005 | Metadata | USER_SECONDARY | INTEGRATED | COMMON | EXTERNAL | Official document SoR external khi eOffice tồn tại |
+| WEB-DOC-006 | Phiên bản | USER_SECONDARY | INTEGRATED | COMMON | EXTERNAL | Official document SoR external khi eOffice tồn tại |
 | WEB-DOC-007 | So sánh phiên bản | USER_SECONDARY | NATIVE | COMMON | HYBRID |  |
 | WEB-DOC-008 | OCR & rà soát | USER_SECONDARY | NATIVE | COMMON | HYBRID |  |
 | WEB-DOC-009 | Dữ liệu trích xuất | USER_SECONDARY | NATIVE | COMMON | HYBRID |  |
-| WEB-DOC-010 | Quan hệ văn bản | USER_SECONDARY | INTEGRATED | COMMON | HYBRID | Official document SoR external khi eOffice tồn tại |
+| WEB-DOC-010 | Quan hệ văn bản | USER_SECONDARY | INTEGRATED | COMMON | EXTERNAL | Official document SoR external khi eOffice tồn tại |
 | WEB-DRF-001 | Danh sách dự thảo | USER_PRIMARY | NATIVE | COMMON | VWORK |  |
 | WEB-DRF-002 | Tạo dự thảo – Brief | USER_PRIMARY | NATIVE | COMMON | VWORK |  |
 | WEB-DRF-003 | Chọn nguồn & mẫu | USER_PRIMARY | NATIVE | COMMON | VWORK |  |
@@ -99,7 +99,7 @@ SourceOfTruth: HYBRID=76, VWORK=75
 | WEB-EXE-004 | Daily Brief | USER_PRIMARY | NATIVE | LEADER | HYBRID |  |
 | WEB-EXE-005 | Weekly Brief | USER_PRIMARY | NATIVE | LEADER | HYBRID |  |
 | WEB-EXE-006 | Ask VWork | USER_PRIMARY | NATIVE | COMMON | HYBRID | Ask VWork |
-| WEB-INC-001 | Danh sách văn bản đến | USER_SECONDARY | INTEGRATED | COMMON | HYBRID |  |
+| WEB-INC-001 | Danh sách văn bản đến | USER_SECONDARY | INTEGRATED | COMMON | EXTERNAL |  |
 | WEB-INC-002 | Đăng ký văn bản đến | OPTIONAL | OPTIONAL | COMMON | HYBRID | Official registration chỉ dùng khi không có eOffice |
 | WEB-INC-003 | Chi tiết xử lý | USER_PRIMARY | NATIVE | COMMON | HYBRID | Intelligence native; official record may be external |
 | WEB-INC-004 | Yêu cầu AI bóc tách | USER_PRIMARY | NATIVE | COMMON | HYBRID | Intelligence native; official record may be external |
@@ -134,18 +134,18 @@ SourceOfTruth: HYBRID=76, VWORK=75
 | WEB-MD-018 | MD-015..017/045..047 | ADMIN | NATIVE | ADMIN | VWORK |  |
 | WEB-MD-019 | MD-016/017/045/046 | ADMIN | NATIVE | ADMIN | VWORK |  |
 | WEB-MD-020 | MD-030/048 | ADMIN | NATIVE | ADMIN | VWORK |  |
-| WEB-MTG-001 | Danh sách cuộc họp | USER_SECONDARY | INTEGRATED | COMMON | HYBRID | Calendar source có thể external |
+| WEB-MTG-001 | Danh sách cuộc họp | USER_SECONDARY | INTEGRATED | COMMON | EXTERNAL | Calendar source có thể external |
 | WEB-MTG-002 | Tạo cuộc họp | OPTIONAL | OPTIONAL | COMMON | VWORK |  |
-| WEB-MTG-003 | Tổng quan cuộc họp | USER_SECONDARY | INTEGRATED | COMMON | HYBRID |  |
-| WEB-MTG-004 | Giấy mời/Agenda | USER_SECONDARY | INTEGRATED | COMMON | HYBRID |  |
+| WEB-MTG-003 | Tổng quan cuộc họp | USER_SECONDARY | INTEGRATED | COMMON | EXTERNAL |  |
+| WEB-MTG-004 | Giấy mời/Agenda | USER_SECONDARY | INTEGRATED | COMMON | EXTERNAL |  |
 | WEB-MTG-005 | Audio & Transcript | USER_PRIMARY | NATIVE | COMMON | HYBRID |  |
 | WEB-MTG-006 | Quyết định/Nhiệm vụ | USER_PRIMARY | NATIVE | COMMON | HYBRID |  |
 | WEB-MTG-007 | Biên bản | USER_PRIMARY | NATIVE | COMMON | HYBRID |  |
-| WEB-RPT-001 | Danh sách kỳ báo cáo | USER_SECONDARY | INTEGRATED | SKILL_BASED | HYBRID |  |
+| WEB-RPT-001 | Danh sách kỳ báo cáo | USER_SECONDARY | INTEGRATED | SKILL_BASED | EXTERNAL |  |
 | WEB-RPT-002 | Tạo kỳ báo cáo | OPTIONAL | OPTIONAL | SKILL_BASED | HYBRID |  |
-| WEB-RPT-003 | Dashboard kỳ báo cáo | USER_SECONDARY | INTEGRATED | SKILL_BASED | HYBRID |  |
-| WEB-RPT-004 | Đơn vị phải nộp | USER_SECONDARY | INTEGRATED | SKILL_BASED | HYBRID |  |
-| WEB-RPT-005 | Nguồn báo cáo | USER_SECONDARY | INTEGRATED | SKILL_BASED | HYBRID |  |
+| WEB-RPT-003 | Dashboard kỳ báo cáo | USER_SECONDARY | INTEGRATED | SKILL_BASED | EXTERNAL |  |
+| WEB-RPT-004 | Đơn vị phải nộp | USER_SECONDARY | INTEGRATED | SKILL_BASED | EXTERNAL |  |
+| WEB-RPT-005 | Nguồn báo cáo | USER_SECONDARY | INTEGRATED | SKILL_BASED | EXTERNAL |  |
 | WEB-RPT-006 | AI đề xuất chỉ tiêu | USER_PRIMARY | NATIVE | SKILL_BASED | HYBRID |  |
 | WEB-RPT-007 | Metric Schema Editor | USER_SECONDARY | NATIVE | SKILL_BASED | VWORK |  |
 | WEB-RPT-008 | Kết quả trích xuất | USER_PRIMARY | NATIVE | SKILL_BASED | HYBRID |  |
@@ -159,7 +159,7 @@ SourceOfTruth: HYBRID=76, VWORK=75
 | WEB-SHELL-003 | Tác vụ nền | PLATFORM_INTERNAL | NATIVE | COMMON | VWORK |  |
 | WEB-TSK-001 | Việc của tôi | USER_PRIMARY | NATIVE | COMMON | HYBRID | RELABEL thành Unified Work Inbox / Việc của tôi |
 | WEB-TSK-002 | Toàn bộ công việc | OPTIONAL | OPTIONAL | COMMON | VWORK |  |
-| WEB-TSK-003 | Chi tiết Task | USER_SECONDARY | INTEGRATED | COMMON | HYBRID | Detail có thể native hoặc external projection |
+| WEB-TSK-003 | Chi tiết Task | USER_SECONDARY | INTEGRATED | COMMON | EXTERNAL | Detail có thể native hoặc external projection |
 | WEB-TSK-004 | Tạo/Giao Task | OPTIONAL | OPTIONAL | COMMON | VWORK |  |
 | WEB-TSK-005 | Cập nhật tiến độ | OPTIONAL | OPTIONAL | COMMON | VWORK |  |
 | WEB-TSK-006 | Nộp kết quả | OPTIONAL | OPTIONAL | COMMON | VWORK |  |

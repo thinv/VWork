@@ -5400,6 +5400,666 @@ paths:
         '403': { $ref: '#/components/responses/Forbidden' }
         '409': { $ref: '#/components/responses/Conflict' }
         '422': { $ref: '#/components/responses/Validation' }
+  /reporting-cycles/{id}:
+    patch:
+      tags: [Reporting]
+      operationId: api_rpt_019
+      summary: "API-RPT-019 - PATCH /reporting-cycles/{id}"
+      x-api-id: API-RPT-019
+      x-fr: [FR-080]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /reporting-cycles/{id}/close:
+    post:
+      tags: [Reporting]
+      operationId: api_rpt_020
+      summary: "API-RPT-020 - POST /reporting-cycles/{id}/close"
+      x-api-id: API-RPT-020
+      x-fr: [FR-080]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /reporting-cycles/{id}/reopen:
+    post:
+      tags: [Reporting]
+      operationId: api_rpt_021
+      summary: "API-RPT-021 - POST /reporting-cycles/{id}/reopen"
+      x-api-id: API-RPT-021
+      x-fr: [FR-080]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /reporting-cycles/{id}/archive:
+    post:
+      tags: [Reporting]
+      operationId: api_rpt_022
+      summary: "API-RPT-022 - POST /reporting-cycles/{id}/archive"
+      x-api-id: API-RPT-022
+      x-fr: [FR-080]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /reporting-cycles/bulk-action:
+    post:
+      tags: [Reporting]
+      operationId: api_rpt_023
+      summary: "API-RPT-023 - POST /reporting-cycles/bulk-action"
+      x-api-id: API-RPT-023
+      x-fr: [FR-080]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /reporting-obligations/{id}:
+    patch:
+      tags: [Reporting]
+      operationId: api_rpt_024
+      summary: "API-RPT-024 - PATCH /reporting-obligations/{id}"
+      x-api-id: API-RPT-024
+      x-fr: [FR-081]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /reporting-obligations/{id}/retire:
+    post:
+      tags: [Reporting]
+      operationId: api_rpt_025
+      summary: "API-RPT-025 - POST /reporting-obligations/{id}/retire"
+      x-api-id: API-RPT-025
+      x-fr: [FR-081]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /reporting-obligations/bulk-action:
+    post:
+      tags: [Reporting]
+      operationId: api_rpt_026
+      summary: "API-RPT-026 - POST /reporting-obligations/bulk-action"
+      x-api-id: API-RPT-026
+      x-fr: [FR-081]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /reporting-obligations/{id}/remind:
+    post:
+      tags: [Reporting]
+      operationId: api_rpt_027
+      summary: "API-RPT-027 - POST /reporting-obligations/{id}/remind"
+      x-api-id: API-RPT-027
+      x-fr: [FR-081]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /reporting-cycles/{id}/submissions:
+    get:
+      tags: [Reporting]
+      operationId: api_rpt_028
+      summary: "API-RPT-028 - GET /reporting-cycles/{id}/submissions"
+      x-api-id: API-RPT-028
+      x-fr: [FR-082]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /report-submissions/{id}/replace:
+    post:
+      tags: [Reporting]
+      operationId: api_rpt_029
+      summary: "API-RPT-029 - POST /report-submissions/{id}/replace"
+      x-api-id: API-RPT-029
+      x-fr: [FR-082]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /report-submissions/{id}/archive:
+    post:
+      tags: [Reporting]
+      operationId: api_rpt_030
+      summary: "API-RPT-030 - POST /report-submissions/{id}/archive"
+      x-api-id: API-RPT-030
+      x-fr: [FR-082]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /report-submissions/bulk-action:
+    post:
+      tags: [Reporting]
+      operationId: api_rpt_031
+      summary: "API-RPT-031 - POST /report-submissions/bulk-action"
+      x-api-id: API-RPT-031
+      x-fr: [FR-082]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /metric-schema-versions/{id}/metrics:
+    post:
+      tags: [Reporting]
+      operationId: api_rpt_032
+      summary: "API-RPT-032 - POST /metric-schema-versions/{id}/metrics"
+      x-api-id: API-RPT-032
+      x-fr: [FR-083]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /metric-definitions/{id}:
+    patch:
+      tags: [Reporting]
+      operationId: api_rpt_033
+      summary: "API-RPT-033 - PATCH /metric-definitions/{id}"
+      x-api-id: API-RPT-033
+      x-fr: [FR-083]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /metric-definitions/{id}/retire:
+    post:
+      tags: [Reporting]
+      operationId: api_rpt_034
+      summary: "API-RPT-034 - POST /metric-definitions/{id}/retire"
+      x-api-id: API-RPT-034
+      x-fr: [FR-083]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /metric-definitions/bulk-action:
+    post:
+      tags: [Reporting]
+      operationId: api_rpt_035
+      summary: "API-RPT-035 - POST /metric-definitions/bulk-action"
+      x-api-id: API-RPT-035
+      x-fr: [FR-083]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /reporting-cycles/{id}/extracted-values:
+    get:
+      tags: [Reporting]
+      operationId: api_rpt_036
+      summary: "API-RPT-036 - GET /reporting-cycles/{id}/extracted-values"
+      x-api-id: API-RPT-036
+      x-fr: [FR-084]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /extracted-metric-values/{id}/verify:
+    patch:
+      tags: [Reporting]
+      operationId: api_rpt_037
+      summary: "API-RPT-037 - PATCH /extracted-metric-values/{id}/verify"
+      x-api-id: API-RPT-037
+      x-fr: [FR-084]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /extracted-metric-values/bulk-action:
+    post:
+      tags: [Reporting]
+      operationId: api_rpt_038
+      summary: "API-RPT-038 - POST /extracted-metric-values/bulk-action"
+      x-api-id: API-RPT-038
+      x-fr: [FR-084]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /data-quality-findings/{id}/resolve:
+    post:
+      tags: [Reporting]
+      operationId: api_rpt_039
+      summary: "API-RPT-039 - POST /data-quality-findings/{id}/resolve"
+      x-api-id: API-RPT-039
+      x-fr: [FR-085]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /data-quality-findings/{id}/override:
+    post:
+      tags: [Reporting]
+      operationId: api_rpt_040
+      summary: "API-RPT-040 - POST /data-quality-findings/{id}/override"
+      x-api-id: API-RPT-040
+      x-fr: [FR-085]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /data-quality-findings/bulk-action:
+    post:
+      tags: [Reporting]
+      operationId: api_rpt_041
+      summary: "API-RPT-041 - POST /data-quality-findings/bulk-action"
+      x-api-id: API-RPT-041
+      x-fr: [FR-085]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /reporting-cycles/{id}/reconciliation-results:
+    get:
+      tags: [Reporting]
+      operationId: api_rpt_042
+      summary: "API-RPT-042 - GET /reporting-cycles/{id}/reconciliation-results"
+      x-api-id: API-RPT-042
+      x-fr: [FR-086]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /reconciliation-results/{id}/override:
+    post:
+      tags: [Reporting]
+      operationId: api_rpt_043
+      summary: "API-RPT-043 - POST /reconciliation-results/{id}/override"
+      x-api-id: API-RPT-043
+      x-fr: [FR-086]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /report-drafts/{id}:
+    get:
+      tags: [Reporting]
+      operationId: api_rpt_044
+      summary: "API-RPT-044 - GET /report-drafts/{id}"
+      x-api-id: API-RPT-044
+      x-fr: [FR-089]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /report-drafts/{id}:
+    patch:
+      tags: [Reporting]
+      operationId: api_rpt_045
+      summary: "API-RPT-045 - PATCH /report-drafts/{id}"
+      x-api-id: API-RPT-045
+      x-fr: [FR-089]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /report-drafts/{id}/submit:
+    post:
+      tags: [Reporting]
+      operationId: api_rpt_046
+      summary: "API-RPT-046 - POST /report-drafts/{id}/submit"
+      x-api-id: API-RPT-046
+      x-fr: [FR-089]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+  /reporting-cycles/{id}/exports:
+    get:
+      tags: [Reporting]
+      operationId: api_rpt_047
+      summary: "API-RPT-047 - GET /reporting-cycles/{id}/exports"
+      x-api-id: API-RPT-047
+      x-fr: [FR-091]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
 components:
   securitySchemes:
     bearerAuth:

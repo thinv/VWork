@@ -1,0 +1,10 @@
+# 12 – Deployment & Acceptance
+
+## Deliverables
+- VWORK-INSTALLATION-GUIDE-v1.0.md
+- VWORK-ADMIN-GUIDE-v1.0.md
+- VWORK-USER-GUIDE-v1.0.md
+- VWORK-TRAINING-PLAN-v1.0.md
+- VWORK-ACCEPTANCE-PLAN-v1.0.md
+- VWORK-SLA-v1.0.md
+- VWORK-HANDOVER-CHECKLIST-v1.0.md

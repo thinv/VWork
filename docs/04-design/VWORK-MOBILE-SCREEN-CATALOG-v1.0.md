@@ -59,11 +59,11 @@ Global:
 
 | ID | Màn hình | Route | Actor | API |
 |---|---|---|---|---|
-| MOB-WRK-001 | Việc của tôi | work | ACT-01/03/04 | WRK-007 |
-| MOB-WRK-002 | Chi tiết Task | tasks/:id | authorized | WRK-008 |
+| MOB-WRK-001 | Việc của tôi | work | ACT-01/03/04 | WRK-007/010/028 |
+| MOB-WRK-002 | Chi tiết Task | tasks/:id | authorized | WRK-008..016/024..030 |
 | MOB-WRK-003 | Cập nhật tiến độ | tasks/:id/progress | ACT-04 | WRK-011 |
-| MOB-WRK-004 | Nộp kết quả nhanh | tasks/:id/evidence | ACT-04 | WRK-012 |
-| MOB-WRK-005 | Hồ sơ công việc | cases/:id | authorized | WRK-003/005 |
+| MOB-WRK-004 | Nộp kết quả nhanh | tasks/:id/evidence | ACT-04 | WRK-012/013/030 |
+| MOB-WRK-005 | Hồ sơ công việc | cases/:id | authorized | WRK-003/005/017/018/021 |
 | MOB-WRK-006 | Giao việc nhanh | cases/:id/assign | ACT-01/03 | WRK-006/009 |
 
 ## AI

@@ -1,6 +1,6 @@
 # VWork – Permission Catalog v1.0
 
-**Phạm vi khởi tạo:** SC-01 Identity / Shell / Executive. Catalog này sẽ được mở rộng theo từng Screen Batch.
+**Phạm vi hiện tại:** SC-01 Identity / Shell / Executive + SC-02 Document / Incoming. Catalog tiếp tục mở rộng theo từng Screen Batch.
 
 ## 1. Quy ước
 Permission code: `<DOMAIN>.<RESOURCE>.<ACTION>`.

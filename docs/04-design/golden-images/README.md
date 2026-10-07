@@ -40,3 +40,35 @@
 
 ### GS-WEB-06 — Xử lý văn bản đến
 ![GS-WEB-06](./GS-WEB-06-xu-ly-van-ban-den.webp)
+
+
+## Batch 02 — Meeting / Reporting / Ask / Knowledge / Leader / Admin
+
+| Golden Screen | File | Purpose |
+|---|---|---|
+| GS-WEB-07 | GS-WEB-07-tro-ly-cuoc-hop.webp | Trợ lý cuộc họp |
+| GS-WEB-08 | GS-WEB-08-tong-hop-bao-cao.webp | Tổng hợp báo cáo |
+| GS-WEB-09 | GS-WEB-09-hoi-vwork.webp | Hỏi VWork |
+| GS-WEB-10 | GS-WEB-10-kho-mau-tri-thuc.webp | Kho mẫu & Tri thức |
+| GS-WEB-11 | GS-WEB-11-dieu-hanh-daily-brief.webp | Điều hành / Daily Brief |
+| GS-WEB-12 | GS-WEB-12-quan-tri-tich-hop-che-do.webp | Quản trị tích hợp & chế độ |
+
+### GS-WEB-07 — Trợ lý cuộc họp
+![GS-WEB-07](./GS-WEB-07-tro-ly-cuoc-hop.webp)
+
+### GS-WEB-08 — Tổng hợp báo cáo
+![GS-WEB-08](./GS-WEB-08-tong-hop-bao-cao.webp)
+
+### GS-WEB-09 — Hỏi VWork
+![GS-WEB-09](./GS-WEB-09-hoi-vwork.webp)
+
+### GS-WEB-10 — Kho mẫu & Tri thức
+![GS-WEB-10](./GS-WEB-10-kho-mau-tri-thuc.webp)
+
+### GS-WEB-11 — Điều hành / Daily Brief
+![GS-WEB-11](./GS-WEB-11-dieu-hanh-daily-brief.webp)
+
+### GS-WEB-12 — Quản trị tích hợp & chế độ
+![GS-WEB-12](./GS-WEB-12-quan-tri-tich-hop-che-do.webp)
+
+**Batch 02 commit:** `21233f6c14133e4f8ade947c6ad7b83fddf141c7`

@@ -29,6 +29,7 @@ Chứa toàn bộ hồ sơ yêu cầu nghiệp vụ và phần mềm.
 - [x] VWORK-KNOWLEDGE-AI-EXCEPTION-CATALOG-v1.0.md
 - [x] VWORK-GOVERNANCE-IAM-BUSINESS-SPEC-v1.0.md
 - [x] VWORK-GOVERNANCE-EXCEPTION-CATALOG-v1.0.md
+- [x] VWORK-MASTER-DATA-EXCEPTION-CATALOG-v1.0.md
 - [x] VWORK-CROSS-DOMAIN-ORCHESTRATION-CONTRACT-v1.0.md
 - [x] VWORK-POST-APPROVAL-ACTION-CATALOG-v1.0.md
 
@@ -37,7 +38,7 @@ Chứa toàn bộ hồ sơ yêu cầu nghiệp vụ và phần mềm.
 - 72 Business Requirements
 - 14 Business Actors
 - 96 Use Cases
-- 160 Business Rules
+- 176 Business Rules
 - 124 Functional Requirements
 - 94 Non-Functional Requirements
 

@@ -13,7 +13,7 @@
   - 2 P2
 - Sau remediation trong cùng wave:
   - P0 OPEN: **0**
-  - P1 OPEN: **2**
+  - P1 OPEN: **0**
   - P2 OPEN: **2**
 
 # 2. Findings
@@ -28,8 +28,8 @@
 | MW-006 | P0 | Related-object link có nguy cơ tạo permission inheritance | PARTIAL | BRULE-129 + §14 | CLOSED |
 | MW-007 | P1 | correlationId/causationId chưa bắt buộc xuyên chain | GAP | BRULE-128 + §16 | CLOSED |
 | MW-008 | P1 | Cross-domain event consumer idempotency chưa explicit | PARTIAL | BRULE-132 + §15 | CLOSED |
-| MW-009 | P1 | Source mutation sau downstream creation cần reconciliation signal thống nhất | PARTIAL | BRULE-131 + §17 | CLOSED baseline; cần event taxonomy chi tiết |
-| MW-010 | P1 | Post-approval automated actions chưa có catalog/config schema chi tiết | GAP | §9 quy định explicit post-action | OPEN-P1 |
+| MW-009 | P1 | Source mutation sau downstream creation cần reconciliation signal thống nhất | PARTIAL | BRULE-131 + EVT-XD-001/002 | CLOSED |
+| MW-010 | P1 | Post-approval automated actions chưa có catalog/config schema chi tiết | GAP | VWORK-POST-APPROVAL-ACTION-CATALOG-v1.0.md + EVT-XD-003..005 | CLOSED |
 | MW-011 | P2 | Snapshot field set theo từng source type chưa machine-readable | PARTIAL | Orchestration contract baseline | OPEN-P2 |
 | MW-012 | P2 | Cross-domain trace query/API cho support/admin chưa đặc tả | GAP | Có correlation IDs nhưng chưa query contract | OPEN-P2 |
 
@@ -73,10 +73,10 @@ Status: PASS after remediation.
 - no silent approval transfer between versions.
 
 ## 3.6 Approval → Work
-Status: PARTIAL.
+Status: PASS.
 - No implicit work action: PASS.
 - Explicit post-action requirement: PASS.
-- Config schema/catalog for post-action: OPEN-P1 MW-010.
+- Post-action catalog/config schema: PASS.
 
 ## 3.7 Work Case → Task
 Status: PASS.
@@ -145,11 +145,9 @@ Need cross-domain E2E additions:
 
 Cho phép chuyển SC-05 Meeting vì:
 - 6/6 P0 findings đã CLOSED.
-- 2 P1 technical-detail items không làm mơ hồ core business behavior.
-- remaining gaps đã định danh và không được Claude/Codex tự suy diễn.
+- Không còn P0/P1 mở.
+- 2 P2 còn lại đã định danh và không được Claude/Codex tự suy diễn.
 
 # 10. Follow-up trước Final 151-Screen Audit
-- MW-010 Post-approval Action Catalog / configuration schema.
-- MW-009 Event taxonomy chi tiết cho reconciliation/stale.
 - MW-011 machine-readable cross-domain SourceRef/Snapshot schema.
 - MW-012 trace query/admin support contract.

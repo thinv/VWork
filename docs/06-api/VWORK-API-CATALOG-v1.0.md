@@ -223,7 +223,27 @@ API-MTG-009 PATCH /transcript-segments/{id}
 API-MTG-010 POST /meetings/{id}/extract-decisions  
 API-MTG-011 PATCH /meeting-decisions/{id}/confirm  
 API-MTG-012 POST /meeting-decisions/{id}/create-task  
-API-MTG-013 POST /meetings/{id}/generate-minutes
+API-MTG-013 POST /meetings/{id}/generate-minutes  
+API-MTG-014 POST /meetings/bulk-action  
+API-MTG-015 POST /meetings/{id}/archive  
+API-MTG-016 GET /meetings/{id}/participants  
+API-MTG-017 POST /meetings/{id}/participants  
+API-MTG-018 PATCH /meeting-participants/{id}  
+API-MTG-019 DELETE /meeting-participants/{id}  
+API-MTG-020 POST /meeting-participants/bulk-action  
+API-MTG-021 GET /meetings/{id}/agenda  
+API-MTG-022 POST /meetings/{id}/agenda  
+API-MTG-023 PATCH /meeting-agenda-items/{id}  
+API-MTG-024 DELETE /meeting-agenda-items/{id}  
+API-MTG-025 POST /meeting-agenda-items/bulk-action  
+API-MTG-026 POST /meetings/{id}/attendance/bulk-action  
+API-MTG-027 POST /transcript-segments/bulk-action  
+API-MTG-028 PATCH /meeting-decisions/{id}  
+API-MTG-029 POST /meeting-decisions/{id}/reconcile-task  
+API-MTG-030 GET /meetings/{id}/minutes  
+API-MTG-031 PATCH /meeting-minutes/{id}  
+API-MTG-032 POST /meeting-minutes/{id}/submit  
+API-MTG-033 POST /meeting-minutes/{id}/archive
 
 Trace: FR-071..079.
 

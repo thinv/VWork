@@ -237,6 +237,54 @@ Definition còn active instance không được archive nếu policy chặn; aud
 # UAT-72 Mobile Approval Stale
 Mobile approval phải refresh submitted version/state trước action; stale/offline cached action không được gửi thành công.
 
+# UAT-73 Work Case Creation
+Tạo Work Case phải có source/provenance, owner unit, owner, priority và scope hợp lệ.
+
+# UAT-74 Work Case Closure
+Không complete khi còn blocking task, required output thiếu hoặc approval critical đang pending.
+
+# UAT-75 Work Case Reopen
+Reopen cần permission + reason; history và previous completion state phải giữ.
+
+# UAT-76 Work Case Output
+Add/remove output phải giữ type/source/provenance; output đã final/referenced không hard delete.
+
+# UAT-77 Task Assignment
+Task phải có đúng một primary owner; owner inactive hoặc ngoài scope phải bị chặn.
+
+# UAT-78 Task Accept
+ASSIGNED → ACCEPTED đúng policy; auto-accept và explicit accept không được trộn semantic.
+
+# UAT-79 Task Progress & Blocker
+Progress percent không thay state; blocker phải lưu severity/resolution và chặn completion khi policy yêu cầu.
+
+# UAT-80 Task Deadline Change
+Đổi deadline phải lưu old/new/reason/actor/time; deadline nguồn từ văn bản phải giữ provenance.
+
+# UAT-81 Task Evidence
+Required output/evidence phải có trước submit/complete; evidence referenced trong review không hard delete.
+
+# UAT-82 Task Review Return
+REVIEW → COMPLETED khi accept; REVIEW → IN_PROGRESS khi return; không mất evidence/history.
+
+# UAT-83 Task Handover
+Reassign sau ACCEPTED tạo handover history; không overwrite owner cũ.
+
+# UAT-84 Task Cancel/Reopen
+Cancel/Reopen phải đúng state, permission, reason và audit.
+
+# UAT-85 Task Bulk
+Select All + bulk assign/priority/remind phải re-authorize từng item và trả partial result; bulk complete mặc định OFF.
+
+# UAT-86 Parent/Child Task
+Parent completion phải tuân ALL_REQUIRED_CHILDREN/MANUAL_REVIEW/INDEPENDENT.
+
+# UAT-87 Mobile Work Stale
+Mobile Task/Case action phải refresh authoritative state trước update; cached stale action bị conflict.
+
+# UAT-88 Work Source Scope
+Related document/meeting/output bị revoke quyền không được leak qua Work Case/Task.
+
 # Exit Criteria
 - 100% UAT P0 PASS.
 - Không workaround cho lỗi thẩm quyền, data loss, versioning, tenant isolation.

@@ -1,9 +1,11 @@
 # 06 – API
 
-## Deliverables
-- VWORK-API-CATALOG-v1.0.md
-- openapi/vwork-openapi.yaml
-- VWORK-INTEGRATION-CONTRACT-v1.0.md
-- VWORK-EVENT-CATALOG-v1.0.md
+## Hoàn thành baseline
+- [x] VWORK-API-CATALOG-v1.0.md
+- [x] openapi/vwork-openapi.yaml
 
-API phải quy định authentication, authorization, request/response, error, validation, audit, rate-limit và tenant scope.
+## Tiếp theo
+- [ ] VWORK-INTEGRATION-CONTRACT-v1.0.md
+- [ ] VWORK-EVENT-CATALOG-v1.0.md
+
+API phải quy định authentication, authorization, tenant scope, validation, error, audit, pagination, idempotency và async job khi phù hợp.

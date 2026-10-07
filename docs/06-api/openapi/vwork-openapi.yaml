@@ -261,6 +261,24 @@ paths:
         '403': { $ref: '#/components/responses/Forbidden' }
         '409': { $ref: '#/components/responses/Conflict' }
         '422': { $ref: '#/components/responses/Validation' }
+    get:
+      tags: [IAM]
+      operationId: api_iam_024
+      summary: "API-IAM-024 - GET /users/{id}"
+      x-api-id: API-IAM-024
+      x-fr: [FR-005]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
   /roles:
     get:
       tags: [Identity]
@@ -270,6 +288,25 @@ paths:
       x-fr: [FR-006]
       responses:
         '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+    post:
+      tags: [IAM]
+      operationId: api_iam_028
+      summary: "API-IAM-028 - POST /roles"
+      x-api-id: API-IAM-028
+      x-fr: [FR-006]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
         '400': { $ref: '#/components/responses/BadRequest' }
         '401': { $ref: '#/components/responses/Unauthorized' }
         '403': { $ref: '#/components/responses/Forbidden' }
@@ -948,6 +985,24 @@ paths:
         '403': { $ref: '#/components/responses/Forbidden' }
         '409': { $ref: '#/components/responses/Conflict' }
         '422': { $ref: '#/components/responses/Validation' }
+    delete:
+      tags: [Drafts]
+      operationId: api_drf_015
+      summary: "API-DRF-015 - DELETE /drafts/{id}"
+      x-api-id: API-DRF-015
+      x-fr: [FR-029]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
   /drafts/{id}/generate:
     post:
       tags: [Drafts]
@@ -1193,6 +1248,29 @@ paths:
           in: path
           required: true
           schema: { type: string }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+    patch:
+      tags: [Incoming]
+      operationId: api_inc_013
+      summary: "API-INC-013 - PATCH /incoming-records/{id}"
+      x-api-id: API-INC-013
+      x-fr: [FR-042]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
       responses:
         '200': { $ref: '#/components/responses/Success' }
         '400': { $ref: '#/components/responses/BadRequest' }
@@ -2331,6 +2409,29 @@ paths:
         '403': { $ref: '#/components/responses/Forbidden' }
         '409': { $ref: '#/components/responses/Conflict' }
         '422': { $ref: '#/components/responses/Validation' }
+    patch:
+      tags: [Reporting]
+      operationId: api_rpt_019
+      summary: "API-RPT-019 - PATCH /reporting-cycles/{id}"
+      x-api-id: API-RPT-019
+      x-fr: [FR-080]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
   /reporting-cycles/{id}/obligations:
     post:
       tags: [Reporting]
@@ -2394,6 +2495,24 @@ paths:
       responses:
         '200': { $ref: '#/components/responses/Success' }
         '201': { $ref: '#/components/responses/Created' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+    get:
+      tags: [Reporting]
+      operationId: api_rpt_028
+      summary: "API-RPT-028 - GET /reporting-cycles/{id}/submissions"
+      x-api-id: API-RPT-028
+      x-fr: [FR-082]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
         '400': { $ref: '#/components/responses/BadRequest' }
         '401': { $ref: '#/components/responses/Unauthorized' }
         '403': { $ref: '#/components/responses/Forbidden' }
@@ -2733,6 +2852,29 @@ paths:
         '403': { $ref: '#/components/responses/Forbidden' }
         '409': { $ref: '#/components/responses/Conflict' }
         '422': { $ref: '#/components/responses/Validation' }
+    patch:
+      tags: [Knowledge]
+      operationId: api_kno_014
+      summary: "API-KNO-014 - PATCH /templates/{id}"
+      x-api-id: API-KNO-014
+      x-fr: [FR-095]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
   /templates/{id}/versions:
     post:
       tags: [Knowledge]
@@ -2828,6 +2970,29 @@ paths:
           in: path
           required: true
           schema: { type: string }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+    patch:
+      tags: [Knowledge]
+      operationId: api_kno_017
+      summary: "API-KNO-017 - PATCH /knowledge-sources/{id}"
+      x-api-id: API-KNO-017
+      x-fr: [FR-096, FR-097]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
       responses:
         '200': { $ref: '#/components/responses/Success' }
         '400': { $ref: '#/components/responses/BadRequest' }
@@ -3045,6 +3210,19 @@ paths:
         '403': { $ref: '#/components/responses/Forbidden' }
         '409': { $ref: '#/components/responses/Conflict' }
         '422': { $ref: '#/components/responses/Validation' }
+    get:
+      tags: [Executive]
+      operationId: api_ast_005
+      summary: "API-AST-005 - GET /assistant/conversations"
+      x-api-id: API-AST-005
+      x-fr: [FR-105]
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
   /assistant/conversations/{id}:
     get:
       tags: [Executive]
@@ -3057,6 +3235,29 @@ paths:
           in: path
           required: true
           schema: { type: string }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+    patch:
+      tags: [Executive]
+      operationId: api_ast_006
+      summary: "API-AST-006 - PATCH /assistant/conversations/{id}"
+      x-api-id: API-AST-006
+      x-fr: [FR-105]
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
       responses:
         '200': { $ref: '#/components/responses/Success' }
         '400': { $ref: '#/components/responses/BadRequest' }
@@ -3196,6 +3397,25 @@ paths:
       x-fr: [FR-111]
       responses:
         '200': { $ref: '#/components/responses/Success' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '403': { $ref: '#/components/responses/Forbidden' }
+        '409': { $ref: '#/components/responses/Conflict' }
+        '422': { $ref: '#/components/responses/Validation' }
+    post:
+      tags: [Governance]
+      operationId: api_gov_030
+      summary: "API-GOV-030 - POST /prompts"
+      x-api-id: API-GOV-030
+      x-fr: [FR-111]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema: { type: object, additionalProperties: true }
+      responses:
+        '200': { $ref: '#/components/responses/Success' }
+        '201': { $ref: '#/components/responses/Created' }
         '400': { $ref: '#/components/responses/BadRequest' }
         '401': { $ref: '#/components/responses/Unauthorized' }
         '403': { $ref: '#/components/responses/Forbidden' }
@@ -3492,7 +3712,6 @@ paths:
         '403': { $ref: '#/components/responses/Forbidden' }
         '409': { $ref: '#/components/responses/Conflict' }
         '422': { $ref: '#/components/responses/Validation' }
-  /code-lists:
     post:
       tags: [Governance]
       operationId: api_md_002
@@ -3531,7 +3750,6 @@ paths:
         '403': { $ref: '#/components/responses/Forbidden' }
         '409': { $ref: '#/components/responses/Conflict' }
         '422': { $ref: '#/components/responses/Validation' }
-  /code-lists/{code}:
     patch:
       tags: [Governance]
       operationId: api_md_004
@@ -3599,7 +3817,6 @@ paths:
         '403': { $ref: '#/components/responses/Forbidden' }
         '409': { $ref: '#/components/responses/Conflict' }
         '422': { $ref: '#/components/responses/Validation' }
-  /code-lists/{code}/items:
     post:
       tags: [Governance]
       operationId: api_md_007
@@ -3854,7 +4071,6 @@ paths:
         '403': { $ref: '#/components/responses/Forbidden' }
         '409': { $ref: '#/components/responses/Conflict' }
         '422': { $ref: '#/components/responses/Validation' }
-  /external-agencies:
     post:
       tags: [Governance]
       operationId: api_md_019
@@ -3912,7 +4128,6 @@ paths:
         '403': { $ref: '#/components/responses/Forbidden' }
         '409': { $ref: '#/components/responses/Conflict' }
         '422': { $ref: '#/components/responses/Validation' }
-  /units-of-measure:
     post:
       tags: [Governance]
       operationId: api_md_022
@@ -4222,44 +4437,6 @@ paths:
         '403': { $ref: '#/components/responses/Forbidden' }
         '409': { $ref: '#/components/responses/Conflict' }
         '422': { $ref: '#/components/responses/Validation' }
-  /assistant/conversations:
-    get:
-      tags: [Executive]
-      operationId: api_ast_005
-      summary: "API-AST-005 - GET /assistant/conversations"
-      x-api-id: API-AST-005
-      x-fr: [FR-105]
-      responses:
-        '200': { $ref: '#/components/responses/Success' }
-        '400': { $ref: '#/components/responses/BadRequest' }
-        '401': { $ref: '#/components/responses/Unauthorized' }
-        '403': { $ref: '#/components/responses/Forbidden' }
-        '409': { $ref: '#/components/responses/Conflict' }
-        '422': { $ref: '#/components/responses/Validation' }
-  /assistant/conversations/{id}:
-    patch:
-      tags: [Executive]
-      operationId: api_ast_006
-      summary: "API-AST-006 - PATCH /assistant/conversations/{id}"
-      x-api-id: API-AST-006
-      x-fr: [FR-105]
-      parameters:
-        - name: id
-          in: path
-          required: true
-          schema: { type: string }
-      requestBody:
-        required: false
-        content:
-          application/json:
-            schema: { type: object, additionalProperties: true }
-      responses:
-        '200': { $ref: '#/components/responses/Success' }
-        '400': { $ref: '#/components/responses/BadRequest' }
-        '401': { $ref: '#/components/responses/Unauthorized' }
-        '403': { $ref: '#/components/responses/Forbidden' }
-        '409': { $ref: '#/components/responses/Conflict' }
-        '422': { $ref: '#/components/responses/Validation' }
   /assistant/conversations/{id}/archive:
     post:
       tags: [Executive]
@@ -4431,30 +4608,6 @@ paths:
         '403': { $ref: '#/components/responses/Forbidden' }
         '409': { $ref: '#/components/responses/Conflict' }
         '422': { $ref: '#/components/responses/Validation' }
-  /incoming-records/{id}:
-    patch:
-      tags: [Incoming]
-      operationId: api_inc_013
-      summary: "API-INC-013 - PATCH /incoming-records/{id}"
-      x-api-id: API-INC-013
-      x-fr: [FR-042]
-      parameters:
-        - name: id
-          in: path
-          required: true
-          schema: { type: string }
-      requestBody:
-        required: false
-        content:
-          application/json:
-            schema: { type: object, additionalProperties: true }
-      responses:
-        '200': { $ref: '#/components/responses/Success' }
-        '400': { $ref: '#/components/responses/BadRequest' }
-        '401': { $ref: '#/components/responses/Unauthorized' }
-        '403': { $ref: '#/components/responses/Forbidden' }
-        '409': { $ref: '#/components/responses/Conflict' }
-        '422': { $ref: '#/components/responses/Validation' }
   /drafts/bulk-action:
     post:
       tags: [Drafts]
@@ -4495,25 +4648,6 @@ paths:
       responses:
         '200': { $ref: '#/components/responses/Success' }
         '201': { $ref: '#/components/responses/Created' }
-        '400': { $ref: '#/components/responses/BadRequest' }
-        '401': { $ref: '#/components/responses/Unauthorized' }
-        '403': { $ref: '#/components/responses/Forbidden' }
-        '409': { $ref: '#/components/responses/Conflict' }
-        '422': { $ref: '#/components/responses/Validation' }
-  /drafts/{id}:
-    delete:
-      tags: [Drafts]
-      operationId: api_drf_015
-      summary: "API-DRF-015 - DELETE /drafts/{id}"
-      x-api-id: API-DRF-015
-      x-fr: [FR-029]
-      parameters:
-        - name: id
-          in: path
-          required: true
-          schema: { type: string }
-      responses:
-        '200': { $ref: '#/components/responses/Success' }
         '400': { $ref: '#/components/responses/BadRequest' }
         '401': { $ref: '#/components/responses/Unauthorized' }
         '403': { $ref: '#/components/responses/Forbidden' }
@@ -4722,7 +4856,6 @@ paths:
         '403': { $ref: '#/components/responses/Forbidden' }
         '409': { $ref: '#/components/responses/Conflict' }
         '422': { $ref: '#/components/responses/Validation' }
-  /work-cases/{id}/outputs:
     post:
       tags: [Work]
       operationId: api_wrk_022
@@ -5018,7 +5151,6 @@ paths:
         '403': { $ref: '#/components/responses/Forbidden' }
         '409': { $ref: '#/components/responses/Conflict' }
         '422': { $ref: '#/components/responses/Validation' }
-  /meetings/{id}/participants:
     post:
       tags: [Meeting]
       operationId: api_mtg_017
@@ -5067,7 +5199,6 @@ paths:
         '403': { $ref: '#/components/responses/Forbidden' }
         '409': { $ref: '#/components/responses/Conflict' }
         '422': { $ref: '#/components/responses/Validation' }
-  /meeting-participants/{id}:
     delete:
       tags: [Meeting]
       operationId: api_mtg_019
@@ -5125,7 +5256,6 @@ paths:
         '403': { $ref: '#/components/responses/Forbidden' }
         '409': { $ref: '#/components/responses/Conflict' }
         '422': { $ref: '#/components/responses/Validation' }
-  /meetings/{id}/agenda:
     post:
       tags: [Meeting]
       operationId: api_mtg_022
@@ -5174,7 +5304,6 @@ paths:
         '403': { $ref: '#/components/responses/Forbidden' }
         '409': { $ref: '#/components/responses/Conflict' }
         '422': { $ref: '#/components/responses/Validation' }
-  /meeting-agenda-items/{id}:
     delete:
       tags: [Meeting]
       operationId: api_mtg_024
@@ -5400,30 +5529,6 @@ paths:
         '403': { $ref: '#/components/responses/Forbidden' }
         '409': { $ref: '#/components/responses/Conflict' }
         '422': { $ref: '#/components/responses/Validation' }
-  /reporting-cycles/{id}:
-    patch:
-      tags: [Reporting]
-      operationId: api_rpt_019
-      summary: "API-RPT-019 - PATCH /reporting-cycles/{id}"
-      x-api-id: API-RPT-019
-      x-fr: [FR-080]
-      parameters:
-        - name: id
-          in: path
-          required: true
-          schema: { type: string }
-      requestBody:
-        required: false
-        content:
-          application/json:
-            schema: { type: object, additionalProperties: true }
-      responses:
-        '200': { $ref: '#/components/responses/Success' }
-        '400': { $ref: '#/components/responses/BadRequest' }
-        '401': { $ref: '#/components/responses/Unauthorized' }
-        '403': { $ref: '#/components/responses/Forbidden' }
-        '409': { $ref: '#/components/responses/Conflict' }
-        '422': { $ref: '#/components/responses/Validation' }
   /reporting-cycles/{id}/close:
     post:
       tags: [Reporting]
@@ -5608,25 +5713,6 @@ paths:
       responses:
         '200': { $ref: '#/components/responses/Success' }
         '201': { $ref: '#/components/responses/Created' }
-        '400': { $ref: '#/components/responses/BadRequest' }
-        '401': { $ref: '#/components/responses/Unauthorized' }
-        '403': { $ref: '#/components/responses/Forbidden' }
-        '409': { $ref: '#/components/responses/Conflict' }
-        '422': { $ref: '#/components/responses/Validation' }
-  /reporting-cycles/{id}/submissions:
-    get:
-      tags: [Reporting]
-      operationId: api_rpt_028
-      summary: "API-RPT-028 - GET /reporting-cycles/{id}/submissions"
-      x-api-id: API-RPT-028
-      x-fr: [FR-082]
-      parameters:
-        - name: id
-          in: path
-          required: true
-          schema: { type: string }
-      responses:
-        '200': { $ref: '#/components/responses/Success' }
         '400': { $ref: '#/components/responses/BadRequest' }
         '401': { $ref: '#/components/responses/Unauthorized' }
         '403': { $ref: '#/components/responses/Forbidden' }
@@ -5992,7 +6078,6 @@ paths:
         '403': { $ref: '#/components/responses/Forbidden' }
         '409': { $ref: '#/components/responses/Conflict' }
         '422': { $ref: '#/components/responses/Validation' }
-  /report-drafts/{id}:
     patch:
       tags: [Reporting]
       operationId: api_rpt_045
@@ -6060,30 +6145,6 @@ paths:
         '403': { $ref: '#/components/responses/Forbidden' }
         '409': { $ref: '#/components/responses/Conflict' }
         '422': { $ref: '#/components/responses/Validation' }
-  /templates/{id}:
-    patch:
-      tags: [Knowledge]
-      operationId: api_kno_014
-      summary: "API-KNO-014 - PATCH /templates/{id}"
-      x-api-id: API-KNO-014
-      x-fr: [FR-095]
-      parameters:
-        - name: id
-          in: path
-          required: true
-          schema: { type: string }
-      requestBody:
-        required: false
-        content:
-          application/json:
-            schema: { type: object, additionalProperties: true }
-      responses:
-        '200': { $ref: '#/components/responses/Success' }
-        '400': { $ref: '#/components/responses/BadRequest' }
-        '401': { $ref: '#/components/responses/Unauthorized' }
-        '403': { $ref: '#/components/responses/Forbidden' }
-        '409': { $ref: '#/components/responses/Conflict' }
-        '422': { $ref: '#/components/responses/Validation' }
   /templates/{id}/archive:
     post:
       tags: [Knowledge]
@@ -6124,30 +6185,6 @@ paths:
       responses:
         '200': { $ref: '#/components/responses/Success' }
         '201': { $ref: '#/components/responses/Created' }
-        '400': { $ref: '#/components/responses/BadRequest' }
-        '401': { $ref: '#/components/responses/Unauthorized' }
-        '403': { $ref: '#/components/responses/Forbidden' }
-        '409': { $ref: '#/components/responses/Conflict' }
-        '422': { $ref: '#/components/responses/Validation' }
-  /knowledge-sources/{id}:
-    patch:
-      tags: [Knowledge]
-      operationId: api_kno_017
-      summary: "API-KNO-017 - PATCH /knowledge-sources/{id}"
-      x-api-id: API-KNO-017
-      x-fr: [FR-096, FR-097]
-      parameters:
-        - name: id
-          in: path
-          required: true
-          schema: { type: string }
-      requestBody:
-        required: false
-        content:
-          application/json:
-            schema: { type: object, additionalProperties: true }
-      responses:
-        '200': { $ref: '#/components/responses/Success' }
         '400': { $ref: '#/components/responses/BadRequest' }
         '401': { $ref: '#/components/responses/Unauthorized' }
         '403': { $ref: '#/components/responses/Forbidden' }
@@ -6400,25 +6437,6 @@ paths:
         '403': { $ref: '#/components/responses/Forbidden' }
         '409': { $ref: '#/components/responses/Conflict' }
         '422': { $ref: '#/components/responses/Validation' }
-  /users/{id}:
-    get:
-      tags: [IAM]
-      operationId: api_iam_024
-      summary: "API-IAM-024 - GET /users/{id}"
-      x-api-id: API-IAM-024
-      x-fr: [FR-005]
-      parameters:
-        - name: id
-          in: path
-          required: true
-          schema: { type: string }
-      responses:
-        '200': { $ref: '#/components/responses/Success' }
-        '400': { $ref: '#/components/responses/BadRequest' }
-        '401': { $ref: '#/components/responses/Unauthorized' }
-        '403': { $ref: '#/components/responses/Forbidden' }
-        '409': { $ref: '#/components/responses/Conflict' }
-        '422': { $ref: '#/components/responses/Validation' }
   /users/{id}/deactivate:
     post:
       tags: [IAM]
@@ -6489,26 +6507,6 @@ paths:
         '403': { $ref: '#/components/responses/Forbidden' }
         '409': { $ref: '#/components/responses/Conflict' }
         '422': { $ref: '#/components/responses/Validation' }
-  /roles:
-    post:
-      tags: [IAM]
-      operationId: api_iam_028
-      summary: "API-IAM-028 - POST /roles"
-      x-api-id: API-IAM-028
-      x-fr: [FR-006]
-      requestBody:
-        required: false
-        content:
-          application/json:
-            schema: { type: object, additionalProperties: true }
-      responses:
-        '200': { $ref: '#/components/responses/Success' }
-        '201': { $ref: '#/components/responses/Created' }
-        '400': { $ref: '#/components/responses/BadRequest' }
-        '401': { $ref: '#/components/responses/Unauthorized' }
-        '403': { $ref: '#/components/responses/Forbidden' }
-        '409': { $ref: '#/components/responses/Conflict' }
-        '422': { $ref: '#/components/responses/Validation' }
   /roles/{id}:
     get:
       tags: [IAM]
@@ -6528,7 +6526,6 @@ paths:
         '403': { $ref: '#/components/responses/Forbidden' }
         '409': { $ref: '#/components/responses/Conflict' }
         '422': { $ref: '#/components/responses/Validation' }
-  /roles/{id}:
     patch:
       tags: [IAM]
       operationId: api_iam_030
@@ -6733,7 +6730,6 @@ paths:
         '403': { $ref: '#/components/responses/Forbidden' }
         '409': { $ref: '#/components/responses/Conflict' }
         '422': { $ref: '#/components/responses/Validation' }
-  /document-profiles/{id}:
     patch:
       tags: [IAM]
       operationId: api_iam_040
@@ -6886,7 +6882,6 @@ paths:
         '403': { $ref: '#/components/responses/Forbidden' }
         '409': { $ref: '#/components/responses/Conflict' }
         '422': { $ref: '#/components/responses/Validation' }
-  /me/preferences:
     put:
       tags: [IAM]
       operationId: api_iam_047
@@ -7030,26 +7025,6 @@ paths:
       summary: "API-GOV-029 - POST /ai/models/bulk-action"
       x-api-id: API-GOV-029
       x-fr: [FR-110]
-      requestBody:
-        required: false
-        content:
-          application/json:
-            schema: { type: object, additionalProperties: true }
-      responses:
-        '200': { $ref: '#/components/responses/Success' }
-        '201': { $ref: '#/components/responses/Created' }
-        '400': { $ref: '#/components/responses/BadRequest' }
-        '401': { $ref: '#/components/responses/Unauthorized' }
-        '403': { $ref: '#/components/responses/Forbidden' }
-        '409': { $ref: '#/components/responses/Conflict' }
-        '422': { $ref: '#/components/responses/Validation' }
-  /prompts:
-    post:
-      tags: [Governance]
-      operationId: api_gov_030
-      summary: "API-GOV-030 - POST /prompts"
-      x-api-id: API-GOV-030
-      x-fr: [FR-111]
       requestBody:
         required: false
         content:
@@ -7399,7 +7374,6 @@ paths:
         '403': { $ref: '#/components/responses/Forbidden' }
         '409': { $ref: '#/components/responses/Conflict' }
         '422': { $ref: '#/components/responses/Validation' }
-  /notification-preferences:
     put:
       tags: [Governance]
       operationId: api_gov_047

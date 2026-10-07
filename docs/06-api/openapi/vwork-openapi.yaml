@@ -1,0 +1,1263 @@
+openapi: 3.1.0
+info:
+  title: VWork Core API
+  version: 1.0.0
+  description: >
+    Machine-readable baseline contract for VWork Core v1.
+    Business scope follows VWORK-SRS-v1.0.
+servers:
+  - url: /api/v1
+security:
+  - bearerAuth: []
+tags:
+  - name: Identity
+  - name: Documents
+  - name: Intelligence
+  - name: Drafts
+  - name: Incoming
+  - name: Work
+  - name: Workflow
+  - name: Meetings
+  - name: Reporting
+  - name: Knowledge
+  - name: Executive
+  - name: Governance
+
+paths:
+  /me:
+    get:
+      tags: [Identity]
+      operationId: getCurrentUser
+      x-api-id: API-IAM-003
+      x-fr: [FR-001]
+      responses:
+        '200':
+          description: Current user context
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CurrentUser'
+
+  /organization-units:
+    get:
+      tags: [Identity]
+      operationId: listOrganizationUnits
+      x-api-id: API-IAM-008
+      x-fr: [FR-004]
+      parameters:
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/PageSize'
+      responses:
+        '200':
+          $ref: '#/components/responses/PagedOrganizationUnit'
+    post:
+      tags: [Identity]
+      operationId: createOrganizationUnit
+      x-api-id: API-IAM-009
+      x-fr: [FR-004]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OrganizationUnitCreate'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OrganizationUnit'
+
+  /users:
+    get:
+      tags: [Identity]
+      operationId: listUsers
+      x-api-id: API-IAM-011
+      x-fr: [FR-005]
+      responses:
+        '200':
+          description: User page
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserPage'
+    post:
+      tags: [Identity]
+      operationId: createUser
+      x-api-id: API-IAM-012
+      x-fr: [FR-005]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserCreate'
+      responses:
+        '201':
+          description: Created
+
+  /delegations:
+    post:
+      tags: [Identity]
+      operationId: createDelegation
+      x-api-id: API-IAM-017
+      x-fr: [FR-008]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DelegationCreate'
+      responses:
+        '201':
+          description: Created
+
+  /documents:
+    get:
+      tags: [Documents]
+      operationId: listDocuments
+      x-api-id: API-DOC-004
+      x-fr: [FR-015, FR-016]
+      parameters:
+        - $ref: '#/components/parameters/Page'
+        - $ref: '#/components/parameters/PageSize'
+        - name: status
+          in: query
+          schema: { $ref: '#/components/schemas/DocumentStatus' }
+      responses:
+        '200':
+          description: Document page
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DocumentPage'
+
+  /documents/upload-init:
+    post:
+      tags: [Documents]
+      operationId: initDocumentUpload
+      x-api-id: API-DOC-001
+      x-fr: [FR-010, FR-013]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UploadInitRequest'
+      responses:
+        '200':
+          description: Upload ticket
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UploadInitResponse'
+
+  /documents/complete-upload:
+    post:
+      tags: [Documents]
+      operationId: completeDocumentUpload
+      x-api-id: API-DOC-002
+      x-fr: [FR-010, FR-020]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UploadCompleteRequest'
+      responses:
+        '201':
+          description: Document created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Document'
+
+  /documents/{documentId}:
+    get:
+      tags: [Documents]
+      operationId: getDocument
+      x-api-id: API-DOC-005
+      x-fr: [FR-015]
+      parameters:
+        - $ref: '#/components/parameters/DocumentId'
+      responses:
+        '200':
+          description: Document
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Document'
+        '404': { $ref: '#/components/responses/NotFound' }
+
+  /documents/{documentId}/versions:
+    get:
+      tags: [Documents]
+      operationId: listDocumentVersions
+      x-api-id: API-DOC-007
+      x-fr: [FR-017]
+      parameters:
+        - $ref: '#/components/parameters/DocumentId'
+      responses:
+        '200':
+          description: Versions
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: '#/components/schemas/DocumentVersion' }
+    post:
+      tags: [Documents]
+      operationId: createDocumentVersion
+      x-api-id: API-DOC-008
+      x-fr: [FR-017]
+      parameters:
+        - $ref: '#/components/parameters/DocumentId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DocumentVersionCreate'
+      responses:
+        '201':
+          description: Version created
+
+  /document-versions/{versionId}/extract:
+    post:
+      tags: [Intelligence]
+      operationId: extractDocument
+      x-api-id: API-INT-001
+      x-fr: [FR-021, FR-023, FR-024, FR-025, FR-026]
+      x-async: true
+      parameters:
+        - $ref: '#/components/parameters/VersionId'
+      responses:
+        '202':
+          $ref: '#/components/responses/AsyncAccepted'
+
+  /extraction-runs/{runId}:
+    get:
+      tags: [Intelligence]
+      operationId: getExtractionRun
+      x-api-id: API-INT-002
+      x-fr: [FR-021]
+      parameters:
+        - name: runId
+          in: path
+          required: true
+          schema: { type: string, format: uuid }
+      responses:
+        '200':
+          description: Extraction run
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExtractionRun'
+
+  /extracted-fields/{fieldId}/verify:
+    patch:
+      tags: [Intelligence]
+      operationId: verifyExtractedField
+      x-api-id: API-INT-004
+      x-fr: [FR-022, FR-028]
+      parameters:
+        - name: fieldId
+          in: path
+          required: true
+          schema: { type: string, format: uuid }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VerificationRequest'
+      responses:
+        '200':
+          description: Verified
+
+  /drafts:
+    get:
+      tags: [Drafts]
+      operationId: listDrafts
+      x-api-id: API-DRF-002
+      x-fr: [FR-029]
+      responses:
+        '200':
+          description: Draft list
+    post:
+      tags: [Drafts]
+      operationId: createDraft
+      x-api-id: API-DRF-001
+      x-fr: [FR-029, FR-030, FR-031]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DraftCreate'
+      responses:
+        '201':
+          description: Draft created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Draft'
+
+  /drafts/{draftId}/generate:
+    post:
+      tags: [Drafts]
+      operationId: generateDraft
+      x-api-id: API-DRF-004
+      x-fr: [FR-029, FR-032, FR-033, FR-035]
+      x-async: true
+      parameters:
+        - $ref: '#/components/parameters/DraftId'
+      responses:
+        '202':
+          $ref: '#/components/responses/AsyncAccepted'
+
+  /draft-versions/{versionId}/review:
+    post:
+      tags: [Drafts]
+      operationId: reviewDraftVersion
+      x-api-id: API-DRF-007
+      x-fr: [FR-036, FR-037, FR-038, FR-041]
+      x-async: true
+      parameters:
+        - $ref: '#/components/parameters/VersionId'
+      responses:
+        '202':
+          $ref: '#/components/responses/AsyncAccepted'
+
+  /draft-versions/{versionId}/rewrite:
+    post:
+      tags: [Drafts]
+      operationId: rewriteDraftVersion
+      x-api-id: API-DRF-010
+      x-fr: [FR-040]
+      x-async: true
+      parameters:
+        - $ref: '#/components/parameters/VersionId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RewriteRequest'
+      responses:
+        '202':
+          $ref: '#/components/responses/AsyncAccepted'
+
+  /incoming-records:
+    get:
+      tags: [Incoming]
+      operationId: listIncomingRecords
+      x-api-id: API-INC-002
+      x-fr: [FR-042]
+      responses:
+        '200':
+          description: Incoming records
+    post:
+      tags: [Incoming]
+      operationId: createIncomingRecord
+      x-api-id: API-INC-001
+      x-fr: [FR-042]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/IncomingCreate'
+      responses:
+        '201':
+          description: Incoming record created
+
+  /incoming-records/{incomingId}/analyze:
+    post:
+      tags: [Incoming]
+      operationId: analyzeIncoming
+      x-api-id: API-INC-004
+      x-fr: [FR-043, FR-044, FR-045, FR-046]
+      x-async: true
+      parameters:
+        - $ref: '#/components/parameters/IncomingId'
+      responses:
+        '202':
+          $ref: '#/components/responses/AsyncAccepted'
+
+  /incoming-records/{incomingId}/convert-to-work-case:
+    post:
+      tags: [Incoming]
+      operationId: convertIncomingToWorkCase
+      x-api-id: API-INC-008
+      x-fr: [FR-047]
+      parameters:
+        - $ref: '#/components/parameters/IncomingId'
+      responses:
+        '201':
+          description: Work case created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WorkCase'
+
+  /work-cases:
+    get:
+      tags: [Work]
+      operationId: listWorkCases
+      x-api-id: API-WRK-002
+      x-fr: [FR-050, FR-051]
+      responses:
+        '200':
+          description: Work cases
+    post:
+      tags: [Work]
+      operationId: createWorkCase
+      x-api-id: API-WRK-001
+      x-fr: [FR-050]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WorkCaseCreate'
+      responses:
+        '201':
+          description: Work case created
+
+  /tasks:
+    get:
+      tags: [Work]
+      operationId: listTasks
+      x-api-id: API-WRK-007
+      x-fr: [FR-052, FR-055]
+      responses:
+        '200':
+          description: Tasks
+
+  /work-cases/{caseId}/tasks:
+    post:
+      tags: [Work]
+      operationId: createTask
+      x-api-id: API-WRK-006
+      x-fr: [FR-052]
+      parameters:
+        - $ref: '#/components/parameters/CaseId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TaskCreate'
+      responses:
+        '201':
+          description: Task created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Task'
+
+  /tasks/{taskId}/assign:
+    post:
+      tags: [Work]
+      operationId: assignTask
+      x-api-id: API-WRK-009
+      x-fr: [FR-053]
+      parameters:
+        - $ref: '#/components/parameters/TaskId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TaskAssignRequest'
+      responses:
+        '200':
+          description: Assigned
+
+  /tasks/{taskId}/progress:
+    patch:
+      tags: [Work]
+      operationId: updateTaskProgress
+      x-api-id: API-WRK-011
+      x-fr: [FR-055]
+      parameters:
+        - $ref: '#/components/parameters/TaskId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TaskProgressRequest'
+      responses:
+        '200':
+          description: Updated
+
+  /approvals:
+    get:
+      tags: [Workflow]
+      operationId: listApprovals
+      x-api-id: API-WFL-007
+      x-fr: [FR-063]
+      responses:
+        '200':
+          description: Approval queue
+
+  /approvals/{approvalId}/approve:
+    post:
+      tags: [Workflow]
+      operationId: approveItem
+      x-api-id: API-WFL-009
+      x-fr: [FR-065]
+      parameters:
+        - $ref: '#/components/parameters/ApprovalId'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ApprovalActionRequest'
+      responses:
+        '200':
+          description: Approved
+        '409':
+          $ref: '#/components/responses/Conflict'
+
+  /approvals/{approvalId}/return:
+    post:
+      tags: [Workflow]
+      operationId: returnApproval
+      x-api-id: API-WFL-010
+      x-fr: [FR-066]
+      parameters:
+        - $ref: '#/components/parameters/ApprovalId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ApprovalActionRequest'
+      responses:
+        '200':
+          description: Returned
+
+  /meetings:
+    get:
+      tags: [Meetings]
+      operationId: listMeetings
+      x-api-id: API-MTG-002
+      x-fr: [FR-071]
+      responses:
+        '200':
+          description: Meetings
+    post:
+      tags: [Meetings]
+      operationId: createMeeting
+      x-api-id: API-MTG-001
+      x-fr: [FR-071]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MeetingCreate'
+      responses:
+        '201':
+          description: Meeting created
+
+  /meetings/{meetingId}/transcribe:
+    post:
+      tags: [Meetings]
+      operationId: transcribeMeeting
+      x-api-id: API-MTG-007
+      x-fr: [FR-074]
+      x-async: true
+      parameters:
+        - $ref: '#/components/parameters/MeetingId'
+      responses:
+        '202':
+          $ref: '#/components/responses/AsyncAccepted'
+
+  /meetings/{meetingId}/extract-decisions:
+    post:
+      tags: [Meetings]
+      operationId: extractMeetingDecisions
+      x-api-id: API-MTG-010
+      x-fr: [FR-076]
+      x-async: true
+      parameters:
+        - $ref: '#/components/parameters/MeetingId'
+      responses:
+        '202':
+          $ref: '#/components/responses/AsyncAccepted'
+
+  /reporting-cycles:
+    get:
+      tags: [Reporting]
+      operationId: listReportingCycles
+      x-api-id: API-RPT-002
+      x-fr: [FR-080]
+      responses:
+        '200':
+          description: Reporting cycles
+    post:
+      tags: [Reporting]
+      operationId: createReportingCycle
+      x-api-id: API-RPT-001
+      x-fr: [FR-080]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ReportingCycleCreate'
+      responses:
+        '201':
+          description: Reporting cycle created
+
+  /reporting-cycles/{cycleId}/suggest-schema:
+    post:
+      tags: [Reporting]
+      operationId: suggestMetricSchema
+      x-api-id: API-RPT-007
+      x-fr: [FR-083]
+      x-async: true
+      parameters:
+        - $ref: '#/components/parameters/CycleId'
+      responses:
+        '202':
+          $ref: '#/components/responses/AsyncAccepted'
+
+  /metric-schema-versions/{schemaVersionId}/approve:
+    post:
+      tags: [Reporting]
+      operationId: approveMetricSchema
+      x-api-id: API-RPT-010
+      x-fr: [FR-084]
+      parameters:
+        - name: schemaVersionId
+          in: path
+          required: true
+          schema: { type: string, format: uuid }
+      responses:
+        '200':
+          description: Schema approved
+
+  /reporting-cycles/{cycleId}/aggregate:
+    post:
+      tags: [Reporting]
+      operationId: aggregateReportingCycle
+      x-api-id: API-RPT-015
+      x-fr: [FR-088]
+      x-async: true
+      parameters:
+        - $ref: '#/components/parameters/CycleId'
+      responses:
+        '202':
+          $ref: '#/components/responses/AsyncAccepted'
+        '422':
+          $ref: '#/components/responses/BusinessValidation'
+
+  /templates:
+    get:
+      tags: [Knowledge]
+      operationId: listTemplates
+      x-api-id: API-KNO-002
+      x-fr: [FR-092, FR-094]
+      responses:
+        '200':
+          description: Templates
+    post:
+      tags: [Knowledge]
+      operationId: createTemplate
+      x-api-id: API-KNO-001
+      x-fr: [FR-092]
+      responses:
+        '201':
+          description: Template created
+
+  /knowledge-sources:
+    get:
+      tags: [Knowledge]
+      operationId: listKnowledgeSources
+      x-api-id: API-KNO-007
+      x-fr: [FR-096, FR-097]
+      responses:
+        '200':
+          description: Knowledge sources
+    post:
+      tags: [Knowledge]
+      operationId: createKnowledgeSource
+      x-api-id: API-KNO-006
+      x-fr: [FR-096]
+      responses:
+        '201':
+          description: Knowledge source created
+
+  /knowledge/query:
+    post:
+      tags: [Knowledge]
+      operationId: queryKnowledge
+      x-api-id: API-KNO-013
+      x-fr: [FR-099]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/KnowledgeQuery'
+      responses:
+        '200':
+          description: Grounded answer
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/KnowledgeAnswer'
+
+  /executive/inbox:
+    get:
+      tags: [Executive]
+      operationId: getExecutiveInbox
+      x-api-id: API-EXE-001
+      x-fr: [FR-101, FR-102]
+      responses:
+        '200':
+          description: Executive inbox
+          content:
+            application/json:
+              schema:
+                type: array
+                items: { $ref: '#/components/schemas/InboxItem' }
+
+  /assistant/conversations:
+    post:
+      tags: [Executive]
+      operationId: createAssistantConversation
+      x-api-id: API-AST-001
+      x-fr: [FR-105]
+      responses:
+        '201':
+          description: Conversation created
+
+  /assistant/conversations/{conversationId}/messages:
+    post:
+      tags: [Executive]
+      operationId: sendAssistantMessage
+      x-api-id: API-AST-003
+      x-fr: [FR-105, FR-106]
+      x-async: true
+      parameters:
+        - name: conversationId
+          in: path
+          required: true
+          schema: { type: string, format: uuid }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AssistantMessageCreate'
+      responses:
+        '202':
+          $ref: '#/components/responses/AsyncAccepted'
+
+  /audit-events:
+    get:
+      tags: [Governance]
+      operationId: listAuditEvents
+      x-api-id: API-GOV-001
+      x-fr: [FR-109]
+      responses:
+        '200':
+          description: Audit events
+
+  /jobs:
+    get:
+      tags: [Governance]
+      operationId: listJobs
+      x-api-id: API-GOV-013
+      x-fr: [FR-116]
+      responses:
+        '200':
+          description: Jobs
+
+  /jobs/{jobId}:
+    get:
+      tags: [Governance]
+      operationId: getJob
+      x-api-id: API-GOV-014
+      x-fr: [FR-116]
+      parameters:
+        - $ref: '#/components/parameters/JobId'
+      responses:
+        '200':
+          description: Job
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Job'
+
+  /jobs/{jobId}/retry:
+    post:
+      tags: [Governance]
+      operationId: retryJob
+      x-api-id: API-GOV-015
+      x-fr: [FR-117]
+      parameters:
+        - $ref: '#/components/parameters/JobId'
+      responses:
+        '202':
+          $ref: '#/components/responses/AsyncAccepted'
+
+  /health/live:
+    get:
+      security: []
+      tags: [Governance]
+      operationId: liveness
+      x-api-id: API-GOV-021
+      responses:
+        '200':
+          description: Alive
+
+  /health/ready:
+    get:
+      security: []
+      tags: [Governance]
+      operationId: readiness
+      x-api-id: API-GOV-020
+      responses:
+        '200':
+          description: Ready
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  parameters:
+    Page:
+      name: page
+      in: query
+      schema: { type: integer, minimum: 1, default: 1 }
+    PageSize:
+      name: pageSize
+      in: query
+      schema: { type: integer, minimum: 1, maximum: 200, default: 50 }
+    DocumentId:
+      name: documentId
+      in: path
+      required: true
+      schema: { type: string, format: uuid }
+    VersionId:
+      name: versionId
+      in: path
+      required: true
+      schema: { type: string, format: uuid }
+    DraftId:
+      name: draftId
+      in: path
+      required: true
+      schema: { type: string, format: uuid }
+    IncomingId:
+      name: incomingId
+      in: path
+      required: true
+      schema: { type: string, format: uuid }
+    CaseId:
+      name: caseId
+      in: path
+      required: true
+      schema: { type: string, format: uuid }
+    TaskId:
+      name: taskId
+      in: path
+      required: true
+      schema: { type: string, format: uuid }
+    ApprovalId:
+      name: approvalId
+      in: path
+      required: true
+      schema: { type: string, format: uuid }
+    MeetingId:
+      name: meetingId
+      in: path
+      required: true
+      schema: { type: string, format: uuid }
+    CycleId:
+      name: cycleId
+      in: path
+      required: true
+      schema: { type: string, format: uuid }
+    JobId:
+      name: jobId
+      in: path
+      required: true
+      schema: { type: string, format: uuid }
+
+  responses:
+    AsyncAccepted:
+      description: Long-running job accepted
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/AsyncJobRef'
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/Error' }
+    Conflict:
+      description: Conflict or stale version
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/Error' }
+    BusinessValidation:
+      description: Business validation failed
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/Error' }
+    PagedOrganizationUnit:
+      description: Organization unit page
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              items:
+                type: array
+                items: { $ref: '#/components/schemas/OrganizationUnit' }
+              page: { type: integer }
+              pageSize: { type: integer }
+              total: { type: integer }
+
+  schemas:
+    Error:
+      type: object
+      required: [code, message, correlationId]
+      properties:
+        code: { type: string }
+        message: { type: string }
+        correlationId: { type: string }
+        details:
+          type: array
+          items: { type: object, additionalProperties: true }
+
+    CurrentUser:
+      type: object
+      properties:
+        userId: { type: string, format: uuid }
+        tenantId: { type: string, format: uuid }
+        membershipId: { type: string, format: uuid }
+        displayName: { type: string }
+        roles:
+          type: array
+          items: { type: string }
+
+    OrganizationUnit:
+      type: object
+      required: [id, code, name, status]
+      properties:
+        id: { type: string, format: uuid }
+        parentId: { type: [string, 'null'], format: uuid }
+        code: { type: string }
+        name: { type: string }
+        status: { type: string }
+
+    OrganizationUnitCreate:
+      type: object
+      required: [code, name]
+      properties:
+        parentId: { type: [string, 'null'], format: uuid }
+        code: { type: string, maxLength: 64 }
+        name: { type: string, maxLength: 255 }
+        type: { type: string }
+
+    UserCreate:
+      type: object
+      required: [displayName]
+      properties:
+        username: { type: string }
+        email: { type: string, format: email }
+        phone: { type: string }
+        displayName: { type: string }
+
+    UserPage:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            type: object
+            properties:
+              id: { type: string, format: uuid }
+              displayName: { type: string }
+              status: { type: string }
+
+    DelegationCreate:
+      type: object
+      required: [delegateMembershipId, startAt, endAt, scope]
+      properties:
+        delegateMembershipId: { type: string, format: uuid }
+        startAt: { type: string, format: date-time }
+        endAt: { type: string, format: date-time }
+        scope: { type: object, additionalProperties: true }
+        reason: { type: string }
+
+    DocumentStatus:
+      type: string
+      enum: [DRAFT, PROCESSING, READY, REVIEW_REQUIRED, APPROVAL, FINAL, ARCHIVED, FAILED, QUARANTINED]
+
+    Document:
+      type: object
+      required: [id, title, status]
+      properties:
+        id: { type: string, format: uuid }
+        title: { type: string }
+        documentType: { type: string }
+        status: { $ref: '#/components/schemas/DocumentStatus' }
+        currentVersionId: { type: [string, 'null'], format: uuid }
+
+    DocumentPage:
+      type: object
+      properties:
+        items:
+          type: array
+          items: { $ref: '#/components/schemas/Document' }
+        page: { type: integer }
+        pageSize: { type: integer }
+        total: { type: integer }
+
+    DocumentVersion:
+      type: object
+      properties:
+        id: { type: string, format: uuid }
+        versionNo: { type: integer }
+        mimeType: { type: string }
+        lifecycleState: { type: string }
+        createdAt: { type: string, format: date-time }
+
+    DocumentVersionCreate:
+      type: object
+      properties:
+        fileAssetId: { type: string, format: uuid }
+
+    UploadInitRequest:
+      type: object
+      required: [filename, mimeType, sizeBytes]
+      properties:
+        filename: { type: string }
+        mimeType: { type: string }
+        sizeBytes: { type: integer }
+        checksum: { type: string }
+
+    UploadInitResponse:
+      type: object
+      properties:
+        uploadId: { type: string, format: uuid }
+        uploadUrl: { type: string }
+        expiresAt: { type: string, format: date-time }
+
+    UploadCompleteRequest:
+      type: object
+      required: [uploadId, title]
+      properties:
+        uploadId: { type: string, format: uuid }
+        title: { type: string }
+        documentType: { type: string }
+
+    AsyncJobRef:
+      type: object
+      required: [jobId, status]
+      properties:
+        jobId: { type: string, format: uuid }
+        status:
+          type: string
+          enum: [QUEUED, RUNNING, RETRYING, SUCCEEDED, FAILED, CANCELLED, DEAD_LETTER]
+        statusUrl: { type: string }
+
+    ExtractionRun:
+      type: object
+      properties:
+        id: { type: string, format: uuid }
+        documentVersionId: { type: string, format: uuid }
+        status: { type: string }
+        confidenceSummary: { type: object, additionalProperties: true }
+
+    VerificationRequest:
+      type: object
+      required: [decision]
+      properties:
+        decision:
+          type: string
+          enum: [VERIFIED, CORRECTED, REJECTED]
+        correctedValue: {}
+
+    DraftCreate:
+      type: object
+      required: [documentType, draftMode]
+      properties:
+        workCaseId: { type: [string, 'null'], format: uuid }
+        documentType: { type: string }
+        draftMode:
+          type: string
+          enum: [SIGN_READY, WORKING, PACKAGE]
+        instruction: { type: string }
+        templateVersionId: { type: [string, 'null'], format: uuid }
+        sourceRefs:
+          type: array
+          items: { type: string }
+
+    Draft:
+      type: object
+      properties:
+        id: { type: string, format: uuid }
+        documentType: { type: string }
+        draftMode: { type: string }
+        status: { type: string }
+        currentVersionId: { type: [string, 'null'], format: uuid }
+
+    RewriteRequest:
+      type: object
+      required: [scopeType, instruction]
+      properties:
+        scopeType:
+          type: string
+          enum: [SELECTION, SECTION, DOCUMENT]
+        selectionRef: { type: [string, 'null'] }
+        instruction: { type: string }
+
+    IncomingCreate:
+      type: object
+      required: [documentId, receivedAt]
+      properties:
+        documentId: { type: string, format: uuid }
+        registrationNo: { type: string }
+        receivedAt: { type: string, format: date-time }
+        sourceAgency: { type: string }
+        urgency: { type: string }
+
+    WorkCaseCreate:
+      type: object
+      required: [title]
+      properties:
+        title: { type: string }
+        description: { type: string }
+        domainCode: { type: string }
+        priority: { type: string }
+        dueAt: { type: [string, 'null'], format: date-time }
+
+    WorkCase:
+      type: object
+      properties:
+        id: { type: string, format: uuid }
+        code: { type: string }
+        title: { type: string }
+        status: { type: string }
+        priority: { type: string }
+        dueAt: { type: [string, 'null'], format: date-time }
+
+    TaskCreate:
+      type: object
+      required: [title]
+      properties:
+        title: { type: string }
+        description: { type: string }
+        ownerMembershipId: { type: [string, 'null'], format: uuid }
+        ownerUnitId: { type: [string, 'null'], format: uuid }
+        dueAt: { type: [string, 'null'], format: date-time }
+        requiredOutput: { type: string }
+
+    Task:
+      type: object
+      properties:
+        id: { type: string, format: uuid }
+        title: { type: string }
+        status: { type: string }
+        progressPercent: { type: integer, minimum: 0, maximum: 100 }
+
+    TaskAssignRequest:
+      type: object
+      properties:
+        ownerMembershipId: { type: [string, 'null'], format: uuid }
+        ownerUnitId: { type: [string, 'null'], format: uuid }
+        reason: { type: string }
+
+    TaskProgressRequest:
+      type: object
+      properties:
+        status: { type: string }
+        progressPercent: { type: integer, minimum: 0, maximum: 100 }
+        blockerText: { type: [string, 'null'] }
+
+    ApprovalActionRequest:
+      type: object
+      properties:
+        comment: { type: string }
+
+    MeetingCreate:
+      type: object
+      required: [title, scheduledStart]
+      properties:
+        title: { type: string }
+        scheduledStart: { type: string, format: date-time }
+        scheduledEnd: { type: [string, 'null'], format: date-time }
+        location: { type: string }
+        workCaseId: { type: [string, 'null'], format: uuid }
+
+    ReportingCycleCreate:
+      type: object
+      required: [code, name, periodStart, periodEnd]
+      properties:
+        code: { type: string }
+        name: { type: string }
+        periodStart: { type: string, format: date }
+        periodEnd: { type: string, format: date }
+        dueAt: { type: [string, 'null'], format: date-time }
+
+    KnowledgeQuery:
+      type: object
+      required: [question]
+      properties:
+        question: { type: string }
+        contextType: { type: string }
+        contextId: { type: [string, 'null'], format: uuid }
+
+    KnowledgeAnswer:
+      type: object
+      properties:
+        answer: { type: string }
+        sufficientEvidence: { type: boolean }
+        citations:
+          type: array
+          items:
+            type: object
+            properties:
+              provenanceId: { type: string, format: uuid }
+              label: { type: string }
+
+    InboxItem:
+      type: object
+      properties:
+        type: { type: string }
+        objectId: { type: string, format: uuid }
+        title: { type: string }
+        priority: { type: string }
+        dueAt: { type: [string, 'null'], format: date-time }
+
+    AssistantMessageCreate:
+      type: object
+      required: [content]
+      properties:
+        content: { type: string }
+
+    Job:
+      type: object
+      properties:
+        id: { type: string, format: uuid }
+        type: { type: string }
+        status: { type: string }
+        progress: { type: number, minimum: 0, maximum: 100 }
+        attemptCount: { type: integer }
+        correlationId: { type: string }

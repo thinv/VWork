@@ -381,6 +381,54 @@ Source/aggregation version đổi sau khi draft sinh → draft STALE, không sil
 # UAT-120 Export Provenance
 Export phải pin cycle, schema version, aggregation run, submission/source snapshot và generated_by/generated_at.
 
+# UAT-121 Knowledge Template Versioning
+Template published/used không sửa in-place; thay đổi tạo version mới và historical consumer vẫn pin version cũ.
+
+# UAT-122 Knowledge Source CRUD/Bulk
+Source hỗ trợ Create/Update/Archive/Restore/Select All/Bulk theo quyền và state; referenced history không hard delete.
+
+# UAT-123 Knowledge Source Authority
+Mỗi source có authority level/type/owner/effective period; conflict phải giải thích precedence hoặc nêu conflict.
+
+# UAT-124 Permission Before Ranking
+RAG phải lọc tenant/data scope/source state trước semantic ranking/reranking; source ngoài quyền không được vào candidate set.
+
+# UAT-125 Revoke Invalidation
+Source/version revoke/archive/permission-reduced không còn xuất hiện trong retrieval sau SLA invalidation, kể cả cache/index.
+
+# UAT-126 Exact Version Citation
+Citation answer lịch sử mở đúng source version đã dùng, không tự nhảy sang latest.
+
+# UAT-127 Citation Reauthorization
+Actor mất quyền nguồn sau khi answer được tạo thì citation open bị deny/not-found an toàn; không leak metadata.
+
+# UAT-128 Insufficient Evidence
+Evidence dưới threshold → assistant trả chưa đủ cơ sở/insufficient evidence, không tạo FACT giả.
+
+# UAT-129 Conflicting Evidence
+Nguồn authoritative mâu thuẫn → nêu conflict/citation từng phía hoặc áp deterministic authority rule có giải thích.
+
+# UAT-130 Prompt Injection Isolation
+Instruction trong document/web/OCR source không override system/tenant policy, không mở rộng tool/source scope, không tiết lộ secret.
+
+# UAT-131 Retrieval Snapshot
+Mỗi grounded answer lưu source/version refs, filter/policy version, prompt/model version, timestamp, correlationId.
+
+# UAT-132 Taxonomy Integrity
+Không gán source vào retired node; không cho circular taxonomy; historical read giữ version cũ.
+
+# UAT-133 Assistant Conversation Permission Re-evaluation
+Mỗi message mới re-evaluate quyền hiện tại; conversation history không cấp lại quyền source đã revoke.
+
+# UAT-134 Contextual Chat Object Scope
+Chat theo Work Case/Document/Meeting chỉ dùng object/context mà actor còn quyền tại thời điểm message.
+
+# UAT-135 Mobile Citation
+Mobile citation mở exact source/version/locator; stale/revoked source xử lý an toàn.
+
+# UAT-136 Knowledge Search Bulk
+Select All + bulk archive/reindex/taxonomy action re-authorize từng source và trả partial result.
+
 # Exit Criteria
 - 100% UAT P0 PASS.
 - Không workaround cho lỗi thẩm quyền, data loss, versioning, tenant isolation.

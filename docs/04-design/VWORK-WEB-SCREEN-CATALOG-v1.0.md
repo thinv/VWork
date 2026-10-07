@@ -156,14 +156,14 @@ Global:
 
 | ID | Màn hình | Route | Actor | API |
 |---|---|---|---|---|
-| WEB-KNO-001 | Kho mẫu | /templates | ACT-03/13 | KNO-002 |
-| WEB-KNO-002 | Chi tiết mẫu | /templates/:id | authorized | KNO-003 |
+| WEB-KNO-001 | Kho mẫu | /templates | ACT-03/13 | KNO-001..005/014..016 |
+| WEB-KNO-002 | Chi tiết mẫu | /templates/:id | authorized | KNO-003/004/014/015 |
 | WEB-KNO-003 | Tạo/phiên bản mẫu | /templates/:id/edit | ACT-13 | KNO-004/005 |
-| WEB-KNO-004 | Kho tri thức | /knowledge | authorized | KNO-007 |
+| WEB-KNO-004 | Kho tri thức | /knowledge | authorized | KNO-006..011/017..021/024/025 |
 | WEB-KNO-005 | Thêm nguồn tri thức | /knowledge/new | ACT-13 | KNO-006 |
-| WEB-KNO-006 | Chi tiết nguồn | /knowledge/:id | ACT-13 | KNO-008..011 |
-| WEB-KNO-007 | Tìm kiếm tri thức | /knowledge/search | authorized | KNO-012 |
-| WEB-KNO-008 | Hỏi đáp có nguồn | /knowledge/ask | authorized | KNO-013 |
+| WEB-KNO-006 | Chi tiết nguồn | /knowledge/:id | ACT-13 | KNO-008..011/017..025 |
+| WEB-KNO-007 | Tìm kiếm tri thức | /knowledge/search | authorized | KNO-012/023/026 |
+| WEB-KNO-008 | Hỏi đáp có nguồn | /knowledge/ask | authorized | KNO-013/022/023 |
 
 ## L. Quản trị
 

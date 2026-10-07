@@ -255,10 +255,16 @@ API-EXE-003 POST /executive/briefs/generate
 API-EXE-004 GET /executive/briefs  
 API-EXE-005 GET /executive/briefs/{id}  
 API-EXE-006 GET /executive/inbox/{itemId}  
+API-EXE-007 POST /executive/inbox/bulk-action  
+API-EXE-008 POST /executive/signals/bulk-action  
 API-AST-001 POST /assistant/conversations  
 API-AST-002 GET /assistant/conversations/{id}  
 API-AST-003 POST /assistant/conversations/{id}/messages  
-API-AST-004 GET /assistant/conversations/{id}/messages
+API-AST-004 GET /assistant/conversations/{id}/messages  
+API-AST-005 GET /assistant/conversations  
+API-AST-006 PATCH /assistant/conversations/{id}  
+API-AST-007 POST /assistant/conversations/{id}/archive  
+API-AST-008 POST /assistant/conversations/bulk-action
 
 Trace: FR-101..108.
 

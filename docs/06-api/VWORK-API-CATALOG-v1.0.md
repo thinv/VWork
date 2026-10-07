@@ -118,7 +118,10 @@ API-DRF-008 GET /review-runs/{id}
 API-DRF-009 PATCH /review-findings/{id}  
 API-DRF-010 POST /draft-versions/{id}/rewrite  
 API-DRF-011 POST /document-packages  
-API-DRF-012 GET /document-packages/{id}
+API-DRF-012 GET /document-packages/{id}  
+API-DRF-013 POST /drafts/bulk-action  
+API-DRF-014 POST /drafts/{id}/archive  
+API-DRF-015 DELETE /drafts/{id}  
 
 Trace: FR-029..041.
 
@@ -181,7 +184,11 @@ API-WFL-009 POST /approvals/{id}/approve
 API-WFL-010 POST /approvals/{id}/return  
 API-WFL-011 POST /approvals/{id}/reject  
 API-WFL-012 POST /approvals/{id}/request-clarification  
-API-WFL-013 POST /approvals/{id}/delegate
+API-WFL-013 POST /approvals/{id}/delegate  
+API-WFL-014 POST /approvals/bulk-action  
+API-WFL-015 PATCH /workflow-definitions/{id}  
+API-WFL-016 POST /workflow-definitions/{id}/archive  
+API-WFL-017 POST /workflow-definitions/bulk-action
 
 Trace: FR-061..070.
 

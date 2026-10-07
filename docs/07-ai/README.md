@@ -1,0 +1,12 @@
+# 07 – AI
+
+## Deliverables
+- VWORK-AI-USE-CASE-CATALOG-v1.0.md
+- VWORK-RAG-SPEC-v1.0.md
+- VWORK-AI-GATEWAY-SPEC-v1.0.md
+- VWORK-PROMPT-GOVERNANCE-v1.0.md
+- VWORK-MODEL-PROVIDER-GOVERNANCE-v1.0.md
+- VWORK-AI-EVALUATION-FRAMEWORK-v1.0.md
+- VWORK-AI-GUARDRAILS-v1.0.md
+
+Nguyên tắc: FACT / INFERENCE / MISSING; provenance khi có nguồn; human approval; model/provider abstraction.

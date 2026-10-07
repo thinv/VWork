@@ -1,6 +1,6 @@
 # VWork – Permission Catalog v1.0
 
-**Phạm vi hiện tại:** SC-01 Identity / Shell / Executive + SC-02 Document / Incoming + SC-03 Draft / Workflow + SC-04 Work Case / Task + SC-05 Meeting + SC-06 Reporting + SC-07 Knowledge / AI + SC-08 Governance. Catalog tiếp tục mở rộng theo từng Screen Batch.
+**Phạm vi hiện tại:** SC-01 Identity / Shell / Executive + SC-02 Document / Incoming + SC-03 Draft / Workflow + SC-04 Work Case / Task + SC-05 Meeting + SC-06 Reporting + SC-07 Knowledge / AI + SC-08 Governance + SC-09 Shared / Master Data.
 
 ## 1. Quy ước
 Permission code: `<DOMAIN>.<RESOURCE>.<ACTION>`.
@@ -402,3 +402,63 @@ RAG retrieval luôn dùng current effective scope; conversation history không m
 - ME.PREFERENCE.UPDATE
 - ME.NOTIFICATION_PREFERENCE.READ
 - ME.NOTIFICATION_PREFERENCE.UPDATE
+
+
+## 24. Shared / Master Data
+- MD.OVERVIEW.READ
+- MD.CODE_LIST.READ
+- MD.CODE_LIST.CREATE
+- MD.CODE_LIST.UPDATE
+- MD.CODE_LIST.CREATE_VERSION
+- MD.CODE_LIST.RETIRE
+- MD.CODE_LIST.BULK
+- MD.CODE_ITEM.READ
+- MD.CODE_ITEM.CREATE
+- MD.CODE_ITEM.UPDATE
+- MD.CODE_ITEM.ACTIVATE
+- MD.CODE_ITEM.DEACTIVATE
+- MD.CODE_ITEM.RETIRE
+- MD.CODE_ITEM.BULK
+- MD.ADMIN_UNIT.READ
+- MD.ADMIN_UNIT.STAGE
+- MD.ADMIN_UNIT.UPDATE_STAGING
+- MD.ADMIN_UNIT.VALIDATE
+- MD.ADMIN_UNIT.PUBLISH
+- MD.ADMIN_UNIT.RETIRE
+- MD.ADMIN_UNIT.MAP_SUCCESSOR
+- MD.ADMIN_UNIT.BULK
+- MD.AGENCY.READ
+- MD.AGENCY.CREATE
+- MD.AGENCY.UPDATE
+- MD.AGENCY.RETIRE
+- MD.AGENCY.BULK
+- MD.UOM.READ
+- MD.UOM.CREATE
+- MD.UOM.UPDATE
+- MD.UOM.CREATE_VERSION
+- MD.UOM.RETIRE
+- MD.UOM.BULK
+- MD.TAXONOMY.READ
+- MD.TAXONOMY.CREATE
+- MD.TAXONOMY.UPDATE
+- MD.TAXONOMY.MOVE
+- MD.TAXONOMY.RETIRE
+- MD.TAXONOMY.BULK
+- MD.IMPORT.CREATE
+- MD.IMPORT.READ
+- MD.IMPORT.VALIDATE
+- MD.IMPORT.DIFF
+- MD.IMPORT.APPLY
+- MD.IMPORT.CANCEL
+- MD.HISTORY.READ
+- MD.HISTORY.EXPORT
+
+## 25. Master Data Scope
+- SYSTEM_READONLY
+- PLATFORM_ADMIN
+- TENANT_ADMIN
+- DATA_STEWARD
+- DOMAIN_STEWARD
+- EXPLICIT
+
+System-owned semantic data chỉ platform-admin thay đổi; tenant-admin chỉ extension/label override khi policy cho phép.

@@ -21,6 +21,7 @@ Chứa toàn bộ hồ sơ yêu cầu nghiệp vụ và phần mềm.
 - [x] VWORK-MEETING-DETAILED-BUSINESS-SPEC-v1.0.md
 - [x] VWORK-IDENTITY-EXECUTIVE-EXCEPTION-CATALOG-v1.0.md
 - [x] VWORK-DOCUMENT-INCOMING-EXCEPTION-CATALOG-v1.0.md
+- [x] VWORK-DRAFT-WORKFLOW-EXCEPTION-CATALOG-v1.0.md
 
 ## Baseline counts
 - 12 Business Processes

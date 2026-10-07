@@ -335,7 +335,7 @@ Widgets:
 
 Rules:
 - cannot complete if blocking active task.
-- access inherited by related objects unless overridden.
+- related objects do not inherit access; every drill-down re-authorizes the target domain/object.
 
 ---
 
